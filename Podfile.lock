@@ -1,0 +1,21 @@
+PODS:
+  - Alamofire (4.7.1)
+  - InputMask (2.2.6)
+  - Stripe (12.1.2)
+  - UITextView+Placeholder (1.2.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.4)
+  - InputMask (~> 2.2)
+  - Stripe
+  - UITextView+Placeholder (~> 1.2)
+
+SPEC CHECKSUMS:
+  Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
+  InputMask: 756ffc515121d07a9c81a605fa5c44e5ac5bde13
+  Stripe: 3230cdf8a8b0c04902e45e86f222fb82a926239c
+  UITextView+Placeholder: 77680995fcdd07c3f52ec92fe1150874a2ac89ff
+
+PODFILE CHECKSUM: 146bd08b877d0c183cf71e0c1ded072451abb0ee
+
+COCOAPODS: 1.4.0
