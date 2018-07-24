@@ -13,6 +13,7 @@ private let reuseIdentifier = "ProductCell"
 class ProductsViewController: UICollectionViewController {
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
+    
     let itemsPerRow: CGFloat = 2
     let sectionInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     let tileExtraSpace: CGFloat = 50

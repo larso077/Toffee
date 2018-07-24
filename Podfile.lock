@@ -1,21 +1,28 @@
 PODS:
-  - Alamofire (4.7.1)
+  - Alamofire (4.7.3)
   - InputMask (2.2.6)
-  - Stripe (12.1.2)
-  - UITextView+Placeholder (1.2.0)
+  - Stripe (13.1.0)
+  - "UITextView+Placeholder (1.2.1)"
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
   - InputMask (~> 2.2)
   - Stripe
-  - UITextView+Placeholder (~> 1.2)
+  - "UITextView+Placeholder (~> 1.2)"
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - InputMask
+    - Stripe
+    - "UITextView+Placeholder"
 
 SPEC CHECKSUMS:
-  Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   InputMask: 756ffc515121d07a9c81a605fa5c44e5ac5bde13
-  Stripe: 3230cdf8a8b0c04902e45e86f222fb82a926239c
-  UITextView+Placeholder: 77680995fcdd07c3f52ec92fe1150874a2ac89ff
+  Stripe: 4f043bb840721b1f30492fa77790bbf9e3508ab0
+  "UITextView+Placeholder": 0c3efd97f37ea64bde7f34cc6e90fe02e87b3909
 
 PODFILE CHECKSUM: 146bd08b877d0c183cf71e0c1ded072451abb0ee
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.2
