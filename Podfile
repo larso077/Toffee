@@ -11,6 +11,7 @@ target 'KPToffee' do
 	pod 'Alamofire', '~> 4.4’
 	pod ‘Stripe’
 	pod 'UITextView+Placeholder', '~> 1.2'
-	pod 'InputMask', '~> 2.2'	
+	pod 'InputMask', '~> 2.2'
+	pod 'BadgeSwift', '~> 5.0'	
 
 end

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		040F6D6C96778E491668603D /* Pods_KPToffee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D5F1E489F43FADD9CB956C /* Pods_KPToffee.framework */; };
 		09A0FD351EEF77DD00FF79C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09A0FD341EEF77DD00FF79C4 /* Assets.xcassets */; };
+		4714623D21079C1600F48B9C /* SCBadgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4714623C21079C1600F48B9C /* SCBadgeButton.swift */; };
 		71A540DAC94AF77E4E75D259 /* Pods_KPToffee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF062F754CEB3890CCC93025 /* Pods_KPToffee.framework */; };
 		D013F4961ECA787E00CB5DDE /* CheckoutCardInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = D013F4951ECA787E00CB5DDE /* CheckoutCardInfo.xib */; };
 		D013F4981ECA788E00CB5DDE /* CheckoutCardInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D013F4971ECA788E00CB5DDE /* CheckoutCardInfoView.swift */; };
@@ -122,6 +123,7 @@
 /* Begin PBXFileReference section */
 		09A0FD341EEF77DD00FF79C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34D5F1E489F43FADD9CB956C /* Pods_KPToffee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KPToffee.framework; path = "../../../Library/Developer/Xcode/DerivedData/KPToffee-bwtnaafmdwpmpueuxllhfldjhlop/Build/Products/Debug-iphoneos/Pods_KPToffee.framework"; sourceTree = SOURCE_ROOT; };
+		4714623C21079C1600F48B9C /* SCBadgeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCBadgeButton.swift; sourceTree = "<group>"; };
 		CF062F754CEB3890CCC93025 /* Pods_KPToffee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KPToffee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D013F4951ECA787E00CB5DDE /* CheckoutCardInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckoutCardInfo.xib; sourceTree = "<group>"; };
 		D013F4971ECA788E00CB5DDE /* CheckoutCardInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutCardInfoView.swift; sourceTree = "<group>"; };
@@ -305,9 +307,9 @@
 				D0AB891E1EDC8D6500A39606 /* ScannedCodeInfoViewController.swift */,
 				D0C0CD3B1EBFE1C1009107B4 /* ShoppingCartViewController.swift */,
 				D0D3D40F1EA1839700273897 /* SingleProductViewController.swift */,
+				D0D3D40D1E9961AB00273897 /* ProductsViewController.swift */,
 				D0FF6D6A1E8840B700466C1C /* CreateAccountViewController.swift */,
 				D0650CE31F25717A00DCB892 /* CustomerServiceTableViewController.swift */,
-				D0D3D40D1E9961AB00273897 /* ProductsViewController.swift */,
 				D05265D41F0DA76800FC663B /* EULAViewController.swift */,
 				D0A0B6B31E91BE6200B56CE6 /* GiftCardsViewController.swift */,
 				D0FF6D6C1E884A9500466C1C /* LandingViewController.swift */,
@@ -356,6 +358,7 @@
 				D0514AC61EEDEFA100F58C53 /* ShippingAddress.swift */,
 				D0514AC81EEDF0B800F58C53 /* State.swift */,
 				D0F89CB11F37E46500B03E1A /* KPLoginable.swift */,
+				4714623C21079C1600F48B9C /* SCBadgeButton.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -458,8 +461,8 @@
 				6A2EDB432106841300165E76 /* Checkout */,
 				D0CDD04A1EE630E1005AEFDB /* API */,
 				09A0FD341EEF77DD00FF79C4 /* Assets.xcassets */,
-				D0A407381EC286F1008B3D8B /* Extensions.swift */,
 				D019CFFB1EE772C400240418 /* Structs.swift */,
+				D0A407381EC286F1008B3D8B /* Extensions.swift */,
 				D0FD794B1E7C31EF007EAEFB /* LaunchScreen.storyboard */,
 				D0FD79461E7C31EF007EAEFB /* Main.storyboard */,
 				D0A0B6A61E88900600B56CE6 /* Models */,
@@ -588,6 +591,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-KPToffee/Pods-KPToffee-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BadgeSwift/BadgeSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/InputMask/InputMask.framework",
 				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
 				"${BUILT_PRODUCTS_DIR}/UITextView+Placeholder/UITextView_Placeholder.framework",
@@ -595,6 +599,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BadgeSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InputMask.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITextView_Placeholder.framework",
@@ -678,6 +683,7 @@
 				D05265D11F0D85B000FC663B /* LoadingHandler.swift in Sources */,
 				D0A0B6B41E91BE6200B56CE6 /* GiftCardsViewController.swift in Sources */,
 				D0A71A761E885790000B3B2F /* SWRevealViewController.m in Sources */,
+				4714623D21079C1600F48B9C /* SCBadgeButton.swift in Sources */,
 				D0AB891F1EDC8D6500A39606 /* ScannedCodeInfoViewController.swift in Sources */,
 				D0C0CD381EBFD5C2009107B4 /* KPShoppingCart.swift in Sources */,
 				D0AE34A61EFB406E004E8C61 /* MediaInfo.swift in Sources */,

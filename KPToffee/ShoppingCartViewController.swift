@@ -114,7 +114,9 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             if let product = KPShoppingCart.instance.products?[indexPath.row] {
+                KPShoppingCart.instance.productCount -= product.quantity
                 KPShoppingCart.instance.removeProduct(product: product.product, quantity: product.quantity)
+                
                 tableView.deleteRows(at: [indexPath], with: .fade)
                 self.setCartValues()
             }

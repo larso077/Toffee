@@ -13,6 +13,10 @@ private let reuseIdentifier = "ProductCell"
 class ProductsViewController: UICollectionViewController {
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
+    var currProductCount: Int = 0
+
+    
+    
     
     let itemsPerRow: CGFloat = 2
     let sectionInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
@@ -20,8 +24,24 @@ class ProductsViewController: UICollectionViewController {
     var products: [Product] = []
     var isUnwinding: Bool = false
 
+
+    
+    @objc func cartSegue(sender: UIBarButtonItem!) {
+        performSegue(withIdentifier: "cartSegue", sender: nil)
+    }
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
+        
+
+
+        
 
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
@@ -42,6 +62,20 @@ class ProductsViewController: UICollectionViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        let notificationButton = BasketBadgeButton()
+        notificationButton.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
+        notificationButton.setImage(UIImage(named: "shopping bag")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        notificationButton.badgeEdgeInsets = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 15)
+        let theShoppingCart = KPShoppingCart.instance
+        let quantity = theShoppingCart.productCount
+        notificationButton.badge = "\(quantity)"
+        notificationButton.addTarget(self, action: #selector(cartSegue), for: .touchUpInside)
+        
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: notificationButton)
+        
+        
         if isUnwinding {
             KPShoppingCart.instance.products?.removeAll()
             isUnwinding = false
@@ -292,4 +326,5 @@ extension ProductsViewController : KPLoginable {
     func showLogin() {
         performSegue(withIdentifier: "showLoginForProductsSegue", sender: self)
     }
+    
 }

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D05B00B1EFEB47F61754848C519D5C8B"
-               BlueprintName = "UITextView+Placeholder"
+               BlueprintIdentifier = "2BB3C7A0D901BA50C22490631DD34A01"
+               BlueprintName = "BadgeSwift"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "UITextView+Placeholder.framework">
+               BuildableName = "BadgeSwift.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

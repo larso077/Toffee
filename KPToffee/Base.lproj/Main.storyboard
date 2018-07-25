@@ -342,6 +342,7 @@
                     <connections>
                         <outlet property="menuButton" destination="xnC-jN-O0P" id="2Co-ct-cr5"/>
                         <segue destination="Tpg-SC-gR4" kind="presentation" identifier="showLoginForProductsSegue" id="4Ff-Cx-ypy"/>
+                        <segue destination="XUy-Vv-nb7" kind="show" identifier="cartSegue" id="QEJ-BS-Onf"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y3o-Mi-FQj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1101,6 +1102,7 @@
                         <barButtonItem key="rightBarButtonItem" image="shopping bag" id="plT-F5-RZ6">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
+                                <action selector="performSegueCart:" destination="kCq-o2-N7r" id="7Xo-1D-Zi1"/>
                                 <segue destination="XUy-Vv-nb7" kind="show" identifier="showCartForScanCodeSegue" id="fyl-uI-RdP"/>
                             </connections>
                         </barButtonItem>
@@ -1115,6 +1117,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0rd-K2-W9z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="kCq-o2-N7r" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-1354" y="339"/>
         </scene>
@@ -1346,7 +1349,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Re-enter password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="r02-Tr-Fuy" customClass="KPTextField" customModule="KPToffee" customModuleProvider="target">
-                                <rect key="frame" x="20" y="290" width="374" height="49"/>
+                                <rect key="frame" x="20" y="234" width="374" height="49"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="W5D-vE-Cd4"/>
@@ -2094,9 +2097,9 @@
         <segue reference="1a7-yP-XPZ"/>
         <segue reference="E6A-x8-UIi"/>
         <segue reference="4Ff-Cx-ypy"/>
-        <segue reference="z1q-cD-WbQ"/>
-        <segue reference="Qke-tx-vzu"/>
-        <segue reference="o7D-Yy-ddl"/>
+        <segue reference="8LL-Ii-h3r"/>
+        <segue reference="lAP-R9-IeG"/>
+        <segue reference="gGg-3W-qXa"/>
         <segue reference="ife-kZ-MaB"/>
     </inferredMetricsTieBreakers>
 </document>
