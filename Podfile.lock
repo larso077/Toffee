@@ -1,13 +1,11 @@
 PODS:
   - Alamofire (4.7.3)
-  - BadgeSwift (5.0.1)
   - InputMask (2.2.6)
   - Stripe (13.1.0)
   - "UITextView+Placeholder (1.2.1)"
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
-  - BadgeSwift (~> 5.0)
   - InputMask (~> 2.2)
   - Stripe
   - "UITextView+Placeholder (~> 1.2)"
@@ -15,18 +13,16 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
-    - BadgeSwift
     - InputMask
     - Stripe
     - "UITextView+Placeholder"
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
-  BadgeSwift: 3defa56f504bfb46f2300122c4a565ec9e405c1e
   InputMask: 756ffc515121d07a9c81a605fa5c44e5ac5bde13
   Stripe: 4f043bb840721b1f30492fa77790bbf9e3508ab0
   "UITextView+Placeholder": 0c3efd97f37ea64bde7f34cc6e90fe02e87b3909
 
-PODFILE CHECKSUM: f448f4c509e74133d0d1d54b8afab1639a5284ea
+PODFILE CHECKSUM: 6d262aa29436bcb468e7c48bbfeea18a4a4631c2
 
 COCOAPODS: 1.5.2
