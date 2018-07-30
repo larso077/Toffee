@@ -1398,7 +1398,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Re-enter password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="r02-Tr-Fuy" customClass="KPTextField" customModule="KPToffee" customModuleProvider="target">
-                                <rect key="frame" x="20" y="234" width="374" height="49"/>
+                                <rect key="frame" x="20" y="260" width="374" height="23"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="W5D-vE-Cd4"/>

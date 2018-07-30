@@ -26,8 +26,12 @@ class ProductsViewController: UICollectionViewController {
 
 
     
-    @objc func cartSegue(sender: UIBarButtonItem!) {
-        performSegue(withIdentifier: "cartSegue", sender: nil)
+    @objc func showCartForProductsSegue(sender: UIBarButtonItem!) {
+        if KPAuthentication.shared.isLoggedIn() {
+            performSegue(withIdentifier: "showCartForProductsSegue", sender: nil)
+        } else {
+            showLogin()
+        }
     }
     
     
@@ -70,7 +74,7 @@ class ProductsViewController: UICollectionViewController {
         let theShoppingCart = KPShoppingCart.instance
         let quantity = theShoppingCart.productCount
         notificationButton.badge = "\(quantity)"
-        notificationButton.addTarget(self, action: #selector(cartSegue), for: .touchUpInside)
+        notificationButton.addTarget(self, action: #selector(showCartForProductsSegue), for: .touchUpInside)
         
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: notificationButton)
