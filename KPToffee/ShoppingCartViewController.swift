@@ -82,17 +82,20 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
         return rowCount
     }
     
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "shoppingCartCell", for: indexPath) as! KPShoppingCartCell
         let currentProduct = KPShoppingCart.instance.products![indexPath.row]
         
+        
         cell.lblProductTitle?.text = currentProduct.product.name
-        cell.lblQuantity.text = "Quantity: \(currentProduct.quantity)"
+        cell.lblQuantity.text = "\(currentProduct.quantity)"
         cell.imgProductImage.downloadedFrom(link: currentProduct.product.images[0])
         
         if currentProduct.total != currentProduct.saleTotal {
-            cell.lblProductPrice.attributedText = getStrikethroughText(text: "$\(currentProduct.total.format(f: ".2"))")
-            cell.lblProductSalePrice.text = "$\(currentProduct.saleTotal.format(f: ".2"))"
+            cell.lblProductPrice.attributedText = getStrikethroughText(text: "$\(currentProduct.total.format(f: ".2")) each")
+            cell.lblProductSalePrice.text = "$\(currentProduct.saleTotal.format(f: ".2")) each"
         } else {
             cell.lblProductPrice.text = "$\(currentProduct.saleTotal.format(f: ".2"))"
             cell.lblProductSalePrice.text = ""
@@ -100,6 +103,35 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
         
         return cell
     }
+    
+    
+    @IBAction func doIncreaseQuantity(_ sender: Any) { //increase button
+        let buttonPosition = (sender as AnyObject).convert(CGPoint.zero, to: tableView)
+        let indexPath = tableView.indexPathForRow(at: buttonPosition)
+        if indexPath != nil {
+            let currentProduct = KPShoppingCart.instance.products! [(indexPath?.row)!]
+            if currentProduct.quantity < 99 { 
+                currentProduct.quantity += 1
+            }
+        }
+        self.setCartValues()
+    }
+    
+    @IBAction func doDecreaseQuantity(_ sender: Any) { //decrease button
+        let buttonPosition = (sender as AnyObject).convert(CGPoint.zero, to: tableView)
+        let indexPath = tableView.indexPathForRow(at: buttonPosition)
+        if indexPath != nil {
+            let currentProduct = KPShoppingCart.instance.products! [(indexPath?.row)!]
+            if currentProduct.quantity > 1 {
+                currentProduct.quantity -= 1
+            }
+        }
+        self.setCartValues()
+    }
+    
+    
+
+    
     
     fileprivate func getStrikethroughText(text: String) -> NSAttributedString {
         let attString = NSMutableAttributedString(string: text)

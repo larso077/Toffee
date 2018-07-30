@@ -111,7 +111,7 @@
 		D0F89CB21F37E46500B03E1A /* KPLoginable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F89CB11F37E46500B03E1A /* KPLoginable.swift */; };
 		D0FD4C25207A964B004A09F8 /* kp-toffee-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D0FD4C24207A964B004A09F8 /* kp-toffee-logo.png */; };
 		D0FD79431E7C31EF007EAEFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FD79421E7C31EF007EAEFB /* AppDelegate.swift */; };
-		D0FD79481E7C31EF007EAEFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0FD79461E7C31EF007EAEFB /* Main.storyboard */; };
+		D0FD79481E7C31EF007EAEFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0FD79461E7C31EF007EAEFB /* Main.storyboard */; settings = {ASSET_TAGS = (1, ); }; };
 		D0FD794D1E7C31EF007EAEFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0FD794B1E7C31EF007EAEFB /* LaunchScreen.storyboard */; };
 		D0FF6D631E8828CE00466C1C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FF6D621E8828CE00466C1C /* LoginViewController.swift */; };
 		D0FF6D691E883D8A00466C1C /* KPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FF6D681E883D8A00466C1C /* KPTextField.swift */; };
@@ -315,8 +315,8 @@
 				D0FF6D6C1E884A9500466C1C /* LandingViewController.swift */,
 				D0A71A781E887A3D000B3B2F /* LoginNavigationViewController.swift */,
 				D0FF6D621E8828CE00466C1C /* LoginViewController.swift */,
-				D05265D21F0DA01D00FC663B /* MediaMessageViewController.swift */,
 				D0AE34A91EFB4D89004E8C61 /* MediaPhotoViewController.swift */,
+				D05265D21F0DA01D00FC663B /* MediaMessageViewController.swift */,
 				D0AE34A31EFB4056004E8C61 /* MediaVideoViewController.swift */,
 				D0A71A7A1E8883C5000B3B2F /* MenuTableTableViewController.swift */,
 				D0B30AEB1E91DEA9000D8A49 /* TestTableTableViewController.swift */,
@@ -500,6 +500,9 @@
 		D0FD79371E7C31EF007EAEFB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					1,
+				);
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Erik Fisch";
