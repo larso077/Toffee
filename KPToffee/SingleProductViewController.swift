@@ -60,6 +60,7 @@ class SingleProductViewController: UIViewController, UIScrollViewDelegate {
     @IBAction func btnAddToCart(_ sender: Any) {
         if let safeProduct = product {
             KPShoppingCart.instance.addProduct(product: safeProduct, quantity: Int(txtQuantity.text!)!)
+            KPShoppingCart.instance.productCount += Int(txtQuantity.text!)!
             showAddedToCart()
         }
     }

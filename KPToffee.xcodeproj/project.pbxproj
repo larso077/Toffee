@@ -11,6 +11,7 @@
 		09A0FD351EEF77DD00FF79C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09A0FD341EEF77DD00FF79C4 /* Assets.xcassets */; };
 		3C840A55D091E277B40DF904 /* Pods_KPToffee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 769B43A020281A13DE595B99 /* Pods_KPToffee.framework */; };
 		9D144F382108E08E00E63127 /* SavedItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D144F372108E08E00E63127 /* SavedItemsTableViewController.swift */; };
+		9D147CE32118D37A0091BF32 /* SCBadgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D147CE22118D37A0091BF32 /* SCBadgeButton.swift */; };
 		9D40D26B2110AB210005B280 /* KPSavedForLater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D40D26A2110AB210005B280 /* KPSavedForLater.swift */; };
 		9D9F6C922107B0CD0065B8B9 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9F6C912107B0CD0065B8B9 /* ResetPasswordViewController.swift */; };
 		9DE3AFAA210F9B4200AB7891 /* SavedItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE3AFA9210F9B4200AB7891 /* SavedItemCell.swift */; };
@@ -128,6 +129,7 @@
 		34D5F1E489F43FADD9CB956C /* Pods_KPToffee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KPToffee.framework; path = "../../../Library/Developer/Xcode/DerivedData/KPToffee-bwtnaafmdwpmpueuxllhfldjhlop/Build/Products/Debug-iphoneos/Pods_KPToffee.framework"; sourceTree = SOURCE_ROOT; };
 		769B43A020281A13DE595B99 /* Pods_KPToffee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KPToffee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D144F372108E08E00E63127 /* SavedItemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedItemsTableViewController.swift; sourceTree = "<group>"; };
+		9D147CE22118D37A0091BF32 /* SCBadgeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCBadgeButton.swift; sourceTree = "<group>"; };
 		9D40D26A2110AB210005B280 /* KPSavedForLater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPSavedForLater.swift; sourceTree = "<group>"; };
 		9D9F6C912107B0CD0065B8B9 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		9DE3AFA9210F9B4200AB7891 /* SavedItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedItemCell.swift; sourceTree = "<group>"; };
@@ -368,6 +370,7 @@
 				D0514AC81EEDF0B800F58C53 /* State.swift */,
 				D0F89CB11F37E46500B03E1A /* KPLoginable.swift */,
 				9D40D26A2110AB210005B280 /* KPSavedForLater.swift */,
+				9D147CE22118D37A0091BF32 /* SCBadgeButton.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -710,6 +713,7 @@
 				D0514ACD1EEDF66700F58C53 /* PaymentInformation.swift in Sources */,
 				D0A71A791E887A3D000B3B2F /* LoginNavigationViewController.swift in Sources */,
 				D0AC32DA1F1BE7CD0091BAA2 /* CheckoutReviewBasicInfo.swift in Sources */,
+				9D147CE32118D37A0091BF32 /* SCBadgeButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
