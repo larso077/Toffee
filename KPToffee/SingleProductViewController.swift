@@ -18,6 +18,7 @@ class SingleProductViewController: UIViewController, UIScrollViewDelegate {
     
     var product: Product?
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -59,8 +60,15 @@ class SingleProductViewController: UIViewController, UIScrollViewDelegate {
     @IBAction func btnAddToCart(_ sender: Any) {
         if let safeProduct = product {
             KPShoppingCart.instance.addProduct(product: safeProduct, quantity: Int(txtQuantity.text!)!)
-            
             showAddedToCart()
+        }
+    }
+    
+    @IBAction func btnSaveForLater(_ sender: Any) {
+        if let safeProduct = product {
+            KPSavedForLater.instance.addProduct(product: safeProduct, quantity: 1)
+            
+            showSavedForLater()
         }
     }
     
@@ -82,6 +90,18 @@ class SingleProductViewController: UIViewController, UIScrollViewDelegate {
     
     fileprivate func showAddedToCart() -> Void {
         let alert = UIAlertController(title: "Added to Cart!", message: "", preferredStyle: .alert)
+        let delay = DispatchTime(uptimeNanoseconds: 0) + 1
+        
+        present(alert, animated: true, completion: nil)
+        
+        DispatchQueue.main.asyncAfter(deadline: delay){
+            alert.dismiss(animated: true, completion: nil)
+            self.performSegue(withIdentifier: "unwindToProductHomeSegue", sender: self)
+        }
+    }
+    
+    fileprivate func showSavedForLater() -> Void {
+        let alert = UIAlertController(title: "Saved for Later!", message: "", preferredStyle: .alert)
         let delay = DispatchTime(uptimeNanoseconds: 0) + 1
         
         present(alert, animated: true, completion: nil)

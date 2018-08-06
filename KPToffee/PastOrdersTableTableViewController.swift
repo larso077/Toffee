@@ -142,7 +142,6 @@ class PastOrdersTableTableViewController: UITableViewController {
             let index = tableView.indexPathForSelectedRow?.row
             let dest = segue.destination as! CheckoutModalViewController
             
-            dest.order = orders[index!]
             dest.isForCheckout = false
         }
     }

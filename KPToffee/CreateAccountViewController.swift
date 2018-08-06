@@ -13,13 +13,15 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var txtLastName: KPTextField!
     @IBOutlet weak var txtEmail: KPTextField!
     @IBOutlet weak var txtPassword: KPTextField!
+    @IBOutlet weak var validatePassword: KPTextField!
     @IBOutlet weak var swSendOffers: UISwitch!
     @IBOutlet weak var createAccountButton: UIButton!
     @IBOutlet weak var cancelBarButton: UIBarButtonItem!
-
+    @IBOutlet weak var passwordRequirements: UIStackView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        passwordRequirements.isHidden = true
         txtFirstName.delegate = self
         txtLastName.delegate = self
         txtEmail.delegate = self
@@ -77,6 +79,13 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         
         guard let password = txtPassword.text, password.isValidPassword() else {
             MessageCenter.showMessage(rootViewController: self, message: "Please enter a valid password")
+            passwordRequirements.isHidden = false
+            return
+        }
+        
+        guard let validPassword = validatePassword.text,
+            validPassword == txtPassword.text else {
+            MessageCenter.showMessage(rootViewController: self, message: "Please make sure both passwords match.")
             return
         }
         
