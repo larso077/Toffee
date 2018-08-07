@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol UpdateBadgeDelegate: class {
+    func updateQuantity(_ quantity: Int?)
+}
+
 class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var lblSubtotal: UILabel!
@@ -15,6 +19,13 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var lblShipping: UILabel!
     @IBOutlet weak var lblTotal: UILabel!
     @IBOutlet weak var btnCheckout: UIButton!
+    
+    weak var delegate: UpdateBadgeDelegate?
+    
+    func quantityChanged() {
+        let quantityTemp = KPShoppingCart.instance.productCount
+        delegate?.updateQuantity(quantityTemp)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -112,9 +123,11 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
             let currentProduct = KPShoppingCart.instance.products! [(indexPath?.row)!]
             if currentProduct.quantity < 99 { 
                 currentProduct.quantity += 1
+                KPShoppingCart.instance.productCount += 1
             }
         }
         self.setCartValues()
+        quantityChanged()
     }
     
     @IBAction func doDecreaseQuantity(_ sender: Any) { //decrease button
@@ -124,9 +137,11 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
             let currentProduct = KPShoppingCart.instance.products! [(indexPath?.row)!]
             if currentProduct.quantity > 1 {
                 currentProduct.quantity -= 1
+                KPShoppingCart.instance.productCount -= 1
             }
         }
         self.setCartValues()
+        quantityChanged()
     }
     
     
