@@ -90,7 +90,7 @@ class SingleProductViewController: UIViewController, UIScrollViewDelegate {
     }
     
     fileprivate func showAddedToCart() -> Void {
-        let alert = UIAlertController(title: "Added to Cart!", message: "", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Added to Basket!", message: "", preferredStyle: .alert)
         let delay = DispatchTime(uptimeNanoseconds: 0) + 1
         
         present(alert, animated: true, completion: nil)

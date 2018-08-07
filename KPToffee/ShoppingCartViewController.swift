@@ -56,7 +56,7 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
     fileprivate func getEmptyCartBackground() -> UIView {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
         
-        label.text = "Your cart is currently empty!"
+        label.text = "Your basket is currently empty!"
         label.textAlignment = .center
         label.sizeToFit()
         

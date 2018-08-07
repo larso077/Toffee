@@ -12,6 +12,7 @@
 		3C840A55D091E277B40DF904 /* Pods_KPToffee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 769B43A020281A13DE595B99 /* Pods_KPToffee.framework */; };
 		9D144F382108E08E00E63127 /* SavedItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D144F372108E08E00E63127 /* SavedItemsTableViewController.swift */; };
 		9D147CE32118D37A0091BF32 /* SCBadgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D147CE22118D37A0091BF32 /* SCBadgeButton.swift */; };
+		9D165B19211A05620061DFE6 /* RetailLocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D165B18211A05620061DFE6 /* RetailLocationsViewController.swift */; };
 		9D40D26B2110AB210005B280 /* KPSavedForLater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D40D26A2110AB210005B280 /* KPSavedForLater.swift */; };
 		9D9F6C922107B0CD0065B8B9 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9F6C912107B0CD0065B8B9 /* ResetPasswordViewController.swift */; };
 		9DE3AFAA210F9B4200AB7891 /* SavedItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE3AFA9210F9B4200AB7891 /* SavedItemCell.swift */; };
@@ -130,6 +131,7 @@
 		769B43A020281A13DE595B99 /* Pods_KPToffee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KPToffee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D144F372108E08E00E63127 /* SavedItemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedItemsTableViewController.swift; sourceTree = "<group>"; };
 		9D147CE22118D37A0091BF32 /* SCBadgeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCBadgeButton.swift; sourceTree = "<group>"; };
+		9D165B18211A05620061DFE6 /* RetailLocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetailLocationsViewController.swift; sourceTree = "<group>"; };
 		9D40D26A2110AB210005B280 /* KPSavedForLater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPSavedForLater.swift; sourceTree = "<group>"; };
 		9D9F6C912107B0CD0065B8B9 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		9DE3AFA9210F9B4200AB7891 /* SavedItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedItemCell.swift; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 				D0A71A7A1E8883C5000B3B2F /* MenuTableTableViewController.swift */,
 				D0B30AEB1E91DEA9000D8A49 /* TestTableTableViewController.swift */,
 				D04829761F0C11F300A74A97 /* YourAccountTableViewController.swift */,
+				9D165B18211A05620061DFE6 /* RetailLocationsViewController.swift */,
 				D0A0B6AF1E91BB4500B56CE6 /* YourAccountViewController.swift */,
 			);
 			name = Views;
@@ -704,6 +707,7 @@
 				D0A407391EC286F1008B3D8B /* Extensions.swift in Sources */,
 				D0514AC91EEDF0B800F58C53 /* State.swift in Sources */,
 				D0514AC31EEDD92100F58C53 /* CheckoutValidationValueSet.swift in Sources */,
+				9D165B19211A05620061DFE6 /* RetailLocationsViewController.swift in Sources */,
 				D0F89CB21F37E46500B03E1A /* KPLoginable.swift in Sources */,
 				D0E2F8ED1EC772B8000FC771 /* CheckoutShippingAddressView.swift in Sources */,
 				D04829771F0C11F300A74A97 /* YourAccountTableViewController.swift in Sources */,
