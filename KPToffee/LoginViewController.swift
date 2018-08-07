@@ -57,7 +57,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        guard let password = txtPassword.text, password.isValidPassword() else {
+        guard let password = txtPassword.text?.trimmingCharacters(in: .whitespacesAndNewlines), password.isValidPassword() else {
             MessageCenter.showMessage(rootViewController: self, message: "Please enter a valid password")
             return
         }

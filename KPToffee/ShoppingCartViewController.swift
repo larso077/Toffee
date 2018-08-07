@@ -18,7 +18,7 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.tableFooterView = UIView()
         
         setCartValues()
@@ -56,13 +56,13 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
     fileprivate func getEmptyCartBackground() -> UIView {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
         
-        label.text = "Your cart is currently empty!"
+        label.text = "Your basket is currently empty!"
         label.textAlignment = .center
         label.sizeToFit()
         
         return label
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -82,17 +82,20 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
         return rowCount
     }
     
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "shoppingCartCell", for: indexPath) as! KPShoppingCartCell
         let currentProduct = KPShoppingCart.instance.products![indexPath.row]
         
+        
         cell.lblProductTitle?.text = currentProduct.product.name
-        cell.lblQuantity.text = "Quantity: \(currentProduct.quantity)"
+        cell.lblQuantity.text = "\(currentProduct.quantity)"
         cell.imgProductImage.downloadedFrom(link: currentProduct.product.images[0])
         
         if currentProduct.total != currentProduct.saleTotal {
-            cell.lblProductPrice.attributedText = getStrikethroughText(text: "$\(currentProduct.total.format(f: ".2"))")
-            cell.lblProductSalePrice.text = "$\(currentProduct.saleTotal.format(f: ".2"))"
+            cell.lblProductPrice.attributedText = getStrikethroughText(text: "$\(currentProduct.total.format(f: ".2")) each")
+            cell.lblProductSalePrice.text = "$\(currentProduct.saleTotal.format(f: ".2")) each"
         } else {
             cell.lblProductPrice.text = "$\(currentProduct.saleTotal.format(f: ".2"))"
             cell.lblProductSalePrice.text = ""
@@ -100,6 +103,35 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
         
         return cell
     }
+    
+    
+    @IBAction func doIncreaseQuantity(_ sender: Any) { //increase button
+        let buttonPosition = (sender as AnyObject).convert(CGPoint.zero, to: tableView)
+        let indexPath = tableView.indexPathForRow(at: buttonPosition)
+        if indexPath != nil {
+            let currentProduct = KPShoppingCart.instance.products! [(indexPath?.row)!]
+            if currentProduct.quantity < 99 { 
+                currentProduct.quantity += 1
+            }
+        }
+        self.setCartValues()
+    }
+    
+    @IBAction func doDecreaseQuantity(_ sender: Any) { //decrease button
+        let buttonPosition = (sender as AnyObject).convert(CGPoint.zero, to: tableView)
+        let indexPath = tableView.indexPathForRow(at: buttonPosition)
+        if indexPath != nil {
+            let currentProduct = KPShoppingCart.instance.products! [(indexPath?.row)!]
+            if currentProduct.quantity > 1 {
+                currentProduct.quantity -= 1
+            }
+        }
+        self.setCartValues()
+    }
+    
+    
+    
+    
     
     fileprivate func getStrikethroughText(text: String) -> NSAttributedString {
         let attString = NSMutableAttributedString(string: text)
@@ -114,21 +146,24 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             if let product = KPShoppingCart.instance.products?[indexPath.row] {
+                KPShoppingCart.instance.productCount -= product.quantity
                 KPShoppingCart.instance.removeProduct(product: product.product, quantity: product.quantity)
+                
                 tableView.deleteRows(at: [indexPath], with: .fade)
                 self.setCartValues()
             }
         }
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
+

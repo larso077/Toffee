@@ -13,13 +13,15 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var txtLastName: KPTextField!
     @IBOutlet weak var txtEmail: KPTextField!
     @IBOutlet weak var txtPassword: KPTextField!
+    @IBOutlet weak var validatePassword: KPTextField!
     @IBOutlet weak var swSendOffers: UISwitch!
     @IBOutlet weak var createAccountButton: UIButton!
     @IBOutlet weak var cancelBarButton: UIBarButtonItem!
-
+    @IBOutlet weak var passwordRequirements: UIStackView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        passwordRequirements.isHidden = true
         txtFirstName.delegate = self
         txtLastName.delegate = self
         txtEmail.delegate = self
@@ -60,23 +62,29 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func validateValuesAndSend() {
-        guard let firstName = txtFirstName.text, firstName.count > 2 else {
+        guard let firstName = txtFirstName.text?.trimmingCharacters(in: .whitespacesAndNewlines), firstName.count > 2 else {
             MessageCenter.showMessage(rootViewController: self, message: "Please enter a first name")
             return
         }
         
-        guard let lastName = txtLastName.text, lastName.count > 2 else {
+        guard let lastName = txtLastName.text?.trimmingCharacters(in: .whitespacesAndNewlines), lastName.count > 2 else {
             MessageCenter.showMessage(rootViewController: self, message: "Please enter a last name")
             return
         }
         
-        guard let email = txtEmail.text, email.isValidEmailAddress() else {
+        guard let email = txtEmail.text?.trimmingCharacters(in: .whitespacesAndNewlines), email.isValidEmailAddress() else {
             MessageCenter.showMessage(rootViewController: self, message: "Please enter a valid email")
             return
         }
         
-        guard let password = txtPassword.text, password.isValidPassword() else {
+        guard let password = txtPassword.text?.trimmingCharacters(in: .whitespacesAndNewlines), password.isValidPassword() else {
             MessageCenter.showMessage(rootViewController: self, message: "Please enter a valid password")
+            return
+        }
+        
+        guard let validPassword = validatePassword.text,
+            validPassword == txtPassword.text else {
+            MessageCenter.showMessage(rootViewController: self, message: "Please make sure both passwords match.")
             return
         }
         
