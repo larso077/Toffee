@@ -62,24 +62,23 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func validateValuesAndSend() {
-        guard let firstName = txtFirstName.text, firstName.count > 2 else {
+        guard let firstName = txtFirstName.text?.trimmingCharacters(in: .whitespacesAndNewlines), firstName.count > 2 else {
             MessageCenter.showMessage(rootViewController: self, message: "Please enter a first name")
             return
         }
         
-        guard let lastName = txtLastName.text, lastName.count > 2 else {
+        guard let lastName = txtLastName.text?.trimmingCharacters(in: .whitespacesAndNewlines), lastName.count > 2 else {
             MessageCenter.showMessage(rootViewController: self, message: "Please enter a last name")
             return
         }
         
-        guard let email = txtEmail.text, email.isValidEmailAddress() else {
+        guard let email = txtEmail.text?.trimmingCharacters(in: .whitespacesAndNewlines), email.isValidEmailAddress() else {
             MessageCenter.showMessage(rootViewController: self, message: "Please enter a valid email")
             return
         }
         
-        guard let password = txtPassword.text, password.isValidPassword() else {
+        guard let password = txtPassword.text?.trimmingCharacters(in: .whitespacesAndNewlines), password.isValidPassword() else {
             MessageCenter.showMessage(rootViewController: self, message: "Please enter a valid password")
-            passwordRequirements.isHidden = false
             return
         }
         

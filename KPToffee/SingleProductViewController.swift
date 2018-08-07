@@ -15,6 +15,7 @@ class SingleProductViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var txtQuantity: UITextField!
     @IBOutlet weak var productImageScrollView: UIScrollView!
     @IBOutlet weak var lblProductSalePrice: UILabel!
+    @IBOutlet weak var totalPrice: UILabel!
     
     var product: Product?
     
@@ -28,9 +29,10 @@ class SingleProductViewController: UIViewController, UIScrollViewDelegate {
             if safeProduct.price != safeProduct.salePrice {
                 lblProductPrice.attributedText = getStrikethroughText(text: "$\(safeProduct.price.format(f: ".2"))")
                 lblProductSalePrice.text = "$\(safeProduct.salePrice.format(f: ".2"))"
+                totalPrice.text = "$\(safeProduct.salePrice.format(f: ".2"))"
             } else {
                 lblProductPrice.text = "$\(safeProduct.salePrice.format(f: ".2"))"
-                lblProductSalePrice.text = ""
+                totalPrice.text = "$\(safeProduct.salePrice.format(f: ".2"))"
             }
             
             txtProductDescription.text = safeProduct.productDescription
@@ -58,9 +60,26 @@ class SingleProductViewController: UIViewController, UIScrollViewDelegate {
     }
     
     @IBAction func btnAddToCart(_ sender: Any) {
+        let price : String = totalPrice.text!
+        let quantity : String = txtQuantity.text!
+        let itemName : String = lblProductName.text!
+        
         if let safeProduct = product {
-            KPShoppingCart.instance.addProduct(product: safeProduct, quantity: Int(txtQuantity.text!)!)
-            showAddedToCart()
+            let alert = UIAlertController(title: "Are you sure?", message: "Are you sure you want to add \(quantity) \(itemName) for \(price) to your basket?", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Yes", comment: ""), style: .default, handler: { _ in
+                alert.dismiss(animated: true, completion: nil)
+                
+                KPShoppingCart.instance.addProduct(product: safeProduct, quantity: Int(self.txtQuantity.text!)!)
+                KPShoppingCart.instance.productCount += Int(self.txtQuantity.text!)!
+                
+                self.showAddedToCart()
+            }))
+            alert.addAction(UIAlertAction(title: NSLocalizedString("No", comment: ""), style: .destructive, handler: { _ in
+                alert.dismiss(animated: true, completion: nil)
+            }))
+            
+            present(alert, animated: true, completion: nil)
         }
     }
     
@@ -74,22 +93,33 @@ class SingleProductViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func decreaseQuantity(_ sender: UIButton) {
         let currentQuantity = Int(txtQuantity.text!)
+        let price = product!.price
+        let amount = Float(currentQuantity!)
+        let oldPrice = price * amount
+        let finalPrice = oldPrice - price
         
         if currentQuantity! > 1 {
             txtQuantity.text = "\(currentQuantity! - 1)"
-        }
+            totalPrice.text = "$\(finalPrice.format(f: ".2"))"
     }
+}
     
     @IBAction func increaseQuantity(_ sender: UIButton) {
         let currentQuantity = Int(txtQuantity.text!)
+        let price = product!.price
+        let amount = Float(currentQuantity! + 1)
+        let finalPrice = price * amount
         
         if currentQuantity! <= 99 {
             txtQuantity.text = "\(currentQuantity! + 1)"
+            totalPrice.text = "$\(finalPrice.format(f: ".2"))"
         }
     }
     
     fileprivate func showAddedToCart() -> Void {
-        let alert = UIAlertController(title: "Added to Cart!", message: "", preferredStyle: .alert)
+        let price : String = totalPrice.text!
+        
+        let alert = UIAlertController(title: "Added to Basket!", message: "\(price)", preferredStyle: .alert)
         let delay = DispatchTime(uptimeNanoseconds: 0) + 1
         
         present(alert, animated: true, completion: nil)

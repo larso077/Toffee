@@ -14,7 +14,7 @@ class MenuTableTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(70)
     }
@@ -40,3 +40,4 @@ class MenuTableTableViewController: UITableViewController {
         return "KP"
     }
 }
+

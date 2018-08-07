@@ -13,6 +13,21 @@ public class KPShoppingCart {
     
     var products: [ProductQuantity]? = []
     
+    var productCount1: Int {
+        get {
+            let productsList = products
+            var productCountVar = 0
+            for productsQ in products! {
+                let singleCount = productsQ.quantity
+                productCountVar += singleCount
+            }
+            return productCountVar
+        }
+    }
+    
+    
+    var productCount: Int = 0
+    
     var subtotal: Float {
         get {
             var total: Float = 0
@@ -47,23 +62,23 @@ public class KPShoppingCart {
     
     func addProduct(product: Product, quantity: Int) {
         let results = products?.filter { $0.product.productId == product.productId }
-        
         if let safeResults = results {
             if !safeResults.isEmpty {
                 safeResults[0].quantity += quantity
             } else {
                 products?.append(ProductQuantity(product: product, quantity: quantity))
+                
             }
         }
     }
     
     func removeProduct(product: Product, quantity: Int) {
         let results = products?.filter { $0.product.productId == product.productId }
-        
         if let safeResults = results {
             let currentProduct = safeResults[0]
             
             currentProduct.quantity -= quantity
+            
             
             if currentProduct.quantity <= 0 {
                 let index = products?.index(where: { (item) -> Bool in

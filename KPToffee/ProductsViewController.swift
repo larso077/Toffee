@@ -13,18 +13,43 @@ private let reuseIdentifier = "ProductCell"
 class ProductsViewController: UICollectionViewController {
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
+    var currProductCount: Int = 0
+    
+    
+    
+    
     let itemsPerRow: CGFloat = 2
     let sectionInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     let tileExtraSpace: CGFloat = 50
     var products: [Product] = []
     var isUnwinding: Bool = false
-
+    
+    
+    
+    @objc func showCartForProductsSegue(sender: UIBarButtonItem!) {
+        if KPAuthentication.shared.isLoggedIn() {
+            performSegue(withIdentifier: "showCartForProductsSegue", sender: nil)
+        } else {
+            showLogin()
+        }
+    }
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+        
+        
+        
+        
+        
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
+        
         // Do any additional setup after loading the view.
         if revealViewController() != nil {
             menuButton.target = revealViewController()
@@ -32,7 +57,7 @@ class ProductsViewController: UICollectionViewController {
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         }
-    
+        
         loadProducts();
         
         menuButton.width = CGFloat(0.0)
@@ -41,6 +66,20 @@ class ProductsViewController: UICollectionViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        let notificationButton = BasketBadgeButton()
+        notificationButton.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
+        notificationButton.setImage(UIImage(named: "shopping bag")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        notificationButton.badgeEdgeInsets = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 15)
+        let theShoppingCart = KPShoppingCart.instance
+        let quantity = theShoppingCart.productCount
+        notificationButton.badge = "\(quantity)"
+        notificationButton.addTarget(self, action: #selector(showCartForProductsSegue), for: .touchUpInside)
+        
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: notificationButton)
+        
+        
         if isUnwinding {
             KPShoppingCart.instance.products?.removeAll()
             isUnwinding = false
@@ -142,7 +181,7 @@ class ProductsViewController: UICollectionViewController {
             }
         }
     }
-
+    
     private func addProduct(jsonProduct: [String: Any?]) {
         let product = Product()
         
@@ -159,10 +198,10 @@ class ProductsViewController: UICollectionViewController {
         
         products.append(product)
     }
-
+    
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? SingleProductViewController {
@@ -185,17 +224,17 @@ class ProductsViewController: UICollectionViewController {
     @IBAction func unwindToProducts(segue: UIStoryboardSegue) {
         isUnwinding = true
     }
-
+    
     // MARK: UICollectionViewDataSource
-
+    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return products.count
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
         let imageHeight = cell.frame.height - tileExtraSpace
@@ -210,7 +249,7 @@ class ProductsViewController: UICollectionViewController {
         cell.contentView.addSubview(getCellImage(cell: cell, product: product))
         cell.contentView.addSubview(titleLabel)
         cell.contentView.addSubview(getCellNameLabel(cell: cell, text: "$\(product.salePrice.format(f: ".2"))", y: imageHeight + tileExtraSpace / 2))
-
+        
         return cell
     }
     
@@ -254,9 +293,9 @@ class ProductsViewController: UICollectionViewController {
         
         return daView
     }
-
+    
     // MARK: UICollectionViewDelegate
-
+    
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         performSegue(withIdentifier: "showSingleProductSegue", sender: self)
     }
@@ -291,4 +330,6 @@ extension ProductsViewController : KPLoginable {
     func showLogin() {
         performSegue(withIdentifier: "showLoginForProductsSegue", sender: self)
     }
+    
 }
+
