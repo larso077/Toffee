@@ -22,7 +22,7 @@ class SingleProductViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         view.layoutIfNeeded()
 
         if let safeProduct = product {
@@ -41,6 +41,7 @@ class SingleProductViewController: UIViewController, UIScrollViewDelegate {
             setupProductImageScrollView()
             txtProductDescription.sizeToFit()
             txtProductDescription.scrollRangeToVisible(NSRange(location: 0, length: 0))
+            lblProductSalePrice.textColor = UIColor(rgb: 0x522100)
         }
     }
     
@@ -49,7 +50,7 @@ class SingleProductViewController: UIViewController, UIScrollViewDelegate {
         let range = NSMakeRange(0, text.count)
         
         attString.addAttribute(NSAttributedStringKey.strikethroughStyle, value: 2, range: range)
-        attString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor(rgb: 0x9B9B9B), range: range);
+        attString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor(rgb: 0x522100), range: range);
         
         return attString
     }
@@ -58,6 +59,7 @@ class SingleProductViewController: UIViewController, UIScrollViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     
     @IBAction func btnAddToCart(_ sender: Any) {
         let price : String = totalPrice.text!
