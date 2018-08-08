@@ -237,14 +237,25 @@ class ProductsViewController: UICollectionViewController, UpdateBadgeDelegate {
         let product = products[indexPath.row]
         let titleLabel = getCellNameLabel(cell: cell, text: product.name, y: imageHeight)
         
-        titleLabel.textColor = UIColor(rgb: 0x4A4A4A)
-        titleLabel.font = UIFont.italicSystemFont(ofSize: 15)
+        titleLabel.textColor = UIColor(rgb: 0x522100)
+        titleLabel.font = UIFont.italicSystemFont(ofSize: 13)
+        
+        cell.backgroundColor = UIColor(rgb: 0xE6DCC5)
+        
         
         removeAllSubviewsFromCell(cell: cell);
         
         cell.contentView.addSubview(getCellImage(cell: cell, product: product))
         cell.contentView.addSubview(titleLabel)
-        cell.contentView.addSubview(getCellNameLabel(cell: cell, text: "$\(product.salePrice.format(f: ".2"))", y: imageHeight + tileExtraSpace / 2))
+        cell.contentView.addSubview(getCellNameLabel(cell: cell, text: "$\(product.salePrice.format(f: ".2"))", y: imageHeight + tileExtraSpace / 2 + 8.5))
+        
+        cell.layer.cornerRadius = 3.5
+        cell.layer.shadowColor = UIColor.black.cgColor
+        cell.layer.shadowRadius = 3.0
+        cell.layer.shadowOffset = CGSize(width: 0, height: 0)
+        cell.layer.shadowOpacity = 0.5
+        cell.layer.masksToBounds = false
+        cell.layer.shadowPath = UIBezierPath(roundedRect:cell.bounds, cornerRadius:cell.contentView.layer.cornerRadius).cgPath
         
         return cell
     }
@@ -256,7 +267,7 @@ class ProductsViewController: UICollectionViewController, UpdateBadgeDelegate {
     }
     
     fileprivate func getCellImage(cell: UICollectionViewCell, product: Product) -> UIImageView {
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: cell.contentView.frame.width, height: cell.contentView.frame.height - tileExtraSpace))
+        let imageView = UIImageView(frame: CGRect(x: 10, y: 0, width: cell.contentView.frame.width - 20, height: cell.contentView.frame.height - tileExtraSpace - 10))
         
         imageView.downloadedFrom(link: product.images[0])
         
@@ -264,9 +275,13 @@ class ProductsViewController: UICollectionViewController, UpdateBadgeDelegate {
     }
     
     fileprivate func getCellNameLabel(cell: UICollectionViewCell, text: String, y: CGFloat) -> UILabel {
-        let label = UILabel(frame: CGRect(x: 7, y: y, width: cell.contentView.frame.width, height: tileExtraSpace / 2))
+        let label = UILabel(frame: CGRect(x: 7, y: y - 20, width: cell.contentView.frame.width - 10, height: tileExtraSpace))
+        
+        label.numberOfLines = 3
+        label.lineBreakMode = .byWordWrapping
         
         label.text = text
+        label.textColor = UIColor(rgb: 0x522100)
         
         return label
     }

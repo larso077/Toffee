@@ -436,14 +436,14 @@
 			isa = PBXGroup;
 			children = (
 				D0E2F8F01EC77A71000FC771 /* CheckoutBilling.xib */,
-				D0E2F8F81EC77EA6000FC771 /* CheckoutBillingView.swift */,
 				D013F4951ECA787E00CB5DDE /* CheckoutCardInfo.xib */,
-				D013F4971ECA788E00CB5DDE /* CheckoutCardInfoView.swift */,
 				D0E2F8F21EC77AC0000FC771 /* CheckoutMedia.xib */,
-				D0E2F8FA1EC77EB0000FC771 /* CheckoutMediaView.swift */,
 				D0E2F8F41EC77ADF000FC771 /* CheckoutReview.xib */,
-				D0E2F8FC1EC77EB7000FC771 /* CheckoutReviewView.swift */,
 				D0E2F8E81EC7720E000FC771 /* CheckoutShippingAddress.xib */,
+				D0E2F8F81EC77EA6000FC771 /* CheckoutBillingView.swift */,
+				D013F4971ECA788E00CB5DDE /* CheckoutCardInfoView.swift */,
+				D0E2F8FA1EC77EB0000FC771 /* CheckoutMediaView.swift */,
+				D0E2F8FC1EC77EB7000FC771 /* CheckoutReviewView.swift */,
 				D0E2F8EC1EC772B8000FC771 /* CheckoutShippingAddressView.swift */,
 			);
 			name = xibs;

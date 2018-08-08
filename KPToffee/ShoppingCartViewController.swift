@@ -50,7 +50,7 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
     
     fileprivate func showNotEmptyCart() {
         btnCheckout.isEnabled = true
-        btnCheckout.backgroundColor = UIColor(rgb: 0x7FBAFF)
+        btnCheckout.backgroundColor = UIColor(rgb: 0xE6DCC5)
         btnCheckout.alpha = 1.0
         
         tableView.backgroundView = UIView()

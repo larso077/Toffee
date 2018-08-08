@@ -22,5 +22,6 @@ class RetailLocationsViewController: UITableViewController {
         }
         tableView.tableFooterView = UIView()
     }
+    
 }
 
