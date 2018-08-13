@@ -8,11 +8,14 @@
 
 import UIKit
 
-class YourAccountViewController: UIViewController {
+class YourAccountViewController: UIViewController, UpdateBadgeDelegate {
+
+    
     @IBOutlet weak var menuButton: UIBarButtonItem!
 
+    
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
         
         if revealViewController() != nil {
             menuButton.target = revealViewController()
