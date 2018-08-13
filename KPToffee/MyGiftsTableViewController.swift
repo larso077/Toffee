@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyGiftsTableViewController: UITableViewController {
+class MyGiftsTableViewController: UITableViewController, UpdateBadgeDelegate {
     
     func updateQuantity(_ quantity: Int?) {
         drawBadge(quantity: quantity)

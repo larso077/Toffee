@@ -28,7 +28,7 @@ class RetailLocationsViewController: UITableViewController, UpdateBadgeDelegate 
         self.navigationItem.rightBarButtonItem = buttonItem
     }
     
-    func goToCart() {
+    @objc func goToCart() {
         if KPAuthentication.shared.isLoggedIn() {
             performSegue(withIdentifier: "showCartForLocationsSegue", sender: nil)
         } else {

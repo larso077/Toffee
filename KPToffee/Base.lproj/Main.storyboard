@@ -1259,7 +1259,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0rd-K2-W9z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1354" y="339"/>
+            <point key="canvasLocation" x="-1355" y="338"/>
         </scene>
         <!--Media Video View Controller-->
         <scene sceneID="mhk-MQ-KR6">
@@ -1308,7 +1308,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KrY-N1-0Bs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5848" y="153"/>
+            <point key="canvasLocation" x="5855" y="157"/>
         </scene>
         <!--Media Photo View Controller-->
         <scene sceneID="7HK-pH-QLN">
@@ -2154,10 +2154,10 @@
                         <color key="backgroundColor" red="0.99215686270000003" green="0.93725490199999995" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="singleGiftCell" id="wMr-TY-fGO">
-                                <rect key="frame" x="0.0" y="55.333333333333336" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="55" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wMr-TY-fGO" id="Cav-eu-aCk">
-                                    <rect key="frame" x="0.0" y="0.0" width="376" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="376" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.86274509799999999" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
@@ -4942,10 +4942,10 @@
         <segue reference="1a7-yP-XPZ"/>
         <segue reference="KyK-pz-Oov"/>
         <segue reference="pqK-gD-9XQ"/>
-        <segue reference="SD8-gK-ag0"/>
-        <segue reference="z1q-cD-WbQ"/>
-        <segue reference="Qke-tx-vzu"/>
-        <segue reference="o7D-Yy-ddl"/>
+        <segue reference="Z1S-NG-xaX"/>
+        <segue reference="8LL-Ii-h3r"/>
+        <segue reference="lAP-R9-IeG"/>
+        <segue reference="gGg-3W-qXa"/>
         <segue reference="fyl-uI-RdP"/>
         <segue reference="NKg-Ch-wqh"/>
     </inferredMetricsTieBreakers>
