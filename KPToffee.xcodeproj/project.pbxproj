@@ -10,6 +10,9 @@
 		040F6D6C96778E491668603D /* Pods_KPToffee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D5F1E489F43FADD9CB956C /* Pods_KPToffee.framework */; };
 		09A0FD351EEF77DD00FF79C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09A0FD341EEF77DD00FF79C4 /* Assets.xcassets */; };
 		3C840A55D091E277B40DF904 /* Pods_KPToffee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 769B43A020281A13DE595B99 /* Pods_KPToffee.framework */; };
+		47B950A92123294F001A633D /* RetailLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B950A82123294F001A633D /* RetailLocation.swift */; };
+		47B950AB212329E3001A633D /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B950AA212329E3001A633D /* Locations.swift */; };
+		47B950AD21232E1D001A633D /* RetailLocationsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B950AC21232E1D001A633D /* RetailLocationsCell.swift */; };
 		9D144F382108E08E00E63127 /* SavedItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D144F372108E08E00E63127 /* SavedItemsTableViewController.swift */; };
 		9D147CE32118D37A0091BF32 /* SCBadgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D147CE22118D37A0091BF32 /* SCBadgeButton.swift */; };
 		9D165B19211A05620061DFE6 /* RetailLocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D165B18211A05620061DFE6 /* RetailLocationsViewController.swift */; };
@@ -128,6 +131,9 @@
 /* Begin PBXFileReference section */
 		09A0FD341EEF77DD00FF79C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34D5F1E489F43FADD9CB956C /* Pods_KPToffee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KPToffee.framework; path = "../../../Library/Developer/Xcode/DerivedData/KPToffee-bwtnaafmdwpmpueuxllhfldjhlop/Build/Products/Debug-iphoneos/Pods_KPToffee.framework"; sourceTree = SOURCE_ROOT; };
+		47B950A82123294F001A633D /* RetailLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetailLocation.swift; sourceTree = "<group>"; };
+		47B950AA212329E3001A633D /* Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
+		47B950AC21232E1D001A633D /* RetailLocationsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetailLocationsCell.swift; sourceTree = "<group>"; };
 		769B43A020281A13DE595B99 /* Pods_KPToffee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KPToffee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D144F372108E08E00E63127 /* SavedItemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedItemsTableViewController.swift; sourceTree = "<group>"; };
 		9D147CE22118D37A0091BF32 /* SCBadgeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCBadgeButton.swift; sourceTree = "<group>"; };
@@ -300,6 +306,7 @@
 				D0E6040A1ECE820B00D14850 /* KPShoppingCartCell.swift */,
 				D0FFEE481ED623DB005D7FC4 /* PastOrderCell.swift */,
 				9DE3AFA9210F9B4200AB7891 /* SavedItemCell.swift */,
+				47B950AC21232E1D001A633D /* RetailLocationsCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -353,6 +360,8 @@
 			isa = PBXGroup;
 			children = (
 				D0AC32DB1F1BEE5A0091BAA2 /* Address.swift */,
+				47B950A82123294F001A633D /* RetailLocation.swift */,
+				47B950AA212329E3001A633D /* Locations.swift */,
 				D0514ACA1EEDF64900F58C53 /* BillingAddress.swift */,
 				D0AC32D91F1BE7CD0091BAA2 /* CheckoutReviewBasicInfo.swift */,
 				D0AC32D71F1BE5B80091BAA2 /* CheckoutReviewInfo.swift */,
@@ -677,6 +686,7 @@
 				D0A0B6AE1E8897B000B56CE6 /* ScanCodeViewController.swift in Sources */,
 				D0822AA61EEC8D430074DD5F /* CheckoutValuesHolder.swift in Sources */,
 				D0822AA81EEC8EB40074DD5F /* CheckoutValueSet.swift in Sources */,
+				47B950AB212329E3001A633D /* Locations.swift in Sources */,
 				D0FFEE491ED623DB005D7FC4 /* PastOrderCell.swift in Sources */,
 				D0FF6D631E8828CE00466C1C /* LoginViewController.swift in Sources */,
 				D0AC32DC1F1BEE5A0091BAA2 /* Address.swift in Sources */,
@@ -709,9 +719,11 @@
 				D0514AC31EEDD92100F58C53 /* CheckoutValidationValueSet.swift in Sources */,
 				9D165B19211A05620061DFE6 /* RetailLocationsViewController.swift in Sources */,
 				D0F89CB21F37E46500B03E1A /* KPLoginable.swift in Sources */,
+				47B950AD21232E1D001A633D /* RetailLocationsCell.swift in Sources */,
 				D0E2F8ED1EC772B8000FC771 /* CheckoutShippingAddressView.swift in Sources */,
 				D04829771F0C11F300A74A97 /* YourAccountTableViewController.swift in Sources */,
 				D01EABD51EB5132800AA9894 /* PastOrdersTableTableViewController.swift in Sources */,
+				47B950A92123294F001A633D /* RetailLocation.swift in Sources */,
 				D01EABDD1EB5175400AA9894 /* ProductImage.swift in Sources */,
 				D0AC32D61F1BE54D0091BAA2 /* CheckoutReviewMediaCell.swift in Sources */,
 				D0514ACD1EEDF66700F58C53 /* PaymentInformation.swift in Sources */,

@@ -55,5 +55,7 @@ class RetailLocationsViewController: UITableViewController, UpdateBadgeDelegate 
         tableView.tableFooterView = UIView()
     }
     
+    
+    
 }
 
