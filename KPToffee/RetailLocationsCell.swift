@@ -7,4 +7,8 @@
 //
 
 import Foundation
+import UIKit
 
+class RetailLocationCell: UITableViewCell {
+    @IBOutlet weak var locationName: UILabel!
+}

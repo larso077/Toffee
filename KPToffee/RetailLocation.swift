@@ -17,10 +17,10 @@ public class RetailLocation {
     var zipcode: Int
     
     init(name: String, address: String, city: String, state: String, zipcode: Int) {
-        self.name = "String"
-        self.address = "String"
-        self.city = "String"
-        self.state = "String"
-        self.zipcode = 123
+        self.name = name
+        self.address = address
+        self.city = city
+        self.state = state
+        self.zipcode = zipcode
     }
 }
