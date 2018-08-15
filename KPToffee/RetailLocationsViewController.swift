@@ -53,11 +53,7 @@ class RetailLocationsViewController: UITableViewController, UpdateBadgeDelegate 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 4
     }
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        let list = Locations.locations
-//        let count = list.count
-//        return count
-//    }
+
     let instance = Locations.instance
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let list = instance.locationsByState
