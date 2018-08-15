@@ -91,4 +91,38 @@ public class Locations {
             RetailLocation(name: "Piggly Wiggly", address: "1300 Brown St", city: "Oconomowoc", state: "WI", zipcode: 53066),
             RetailLocation(name: "Piggly Wiggly", address: "100 E Genva Square", city: "Lake Geneva", state: "WI", zipcode: 53147),
     ]
+    
+    
+//    init(locationWI: [RetailLocation], locationIL: [RetailLocation], locationIA: [RetailLocation], locationMI: [RetailLocation], locationERROR: [RetailLocation]) {
+//        self.locationWI = locationWI
+//        self.locationIL = locationIL
+//        self.locationIA = locationIA
+//        self.locationMI = locationMI
+//        self.locationERROR = locationERROR
+//    }
+    func sortLocationsByState() -> Array<Array<RetailLocation>> {
+        var locationWI: [RetailLocation] = []
+        var locationIL: [RetailLocation] = []
+        var locationIA: [RetailLocation] = []
+        var locationMI: [RetailLocation] = []
+        var locationERROR: [RetailLocation] = []
+        for location in Locations.locations {
+        switch location.state {
+        case "WI":
+            locationWI.append(location)
+        case "IL":
+            locationIL.append(location)
+        case "IA":
+            locationIA.append(location)
+        case "MI":
+            locationMI.append(location)
+        default:
+            locationERROR.append(location)
+        }
+    }
+        let locationsByState = [locationWI, locationIL, locationIA, locationMI]
+        return locationsByState
+    }
+    lazy var locationsByState = sortLocationsByState()
+    static var instance = Locations()
 }

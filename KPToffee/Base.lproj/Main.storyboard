@@ -950,11 +950,11 @@
                                         <rect key="frame" x="0.0" y="64" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="huG-ms-uVd" id="3eh-7d-8qK">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QFg-pv-47Y">
-                                                    <rect key="frame" x="68" y="0.0" width="326" height="43.666666666666664"/>
+                                                    <rect key="frame" x="68" y="0.0" width="326" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -972,11 +972,11 @@
                                         <rect key="frame" x="0.0" y="108" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iyX-0a-D2Z" id="D8S-bW-lxT">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Email Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k1r-y3-IE1">
-                                                    <rect key="frame" x="68" y="0.0" width="326" height="43.666666666666664"/>
+                                                    <rect key="frame" x="68" y="0.0" width="326" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -994,11 +994,11 @@
                                         <rect key="frame" x="0.0" y="152" width="414" height="91"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DI3-WK-pBk" id="hqp-Ma-62H">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="90.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mY4-fd-7FV">
-                                                    <rect key="frame" x="68" y="0.0" width="326" height="90.666666666666671"/>
+                                                    <rect key="frame" x="68" y="0.0" width="326" height="91"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -2441,26 +2441,36 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="locationCell" id="hZM-gd-IX2" customClass="RetailLocationCell" customModule="KPToffee" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="locationCell" rowHeight="80" id="hZM-gd-IX2" customClass="RetailLocationCell" customModule="KPToffee" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hZM-gd-IX2" id="t6s-iq-n2K">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="79.666666666666671"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1f-yX-jIP">
-                                            <rect key="frame" x="60" y="6" width="93" height="30"/>
+                                            <rect key="frame" x="90" y="11" width="93" height="30"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City - Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIt-nq-RMJ">
+                                            <rect key="frame" x="90" y="49" width="110" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="D1f-yX-jIP" firstAttribute="leading" secondItem="t6s-iq-n2K" secondAttribute="leading" constant="60" id="4E7-Rp-dgY"/>
-                                        <constraint firstItem="D1f-yX-jIP" firstAttribute="centerY" secondItem="t6s-iq-n2K" secondAttribute="centerY" id="Nhz-Nh-h5r"/>
+                                        <constraint firstItem="iIt-nq-RMJ" firstAttribute="top" secondItem="D1f-yX-jIP" secondAttribute="bottom" constant="8" symbolic="YES" id="S3S-gP-0Yz"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="D1f-yX-jIP" secondAttribute="bottom" constant="28" id="SSk-jj-azN"/>
+                                        <constraint firstItem="D1f-yX-jIP" firstAttribute="top" secondItem="t6s-iq-n2K" secondAttribute="topMargin" id="gWl-Za-QoS"/>
+                                        <constraint firstItem="iIt-nq-RMJ" firstAttribute="leading" secondItem="D1f-yX-jIP" secondAttribute="leading" id="o7O-K2-UUY"/>
+                                        <constraint firstItem="D1f-yX-jIP" firstAttribute="leading" secondItem="t6s-iq-n2K" secondAttribute="leadingMargin" constant="70" id="zDy-Eg-nMi"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="address" destination="iIt-nq-RMJ" id="uLT-Yd-OY4"/>
                                     <outlet property="locationName" destination="D1f-yX-jIP" id="iIy-ew-KCu"/>
                                 </connections>
                             </tableViewCell>
@@ -2490,7 +2500,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HYn-MJ-7Nm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3384" y="1696"/>
+            <point key="canvasLocation" x="-3384.057971014493" y="1695.6521739130435"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Pdo-qq-R1f">

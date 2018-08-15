@@ -11,4 +11,5 @@ import UIKit
 
 class RetailLocationCell: UITableViewCell {
     @IBOutlet weak var locationName: UILabel!
+    @IBOutlet weak var address: UILabel!
 }
