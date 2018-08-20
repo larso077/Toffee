@@ -11,7 +11,7 @@ import Foundation
 public class BillingAddress: Address {
     var sameAsShipping: Bool = false
     
-    override init(firstName: String, lastName: String, street: String, city: String, stateId: Int, zipcode: Int) {
-        super.init(firstName: firstName, lastName: lastName, street: street, city: city, stateId: stateId, zipcode: zipcode)
+    override init(firstName: String, lastName: String, street: String, line2: String?, city: String, stateId: Int, zipcode: Int) {
+        super.init(firstName: firstName, lastName: lastName, street: street, line2: line2, city: city, stateId: stateId, zipcode: zipcode)
     }
 }

@@ -73,7 +73,7 @@ class CheckoutViewController: UIViewController, UIScrollViewDelegate{
     
     fileprivate func getShippingAddress() -> Address {
         let shippingView = checkoutViews[0] as! CheckoutShippingAddressView
-        let address = Address(firstName: shippingView.txtFirstName.text!, lastName: shippingView.txtLastName.text!, street: shippingView.txtAddress.text!, city: shippingView.txtCity.text!, stateId: Int(shippingView.txtState.tag), zipcode: Int(shippingView.txtPostalCode.text!)!)
+        let address = Address(firstName: shippingView.txtFirstName.text!, lastName: shippingView.txtLastName.text!, street: shippingView.txtAddress.text!, line2: shippingView.txtAddressLine2.text!, city: shippingView.txtCity.text!, stateId: Int(shippingView.txtState.tag), zipcode: Int(shippingView.txtPostalCode.text!)!)
         
         return address
     }
@@ -83,13 +83,13 @@ class CheckoutViewController: UIViewController, UIScrollViewDelegate{
         
         if billingView.switchUseShippingAddress.isOn {
             let shipping = getShippingAddress()
-            let address = BillingAddress(firstName: shipping.firstName, lastName: shipping.lastName, street: shipping.street, city: shipping.city, stateId: shipping.state.stateId, zipcode: shipping.zipcode)
+            let address = BillingAddress(firstName: shipping.firstName, lastName: shipping.lastName, street: shipping.street, line2: shipping.line2!, city: shipping.city, stateId: shipping.state.stateId, zipcode: shipping.zipcode)
             
             address.sameAsShipping = true
             
             return address
         } else {
-            return BillingAddress(firstName: billingView.txtFirstName.text!, lastName: billingView.txtLastName.text!, street: billingView.txtAddress.text!, city: billingView.txtCity.text!, stateId: Int(billingView.txtState.tag), zipcode: Int(billingView.txtPostalCode.text!)!)
+            return BillingAddress(firstName: billingView.txtFirstName.text!, lastName: billingView.txtLastName.text!, street: billingView.txtAddress.text!, line2: billingView.txtAddressLine2.text!, city: billingView.txtCity.text!, stateId: Int(billingView.txtState.tag), zipcode: Int(billingView.txtPostalCode.text!)!)
         }
     }
     

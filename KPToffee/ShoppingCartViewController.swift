@@ -117,31 +117,34 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
     
     
     @IBAction func doIncreaseQuantity(_ sender: Any) { //increase button
+        
         let buttonPosition = (sender as AnyObject).convert(CGPoint.zero, to: tableView)
         let indexPath = tableView.indexPathForRow(at: buttonPosition)
+        let cell = tableView.cellForRow(at: indexPath!) as! KPShoppingCartCell
+        let currentProduct = KPShoppingCart.instance.products![(indexPath?.row)!]
         if indexPath != nil {
-            let currentProduct = KPShoppingCart.instance.products! [(indexPath?.row)!]
-            if currentProduct.quantity < 99 { 
+            if currentProduct.quantity < 99 {
                 currentProduct.quantity += 1
-                KPShoppingCart.instance.productCount += 1
+                
             }
         }
         self.setCartValues()
-        quantityChanged()
+        cell.lblProductPrice.text = "$\(currentProduct.saleTotal.format(f: ".2")) for \(currentProduct.quantity)"
     }
     
     @IBAction func doDecreaseQuantity(_ sender: Any) { //decrease button
         let buttonPosition = (sender as AnyObject).convert(CGPoint.zero, to: tableView)
         let indexPath = tableView.indexPathForRow(at: buttonPosition)
+        let currentProduct = KPShoppingCart.instance.products! [(indexPath?.row)!]
+        let cell = tableView.cellForRow(at: indexPath!) as! KPShoppingCartCell
         if indexPath != nil {
-            let currentProduct = KPShoppingCart.instance.products! [(indexPath?.row)!]
+            
             if currentProduct.quantity > 1 {
                 currentProduct.quantity -= 1
-                KPShoppingCart.instance.productCount -= 1
             }
         }
         self.setCartValues()
-        quantityChanged()
+        cell.lblProductPrice.text = "$\(currentProduct.saleTotal.format(f: ".2")) for \(currentProduct.quantity)"
     }
     
     
