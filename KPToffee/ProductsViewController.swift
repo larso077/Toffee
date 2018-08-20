@@ -10,12 +10,27 @@ import UIKit
 
 private let reuseIdentifier = "ProductCell"
 
-class ProductsViewController: UICollectionViewController {
+class ProductsViewController: UICollectionViewController, UpdateBadgeDelegate {
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     var currProductCount: Int = 0
     
+    func updateQuantity(_ quantity: Int?) {
+        drawBadge(quantity: quantity)
+    }
     
+    func drawBadge(quantity: Int?) {
+        let notificationButton = BasketBadgeButton()
+        notificationButton.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
+        notificationButton.setImage(UIImage(named: "shopping bag")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        notificationButton.badgeEdgeInsets = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 15)
+        var num = quantity
+        if num == nil { num = 0 }
+        notificationButton.badge = "\(num ?? 0)"
+        notificationButton.addTarget(self, action: #selector(showCartForProductsSegue), for: .touchUpInside)
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: notificationButton)
+    }
     
     
     let itemsPerRow: CGFloat = 2
@@ -27,26 +42,15 @@ class ProductsViewController: UICollectionViewController {
     
     
     @objc func showCartForProductsSegue(sender: UIBarButtonItem!) {
-        if KPAuthentication.shared.isLoggedIn() {
+//        if KPAuthentication.shared.isLoggedIn() {
             performSegue(withIdentifier: "showCartForProductsSegue", sender: nil)
-        } else {
-            showLogin()
-        }
+//        } else {
+//            showLogin()
+//        }
     }
-    
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
-        
-        
-        
-        
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
@@ -67,18 +71,10 @@ class ProductsViewController: UICollectionViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        let notificationButton = BasketBadgeButton()
-        notificationButton.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
-        notificationButton.setImage(UIImage(named: "shopping bag")?.withRenderingMode(.alwaysTemplate), for: .normal)
-        notificationButton.badgeEdgeInsets = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 15)
         let theShoppingCart = KPShoppingCart.instance
         let quantity = theShoppingCart.productCount
-        notificationButton.badge = "\(quantity)"
-        notificationButton.addTarget(self, action: #selector(showCartForProductsSegue), for: .touchUpInside)
         
-        
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: notificationButton)
-        
+        self.drawBadge(quantity: quantity)
         
         if isUnwinding {
             KPShoppingCart.instance.products?.removeAll()
@@ -213,10 +209,10 @@ class ProductsViewController: UICollectionViewController {
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if !KPAuthentication.shared.isLoggedIn(), identifier == "showCartForProductsSegue" {
-            showLogin()
-            return false
-        }
+//        if !KPAuthentication.shared.isLoggedIn(), identifier == "showCartForProductsSegue" {
+//            showLogin()
+//            return false
+//        }
         
         return true
     }

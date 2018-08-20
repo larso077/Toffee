@@ -16,12 +16,16 @@ public class CheckoutBillingView : UIView, UIPickerViewDelegate, UIPickerViewDat
     @IBOutlet weak var txtEmailAddress: KPTextField!
     @IBOutlet weak var txtPhoneNumber: KPTextField!
     @IBOutlet weak var txtAddress: KPTextField!
+    @IBOutlet weak var txtAddressLine2: KPTextField!
     @IBOutlet weak var txtCity: KPTextField!
     @IBOutlet weak var txtState: KPTextField!
     @IBOutlet weak var txtPostalCode: KPTextField!
     @IBOutlet weak var btnNextStep: UIButton!
+    @IBOutlet weak var addressLine2Info: UILabel!
+    @IBOutlet weak var showInfoAddress2: UIButton!
     
     let pickerView = UIPickerView()
+    var check = 0
     
     public override func awakeFromNib() {
         pickerView.showsSelectionIndicator = true
@@ -41,10 +45,34 @@ public class CheckoutBillingView : UIView, UIPickerViewDelegate, UIPickerViewDat
                 "Email": txtEmailAddress.text,
                 "PhoneNumber": txtPhoneNumber.text,
                 "Address": txtAddress.text,
+                "AddressLine2": txtAddressLine2.text,
                 "City": txtCity.text,
                 "State": txtState.text,
                 "PostalCode": txtPostalCode.text
             ])
+    }
+    
+    @IBAction func revealAddress2Info(_ sender: Any) {
+        // city state zip movement
+        let amount: CGFloat = 20
+        if addressLine2Info.isHidden == true {
+            UIView.animateKeyframes(withDuration: 0.25, delay: 0.0, options: UIViewKeyframeAnimationOptions(rawValue: 7), animations: {
+                self.txtCity.frame.origin.y+=amount
+                self.txtState.frame.origin.y+=amount
+                self.txtPostalCode.frame.origin.y+=amount
+            },completion: nil)
+            check = 1
+            addressLine2Info.isHidden = false
+        }
+        else{
+            UIView.animateKeyframes(withDuration: 0.25, delay: 0.0, options: UIViewKeyframeAnimationOptions(rawValue: 7), animations: {
+                self.txtCity.frame.origin.y-=amount
+                self.txtState.frame.origin.y-=amount
+                self.txtPostalCode.frame.origin.y-=amount
+            },completion: nil)
+            check = 0
+            addressLine2Info.isHidden = true
+        }
     }
     
     public func validate() -> CheckoutValidationValueSet {
@@ -81,6 +109,7 @@ public class CheckoutBillingView : UIView, UIPickerViewDelegate, UIPickerViewDat
             return valueSet
         }
         
+        
         guard let city = txtCity.text, city.count > 1 else {
             valueSet.message = "Please enter a valid city"
             return valueSet
@@ -101,7 +130,7 @@ public class CheckoutBillingView : UIView, UIPickerViewDelegate, UIPickerViewDat
         
         return valueSet
     }
-
+    
     @IBAction func useShippingAddressChanged(_ sender: UISwitch!) {
         hideBillingThings(sender.isOn)
     }
@@ -148,11 +177,28 @@ public class CheckoutBillingView : UIView, UIPickerViewDelegate, UIPickerViewDat
         txtEmailAddress.isHidden = shouldHide
         txtPhoneNumber.isHidden = shouldHide
         txtAddress.isHidden = shouldHide
+        txtAddressLine2.isHidden = shouldHide
         txtCity.isHidden = shouldHide
         txtState.isHidden = shouldHide
         txtPostalCode.isHidden = shouldHide
+        showInfoAddress2.isHidden = shouldHide
+        
+        if addressLine2Info.isHidden == true{
+            if check == 1 {
+                addressLine2Info.isHidden = false
+            }
+            else if check == 0{
+                addressLine2Info.isHidden = true
+            } else {
+                addressLine2Info.isHidden = false
+            }
+        }
+        else if addressLine2Info.isHidden == false{
+            addressLine2Info.isHidden = true
+        }
     }
 }
+
 
 extension CheckoutBillingView : UITextFieldDelegate {
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {

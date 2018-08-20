@@ -15,10 +15,16 @@ public class CheckoutShippingAddressView: UIView, UIPickerViewDelegate, UIPicker
     @IBOutlet weak var txtEmailAddress: KPTextField!
     @IBOutlet weak var txtPhoneNumber: KPTextField!
     @IBOutlet weak var txtAddress: KPTextField!
+    @IBOutlet weak var txtAddressLine2: KPTextField!
     @IBOutlet weak var txtCity: KPTextField!
     @IBOutlet weak var txtState: KPTextField!
     @IBOutlet weak var txtPostalCode: KPTextField!
     @IBOutlet weak var btnNextStep: UIButton!
+    @IBOutlet weak var addressLine2Info: UILabel!
+    
+    
+    
+    
     
     let pickerView = UIPickerView()
     
@@ -46,10 +52,34 @@ public class CheckoutShippingAddressView: UIView, UIPickerViewDelegate, UIPicker
                 "Email": txtEmailAddress.text,
                 "PhoneNumber": txtPhoneNumber.text,
                 "Address": txtAddress.text,
+                "AddressLine2": txtAddressLine2.text,
                 "City": txtCity.text,
                 "State": txtState.text,
                 "PostalCode": txtPostalCode.text
             ])
+    }
+    
+    @IBAction func revealAddress2Info(_ sender: Any) {
+        // city state zip movement
+        let amount: CGFloat = 20
+        if addressLine2Info.isHidden == true {
+            UIView.animateKeyframes(withDuration: 0.25, delay: 0.0, options: UIViewKeyframeAnimationOptions(rawValue: 7), animations: {
+                self.txtCity.frame.origin.y+=amount
+                self.txtState.frame.origin.y+=amount
+                self.txtPostalCode.frame.origin.y+=amount
+            },completion: nil)
+            
+            addressLine2Info.isHidden = false
+        }
+        else{
+            UIView.animateKeyframes(withDuration: 0.25, delay: 0.0, options: UIViewKeyframeAnimationOptions(rawValue: 7), animations: {
+                self.txtCity.frame.origin.y-=amount
+                self.txtState.frame.origin.y-=amount
+                self.txtPostalCode.frame.origin.y-=amount
+            },completion: nil)
+            
+            addressLine2Info.isHidden = true
+        }
     }
     
     public func validate() -> CheckoutValidationValueSet {
@@ -155,6 +185,7 @@ extension CheckoutShippingAddressView : UITextFieldDelegate {
         return true
     }
 }
+
 
 
 

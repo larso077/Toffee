@@ -31,6 +31,7 @@ class SingleProductViewController: UIViewController, UIScrollViewDelegate {
                 lblProductSalePrice.text = "$\(safeProduct.salePrice.format(f: ".2"))"
                 totalPrice.text = "$\(safeProduct.salePrice.format(f: ".2"))"
             } else {
+                lblProductSalePrice.text = "$\(safeProduct.salePrice.format(f: ".2")) each"
                 lblProductPrice.text = "$\(safeProduct.salePrice.format(f: ".2"))"
                 totalPrice.text = "$\(safeProduct.salePrice.format(f: ".2"))"
             }

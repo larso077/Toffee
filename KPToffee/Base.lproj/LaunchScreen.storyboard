@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,8 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KPToffee-Splash.png" translatesAutoresizingMaskIntoConstraints="NO" id="znG-uc-T4S">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Default.png" translatesAutoresizingMaskIntoConstraints="NO" id="znG-uc-T4S">
+                                <rect key="frame" x="10" y="10" width="394" height="716"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
@@ -31,10 +31,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="znG-uc-T4S" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="IBt-qf-6Kt"/>
-                            <constraint firstItem="znG-uc-T4S" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="a4W-MC-CUh"/>
-                            <constraint firstAttribute="trailing" secondItem="znG-uc-T4S" secondAttribute="trailing" id="edg-nN-mtf"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="znG-uc-T4S" secondAttribute="bottom" id="x0c-Ze-Nxg"/>
+                            <constraint firstAttribute="trailing" secondItem="znG-uc-T4S" secondAttribute="trailing" constant="10" id="37n-uJ-J3K"/>
+                            <constraint firstItem="znG-uc-T4S" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="10" id="5zq-MY-KfJ"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="znG-uc-T4S" secondAttribute="bottom" constant="10" id="Ije-3u-Pa9"/>
+                            <constraint firstItem="znG-uc-T4S" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="10" id="bcM-vh-igC"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -44,6 +44,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="KPToffee-Splash.png" width="750" height="1334"/>
+        <image name="Default.png" width="320" height="480"/>
     </resources>
 </document>

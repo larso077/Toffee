@@ -8,8 +8,36 @@
 
 import UIKit
 
-class MyGiftsTableViewController: UITableViewController {
+class MyGiftsTableViewController: UITableViewController, UpdateBadgeDelegate {
     
+    func updateQuantity(_ quantity: Int?) {
+        drawBadge(quantity: quantity)
+    }
+    
+    func drawBadge(quantity: Int?) {
+        let notificationButton = BasketBadgeButton()
+        notificationButton.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
+        notificationButton.setImage(UIImage(named: "shopping bag")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        notificationButton.badgeEdgeInsets = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 15)
+        var num = quantity
+        if num == nil { num = 0 }
+        notificationButton.badge = "\(num ?? 0)"
+        notificationButton.addTarget(self, action: #selector(goToCart), for: .touchUpInside)
+        let buttonItem = UIBarButtonItem(customView: notificationButton)
+        self.navigationItem.rightBarButtonItem = buttonItem
+    }
+    
+    func goToCart() {
+            performSegue(withIdentifier: "showCartForGiftSegue", sender: nil)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        let theShoppingCart = KPShoppingCart.instance
+        let quantity = theShoppingCart.productCount
+        
+        drawBadge(quantity: quantity)
+    }
     var gifts: [MediaInfo] = []
     var currentMedia: MediaInfo?
 

@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol UpdateBadgeDelegate: class {
+    func updateQuantity(_ quantity: Int?)
+}
+
 class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var lblSubtotal: UILabel!
@@ -15,6 +19,13 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var lblShipping: UILabel!
     @IBOutlet weak var lblTotal: UILabel!
     @IBOutlet weak var btnCheckout: UIButton!
+    
+    weak var delegate: UpdateBadgeDelegate?
+    
+    func quantityChanged() {
+        let quantityTemp = KPShoppingCart.instance.productCount
+        delegate?.updateQuantity(quantityTemp)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,27 +117,34 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
     
     
     @IBAction func doIncreaseQuantity(_ sender: Any) { //increase button
+        
         let buttonPosition = (sender as AnyObject).convert(CGPoint.zero, to: tableView)
         let indexPath = tableView.indexPathForRow(at: buttonPosition)
+        let cell = tableView.cellForRow(at: indexPath!) as! KPShoppingCartCell
+        let currentProduct = KPShoppingCart.instance.products![(indexPath?.row)!]
         if indexPath != nil {
-            let currentProduct = KPShoppingCart.instance.products! [(indexPath?.row)!]
-            if currentProduct.quantity < 99 { 
+            if currentProduct.quantity < 99 {
                 currentProduct.quantity += 1
+                
             }
         }
         self.setCartValues()
+        cell.lblProductPrice.text = "$\(currentProduct.saleTotal.format(f: ".2")) for \(currentProduct.quantity)"
     }
     
     @IBAction func doDecreaseQuantity(_ sender: Any) { //decrease button
         let buttonPosition = (sender as AnyObject).convert(CGPoint.zero, to: tableView)
         let indexPath = tableView.indexPathForRow(at: buttonPosition)
+        let currentProduct = KPShoppingCart.instance.products! [(indexPath?.row)!]
+        let cell = tableView.cellForRow(at: indexPath!) as! KPShoppingCartCell
         if indexPath != nil {
-            let currentProduct = KPShoppingCart.instance.products! [(indexPath?.row)!]
+            
             if currentProduct.quantity > 1 {
                 currentProduct.quantity -= 1
             }
         }
         self.setCartValues()
+        cell.lblProductPrice.text = "$\(currentProduct.saleTotal.format(f: ".2")) for \(currentProduct.quantity)"
     }
     
     

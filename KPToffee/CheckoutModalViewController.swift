@@ -32,7 +32,12 @@ class CheckoutModalViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     @IBAction func closeButtonClicked(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+        let alert = UIAlertController(title: "Do you wish to cancel?", message: "Cancelling the order will bring you back to the checkout.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Yes", comment: ""), style: .default, handler: {_ in self.dismiss(animated: true, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("No", comment: ""), style: .default, handler: {_ in alert.dismiss(animated: true, completion: nil)
+        }))
+        present(alert, animated:true, completion: nil)
     }
     
     @IBAction func submitOrderClicked(_ sender: UIButton) {

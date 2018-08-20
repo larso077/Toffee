@@ -1,7 +1,8 @@
 import UIKit
 import AVFoundation
 
-class CheckoutViewController: UIViewController, UIScrollViewDelegate {
+class CheckoutViewController: UIViewController, UIScrollViewDelegate{
+    
     @IBOutlet weak var pagingControl: UIPageControl!
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -12,17 +13,19 @@ class CheckoutViewController: UIViewController, UIScrollViewDelegate {
     private var nextStepScrollIsLocked: Bool = true
     private var lastOffsetX: CGFloat = 0
     private var currentValueSet: CheckoutValueSet?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         view.layoutIfNeeded() // without this I am not getting the proper width from self.view.frame.width
-        
         scrollView.delegate = self
-        
         loadCheckoutViews()
         pagingControl.numberOfPages = checkoutViews.count
         hideKeyboardWhenTappedAround()
+        
+        if ShowPopup.shared.shouldShowPopup == true {
+            performSegue(withIdentifier: "showPopup", sender: self)
+        }
+        
     }
     
     @objc func setStep(sender: UIButton) {
@@ -66,9 +69,11 @@ class CheckoutViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
+    
+    
     fileprivate func getShippingAddress() -> Address {
         let shippingView = checkoutViews[0] as! CheckoutShippingAddressView
-        let address = Address(firstName: shippingView.txtFirstName.text!, lastName: shippingView.txtLastName.text!, street: shippingView.txtAddress.text!, city: shippingView.txtCity.text!, stateId: Int(shippingView.txtState.tag), zipcode: Int(shippingView.txtPostalCode.text!)!)
+        let address = Address(firstName: shippingView.txtFirstName.text!, lastName: shippingView.txtLastName.text!, street: shippingView.txtAddress.text!, line2: shippingView.txtAddressLine2.text!, city: shippingView.txtCity.text!, stateId: Int(shippingView.txtState.tag), zipcode: Int(shippingView.txtPostalCode.text!)!)
         
         return address
     }
@@ -78,13 +83,13 @@ class CheckoutViewController: UIViewController, UIScrollViewDelegate {
         
         if billingView.switchUseShippingAddress.isOn {
             let shipping = getShippingAddress()
-            let address = BillingAddress(firstName: shipping.firstName, lastName: shipping.lastName, street: shipping.street, city: shipping.city, stateId: shipping.state.stateId, zipcode: shipping.zipcode)
+            let address = BillingAddress(firstName: shipping.firstName, lastName: shipping.lastName, street: shipping.street, line2: shipping.line2!, city: shipping.city, stateId: shipping.state.stateId, zipcode: shipping.zipcode)
             
             address.sameAsShipping = true
             
             return address
         } else {
-            return BillingAddress(firstName: billingView.txtFirstName.text!, lastName: billingView.txtLastName.text!, street: billingView.txtAddress.text!, city: billingView.txtCity.text!, stateId: Int(billingView.txtState.tag), zipcode: Int(billingView.txtPostalCode.text!)!)
+            return BillingAddress(firstName: billingView.txtFirstName.text!, lastName: billingView.txtLastName.text!, street: billingView.txtAddress.text!, line2: billingView.txtAddressLine2.text!, city: billingView.txtCity.text!, stateId: Int(billingView.txtState.tag), zipcode: Int(billingView.txtPostalCode.text!)!)
         }
     }
     
@@ -268,7 +273,6 @@ class CheckoutViewController: UIViewController, UIScrollViewDelegate {
     
     // KEYBOARD
     
-    // http://stackoverflow.com/questions/13161666/how-do-i-scroll-the-uiscrollview-when-the-keyboard-appears
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -312,3 +316,4 @@ class CheckoutViewController: UIViewController, UIScrollViewDelegate {
         horizontalScrollIsLocked = false
     }
 }
+
