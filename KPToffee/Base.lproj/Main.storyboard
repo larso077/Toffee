@@ -1927,7 +1927,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="376" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="View Past Orders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="khP-A6-ova">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Order History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="khP-A6-ova">
                                                     <rect key="frame" x="20" y="0.0" width="356" height="43.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -2168,7 +2168,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OFt-z7-Af9">
-                                <rect key="frame" x="0.0" y="108" width="414" height="552"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="596"/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.93725490199999995" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reviewInfoBasicCell" rowHeight="172" id="eRK-yw-e7Y" customClass="CheckoutReviewBasicCell" customModule="KPToffee" customModuleProvider="target">
@@ -2269,7 +2269,7 @@
                                 </connections>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d6d-Hf-RvR">
-                                <rect key="frame" x="0.0" y="64" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                                 <color key="barTintColor" red="0.89019607840000003" green="0.84313725490000002" blue="0.74117647060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem title="Review" id="50i-kL-gp3">
@@ -2588,13 +2588,13 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="1a7-yP-XPZ"/>
-        <segue reference="KyK-pz-Oov"/>
+        <segue reference="E6A-x8-UIi"/>
         <segue reference="5zK-mc-CsR"/>
-        <segue reference="dve-Em-w3Q"/>
+        <segue reference="DZG-cA-Lz6"/>
         <segue reference="z1q-cD-WbQ"/>
         <segue reference="Qke-tx-vzu"/>
         <segue reference="o7D-Yy-ddl"/>
-        <segue reference="9G8-Yv-mag"/>
+        <segue reference="4Lh-Rv-NvP"/>
         <segue reference="NKg-Ch-wqh"/>
     </inferredMetricsTieBreakers>
 </document>
