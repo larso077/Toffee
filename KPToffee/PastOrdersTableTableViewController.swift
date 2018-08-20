@@ -86,7 +86,7 @@ class PastOrdersTableTableViewController: UITableViewController, UpdateBadgeDele
     fileprivate func getEmptyListBackgroundView() -> UIView {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
         
-        label.text = "No Gifts Yet!"
+        label.text = "No Past Orders Yet!"
         label.textAlignment = .center
         label.sizeToFit()
         

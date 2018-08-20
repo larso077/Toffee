@@ -131,6 +131,7 @@
 		D0FF6D6B1E8840B700466C1C /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FF6D6A1E8840B700466C1C /* CreateAccountViewController.swift */; };
 		D0FF6D6D1E884A9500466C1C /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FF6D6C1E884A9500466C1C /* LandingViewController.swift */; };
 		D0FFEE491ED623DB005D7FC4 /* PastOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FFEE481ED623DB005D7FC4 /* PastOrderCell.swift */; };
+		FC155A62212B14FB00CE3F9D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FC155A61212B14FA00CE3F9D /* Default.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -264,6 +265,7 @@
 		D0FFEE481ED623DB005D7FC4 /* PastOrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastOrderCell.swift; sourceTree = "<group>"; };
 		EE606F791F931654D1AE5FE4 /* Pods-KPToffee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KPToffee.release.xcconfig"; path = "Pods/Target Support Files/Pods-KPToffee/Pods-KPToffee.release.xcconfig"; sourceTree = "<group>"; };
 		F267285529BFA98294055F99 /* Pods-KPToffee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KPToffee.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KPToffee/Pods-KPToffee.debug.xcconfig"; sourceTree = "<group>"; };
+		FC155A61212B14FA00CE3F9D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -401,6 +403,7 @@
 		D0A71A771E8858F1000B3B2F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FC155A61212B14FA00CE3F9D /* Default.png */,
 				D0FD4C24207A964B004A09F8 /* kp-toffee-logo.png */,
 				D0E604021ECE656700D14850 /* account-small.png */,
 				D0D80CFB1EF348A3008B1405 /* minus-32.png */,
@@ -586,6 +589,7 @@
 				D033278F1ED2520300BD0837 /* trash-big.png in Resources */,
 				D0E6043A1ECE8E3D00D14850 /* home.png in Resources */,
 				D0E603FD1ECE64EB00D14850 /* gift-cards-small.png in Resources */,
+				FC155A62212B14FB00CE3F9D /* Default.png in Resources */,
 				D0D80CFA1EF34877008B1405 /* plus-32.png in Resources */,
 				D03327911ED27E4200BD0837 /* shopping-bag.png in Resources */,
 				D0E604341ECE8E3D00D14850 /* account.png in Resources */,
