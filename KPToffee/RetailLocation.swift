@@ -24,7 +24,7 @@ public class RetailLocation {
         self.city = city
         self.state = state
         self.zipcode = zipcode
-        self.lon = lat
-        self.lat = lon
+        self.lon = lon
+        self.lat = lat
     }
 }

@@ -758,6 +758,7 @@ const int FrontViewPositionNone = 0xff;
     // we store at this point the view's user interaction state as we may temporarily disable it
     // and resume it back to the previous state, it is possible to override this behaviour by
     // intercepting it on the panGestureBegan and panGestureEnded delegates
+    
     _userInteractionStore = _contentView.userInteractionEnabled;
 }
 

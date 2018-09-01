@@ -10,7 +10,7 @@ import Foundation
 
 
 public class Locations {
-
+    
     public static let locations = [
         RetailLocation(name: "Apple Holler", address: "5006 S Sylvania Ave", city: "Sturtevant", state: "WI", zipcode: 53177, lat: 42.6747834, lon: -87.9548212),
         RetailLocation(name: "Sendiks", address: "701 Meadowbrook Rd", city: "Waukesha", state: "WI", zipcode: 53188, lat: 43.0220091, lon: -88.28391099999999),

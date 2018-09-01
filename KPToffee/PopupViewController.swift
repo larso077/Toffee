@@ -9,28 +9,19 @@
 import UIKit
 import AVFoundation
 
-public class ShowPopup {
-    public static let shared = ShowPopup()
-    var shouldShowPopup: Bool = true
-    
-    func setShowPopup(bool: Bool){
-        shouldShowPopup = bool
-    }
-}
-
 class PopupViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var pagingControl: UIPageControl!
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBAction func showPopupSwitch(_ sender: UISwitch) {
         if sender.isOn == true {
-            ShowPopup.shared.setShowPopup(bool: false)
+            PopupsController.shared.setShowCheckoutPopup(bool: false)
         } else {
-            ShowPopup.shared.setShowPopup(bool: true)
+            PopupsController.shared.setShowCheckoutPopup(bool: true)
         }
     }
     
-    @IBAction func continueBtn(_ sender: Any) {
+    @IBAction func exitBtn(_ sender: Any) {
         dismissPopup()
     }
     

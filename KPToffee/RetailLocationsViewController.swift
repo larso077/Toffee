@@ -51,13 +51,12 @@ class RetailLocationsViewController: UIViewController, UpdateBadgeDelegate {
         }
         let span: MKCoordinateSpan = MKCoordinateSpanMake(0.1, 0.1)
         
-        let tempLoc: CLLocationCoordinate2D = CLLocationCoordinate2DMake(Locations.locations[0].lon, Locations.locations[0].lat)
+        let tempLoc: CLLocationCoordinate2D = CLLocationCoordinate2DMake(Locations.locations[0].lat, Locations.locations[0].lon)
         let region: MKCoordinateRegion = MKCoordinateRegionMake(tempLoc, span)
         mapView.setRegion(region, animated: true)
         
-        // Latitude and longitude are reversed (x.lon is actually the latitude of x)
         for x in Locations.locations {
-            let location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(x.lon, x.lat)
+            let location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(x.lat, x.lon)
             
             let annotation = MKPointAnnotation()
             
