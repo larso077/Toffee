@@ -22,7 +22,7 @@ class CheckoutViewController: UIViewController, UIScrollViewDelegate{
         pagingControl.numberOfPages = checkoutViews.count
         hideKeyboardWhenTappedAround()
         
-        if ShowPopup.shared.shouldShowPopup == true {
+        if PopupsController.shared.shouldShowCheckoutPopup == true {
             performSegue(withIdentifier: "showPopup", sender: self)
         }
         

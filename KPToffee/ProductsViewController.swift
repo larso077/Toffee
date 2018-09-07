@@ -67,6 +67,13 @@ class ProductsViewController: UICollectionViewController, UpdateBadgeDelegate {
         menuButton.width = CGFloat(0.0)
         
         hideNavBorder()
+        if PopupsController.shared.shouldShowInitialPopup == true {
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:"InitialPopupViewController")
+            
+            self.present(vc as! InitialPopupViewController, animated: true, completion: nil)
+        }
+        
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -81,6 +88,8 @@ class ProductsViewController: UICollectionViewController, UpdateBadgeDelegate {
             isUnwinding = false
             MessageCenter.showMessage(rootViewController: self, message: "Order Submitted Successfully!")
         }
+        
+        
     }
     
     private func hideNavBorder() {

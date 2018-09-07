@@ -1,23 +1,20 @@
 //
-//  RetailLocationsTableViewController.swift
+//  RetailLocationsVIewController.swift
 //  KPToffee
 //
-//  Created by UWP_MU-eg9rvp on 8/7/18.
+//  Created by Alec DiGirolamo on 8/28/18.
 //  Copyright © 2018 Erik Fisch. All rights reserved.
 //
 
-import Foundation
-import MapKit
 import UIKit
-import CoreLocation
+import MapKit
 
-class RetailLocationsViewController: UITableViewController, UpdateBadgeDelegate {
+class RetailLocationsViewController: UIViewController, UpdateBadgeDelegate {
+    @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var menuButton: UIBarButtonItem!
-    
     func updateQuantity(_ quantity: Int?) {
         drawBadge(quantity: quantity)
     }
-    
     func drawBadge(quantity: Int?) {
         let notificationButton = BasketBadgeButton()
         notificationButton.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
@@ -30,7 +27,6 @@ class RetailLocationsViewController: UITableViewController, UpdateBadgeDelegate 
         let buttonItem = UIBarButtonItem(customView: notificationButton)
         self.navigationItem.rightBarButtonItem = buttonItem
     }
-    
     @objc func goToCart() {
         if KPAuthentication.shared.isLoggedIn() {
             performSegue(withIdentifier: "showCartForLocationsSegue", sender: nil)
@@ -38,7 +34,6 @@ class RetailLocationsViewController: UITableViewController, UpdateBadgeDelegate 
             performSegue(withIdentifier: "showLoginForLocationsSegue", sender: self)
         }
     }
-    
     override func viewDidAppear(_ animated: Bool) {
         
         let theShoppingCart = KPShoppingCart.instance
@@ -46,107 +41,31 @@ class RetailLocationsViewController: UITableViewController, UpdateBadgeDelegate 
         
         drawBadge(quantity: quantity)
     }
-    
-    //***********************************************************
-    // Start Table Functions
-    let headerTitles = ["Wisconsin", "Illinois", "Iowa", "Michigan"]
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
-    }
-
-    let instance = Locations.instance
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let list = instance.locationsByState
-        return list[section].count
-    }
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "locationCell", for: indexPath as IndexPath) as! RetailLocationCell
-        let list = instance.locationsByState
-        let name = list[indexPath.section][indexPath.row].name
-        let address = "\(list[indexPath.section][indexPath.row].city) - \(list[indexPath.section][indexPath.row].address)"
-        cell.locationName?.text = name
-        cell.address?.text = address
-        return cell
-    }
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let index = indexPath.row
-        convertAddress(index: index)
-    }
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section < headerTitles.count {
-            return headerTitles[section]
-        }
-        
-        return nil
-    }
-    
-    func convertAddress(index: Int) { //Geocoding location, displays name
-        let geocoder = CLGeocoder()
-        let selLoc = Locations.locations[index]
-        let address = "\(selLoc.address) \(selLoc.city), \(selLoc.state) \(selLoc.zipcode)"
-        var coordinate: (CLLocationDegrees, CLLocationDegrees)
-            geocoder.geocodeAddressString(address, completionHandler: {(placemarks, error) in
-                if((error) != nil){
-                    print("Error", error ?? "")
-                }
-                if let placemark = placemarks?.first {
-                    let coordinates:CLLocationCoordinate2D = placemark.location!.coordinate
-                    let regionDistance: CLLocationDistance = 1000
-                    let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
-                    let options = [MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center), MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)]
-                    
-                    if #available(iOS 10.0, *) { // fallback check
-                        let placemark = MKPlacemark(coordinate: coordinates)
-                        let mapItem = MKMapItem(placemark: placemark)
-                        mapItem.name = selLoc.name
-                        mapItem.openInMaps(launchOptions: options)
-                    } else {
-                        self.openMaps(address: address)
-                    }
-                }
-            })
-        
-        }
-        
-    
-    
-    func openMaps(address: String) { // Maps fallback using address URL, without location name
-        let baseURL: String = "http://maps.apple.com/?q="
-        
-        guard let encodedString = address.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
-            return
-        }
-        
-        guard let addressURL = URL(string: "\(baseURL)\(encodedString)") else {
-            return
-        }
-        
-        openURL(addressURL)
-    }
-    
-    fileprivate func openURL(_ url: URL) {
-        if UIApplication.shared.canOpenURL(url) {
-            if #available(iOS 10, *) {
-                UIApplication.shared.open(url)
-            } else {
-                UIApplication.shared.openURL(url)
-            }
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         if revealViewController() != nil {
             menuButton.target = revealViewController()
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         }
-        tableView.tableFooterView = UIView()
+        let span: MKCoordinateSpan = MKCoordinateSpanMake(0.1, 0.1)
+        
+        let tempLoc: CLLocationCoordinate2D = CLLocationCoordinate2DMake(Locations.locations[0].lat, Locations.locations[0].lon)
+        let region: MKCoordinateRegion = MKCoordinateRegionMake(tempLoc, span)
+        mapView.setRegion(region, animated: true)
+        
+        for x in Locations.locations {
+            let location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(x.lat, x.lon)
+            
+            let annotation = MKPointAnnotation()
+            
+            
+            annotation.coordinate = location
+            annotation.title = x.name
+            annotation.subtitle = "\(x.address) \(x.city), \(x.state) \(x.zipcode)"
+            mapView.addAnnotation(annotation)
+        }
+        
     }
-    
-    
-    
 }
-
