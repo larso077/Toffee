@@ -132,14 +132,13 @@
 		D0F89CB21F37E46500B03E1A /* KPLoginable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F89CB11F37E46500B03E1A /* KPLoginable.swift */; };
 		D0FD4C25207A964B004A09F8 /* kp-toffee-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D0FD4C24207A964B004A09F8 /* kp-toffee-logo.png */; };
 		D0FD79431E7C31EF007EAEFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FD79421E7C31EF007EAEFB /* AppDelegate.swift */; };
-		D0FD79481E7C31EF007EAEFB /* Old Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0FD79461E7C31EF007EAEFB /* Old Main.storyboard */; };
 		D0FD794D1E7C31EF007EAEFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0FD794B1E7C31EF007EAEFB /* LaunchScreen.storyboard */; };
 		D0FF6D631E8828CE00466C1C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FF6D621E8828CE00466C1C /* LoginViewController.swift */; };
 		D0FF6D691E883D8A00466C1C /* KPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FF6D681E883D8A00466C1C /* KPTextField.swift */; };
 		D0FF6D6B1E8840B700466C1C /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FF6D6A1E8840B700466C1C /* CreateAccountViewController.swift */; };
 		D0FF6D6D1E884A9500466C1C /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FF6D6C1E884A9500466C1C /* LandingViewController.swift */; };
 		D0FFEE491ED623DB005D7FC4 /* PastOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FFEE481ED623DB005D7FC4 /* PastOrderCell.swift */; };
-		DD558B02216EB1860027B452 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD558B01216EB1860027B452 /* Menu.storyboard */; };
+		DD558B02216EB1860027B452 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD558B01216EB1860027B452 /* Main.storyboard */; };
 		DD558B04216EB8D40027B452 /* Products.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD558B03216EB8D40027B452 /* Products.storyboard */; };
 		DD558B06216EBA530027B452 /* Single Product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD558B05216EBA530027B452 /* Single Product.storyboard */; };
 		DD558B08216EBAE60027B452 /* Your Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD558B07216EBAE60027B452 /* Your Account.storyboard */; };
@@ -287,7 +286,6 @@
 		D0FD4C24207A964B004A09F8 /* kp-toffee-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "kp-toffee-logo.png"; path = "KPToffee/kp-toffee-logo.png"; sourceTree = SOURCE_ROOT; };
 		D0FD793F1E7C31EF007EAEFB /* KPToffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KPToffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0FD79421E7C31EF007EAEFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D0FD79471E7C31EF007EAEFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Old Main.storyboard"; sourceTree = "<group>"; };
 		D0FD794C1E7C31EF007EAEFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0FD794E1E7C31F0007EAEFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0FF6D621E8828CE00466C1C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -295,7 +293,7 @@
 		D0FF6D6A1E8840B700466C1C /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		D0FF6D6C1E884A9500466C1C /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		D0FFEE481ED623DB005D7FC4 /* PastOrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastOrderCell.swift; sourceTree = "<group>"; };
-		DD558B01216EB1860027B452 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
+		DD558B01216EB1860027B452 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DD558B03216EB8D40027B452 /* Products.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Products.storyboard; sourceTree = "<group>"; };
 		DD558B05216EBA530027B452 /* Single Product.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Single Product.storyboard"; sourceTree = "<group>"; };
 		DD558B07216EBAE60027B452 /* Your Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Your Account.storyboard"; sourceTree = "<group>"; };
@@ -566,7 +564,6 @@
 				D0A407381EC286F1008B3D8B /* Extensions.swift */,
 				D019CFFB1EE772C400240418 /* Structs.swift */,
 				D0FD794B1E7C31EF007EAEFB /* LaunchScreen.storyboard */,
-				D0FD79461E7C31EF007EAEFB /* Old Main.storyboard */,
 				D0A0B6A61E88900600B56CE6 /* Models */,
 				D0A71A771E8858F1000B3B2F /* Supporting Files */,
 				D0E2F8E71EC771BB000FC771 /* xibs */,
@@ -577,7 +574,7 @@
 		DD558B00216EB1650027B452 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				DD558B01216EB1860027B452 /* Menu.storyboard */,
+				DD558B01216EB1860027B452 /* Main.storyboard */,
 				DD558B03216EB8D40027B452 /* Products.storyboard */,
 				DD558B05216EBA530027B452 /* Single Product.storyboard */,
 				DD558B07216EBAE60027B452 /* Your Account.storyboard */,
@@ -707,9 +704,8 @@
 				9DFDE939212C896500960646 /* FirstInitialPopup.xib in Resources */,
 				DD558B04216EB8D40027B452 /* Products.storyboard in Resources */,
 				D0E6042B1ECE8E3700D14850 /* undo.png in Resources */,
-				DD558B02216EB1860027B452 /* Menu.storyboard in Resources */,
+				DD558B02216EB1860027B452 /* Main.storyboard in Resources */,
 				472CE3912124AE7900B37925 /* FirstPopup.xib in Resources */,
-				D0FD79481E7C31EF007EAEFB /* Old Main.storyboard in Resources */,
 				FC155A66212B1C4D00CE3F9D /* cp_icn01.png in Resources */,
 				D013F4961ECA787E00CB5DDE /* CheckoutCardInfo.xib in Resources */,
 				D0E604251ECE8E3700D14850 /* photos.png in Resources */,
@@ -864,14 +860,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D0FD79461E7C31EF007EAEFB /* Old Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D0FD79471E7C31EF007EAEFB /* Base */,
-			);
-			name = "Old Main.storyboard";
-			sourceTree = "<group>";
-		};
 		D0FD794B1E7C31EF007EAEFB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
