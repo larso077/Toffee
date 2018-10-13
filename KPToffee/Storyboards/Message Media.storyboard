@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QDq-l4-JuN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Media Message View Controller-->
+        <scene sceneID="J50-iM-kqy">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="QDq-l4-JuN" customClass="MediaMessageViewController" customModule="KPToffee" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rZ3-mu-nWw"/>
+                        <viewControllerLayoutGuide type="bottom" id="hfF-vV-FP9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4y4-iF-UVq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VtO-Ji-SF8">
+                                <rect key="frame" x="16" y="91" width="343" height="556"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.95294117649999999" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" red="0.32156862749999998" green="0.12941176469999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Title&gt;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzZ-9K-wQQ">
+                                <rect key="frame" x="16" y="20" width="343" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="PcK-NO-ZeW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.32156862749999998" green="0.12941176469999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.95294117649999999" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VtO-Ji-SF8" firstAttribute="top" secondItem="zzZ-9K-wQQ" secondAttribute="bottom" constant="8" id="4xD-b6-yIf"/>
+                            <constraint firstItem="zzZ-9K-wQQ" firstAttribute="top" secondItem="rZ3-mu-nWw" secondAttribute="bottom" id="DAl-1g-fSS"/>
+                            <constraint firstItem="zzZ-9K-wQQ" firstAttribute="trailing" secondItem="4y4-iF-UVq" secondAttribute="trailingMargin" id="MMo-bD-sC6"/>
+                            <constraint firstItem="hfF-vV-FP9" firstAttribute="top" secondItem="VtO-Ji-SF8" secondAttribute="bottom" constant="20" id="em7-g0-scB"/>
+                            <constraint firstItem="zzZ-9K-wQQ" firstAttribute="leading" secondItem="4y4-iF-UVq" secondAttribute="leadingMargin" id="f2v-Up-X6f"/>
+                            <constraint firstItem="VtO-Ji-SF8" firstAttribute="trailing" secondItem="4y4-iF-UVq" secondAttribute="trailingMargin" id="fDQ-h9-OQm"/>
+                            <constraint firstItem="VtO-Ji-SF8" firstAttribute="leading" secondItem="4y4-iF-UVq" secondAttribute="leadingMargin" id="gMq-X9-6Ze"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Moa-KN-npS"/>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="VtO-Ji-SF8" id="ofQ-ge-Zdo"/>
+                        <outlet property="titleLabel" destination="zzZ-9K-wQQ" id="w2u-ZA-SHJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Twd-dS-vt6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6160.8695652173919" y="1634.5108695652175"/>
+        </scene>
+    </scenes>
+</document>

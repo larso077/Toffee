@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yE3-aG-2ve">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="bYo-LQ-Jyp">
+            <objects>
+                <navigationController id="yE3-aG-2ve" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1ia-lI-Xc4">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Z0o-pe-lmc" kind="relationship" relationship="rootViewController" id="svl-xf-2Hj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wpY-NZ-JVT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2108" y="338"/>
+        </scene>
+        <!--Scan Code View Controller-->
+        <scene sceneID="gup-BT-Ga5">
+            <objects>
+                <viewController id="Z0o-pe-lmc" customClass="ScanCodeViewController" customModule="KPToffee" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZMZ-A2-a4M"/>
+                        <viewControllerLayoutGuide type="bottom" id="YBj-Yv-XuE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nGR-qB-0jh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.95294117649999999" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="pHg-aq-Wac"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qAd-dA-3YH">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="9pr-s2-IM1">
+                            <color key="tintColor" red="0.32156862749999998" green="0.12941176469999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="shopping bag" id="vOs-b4-f9S">
+                            <color key="tintColor" red="0.32156862749999998" green="0.12941176469999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="9pr-s2-IM1" id="8ve-sx-6MJ"/>
+                        <segue destination="PWf-GK-mij" kind="show" identifier="showMediaVideoSegue" id="qMj-74-XFs"/>
+                        <segue destination="596-5l-8Hf" kind="show" identifier="showMediaPhotoSegue" id="Phz-I9-L9e"/>
+                        <segue destination="vzM-2a-Gbo" kind="show" identifier="showMediaMessageSegue" id="XX0-eF-tyl"/>
+                        <segue destination="fzq-UD-jWX" kind="show" identifier="showCartForScanCodeSegue" id="o4d-V7-2a1"/>
+                        <segue destination="ChU-5F-w2R" kind="show" identifier="showLoginForScanCodeSegue" id="Utf-a5-SFl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V2b-sg-zRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1355" y="338"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="sIu-eA-GBD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="ChU-5F-w2R" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ASO-Ku-oZt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-626" y="-27"/>
+        </scene>
+        <!--Video Media-->
+        <scene sceneID="DCv-gt-2Mb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Video Media" id="PWf-GK-mij" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P8H-e6-2I2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-543" y="75"/>
+        </scene>
+        <!--Photo Media-->
+        <scene sceneID="ewa-h1-lKa">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Photo Media" id="596-5l-8Hf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1dc-FA-Wpc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-448" y="337"/>
+        </scene>
+        <!--Message Media-->
+        <scene sceneID="rbU-Yh-mFI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Message Media" id="vzM-2a-Gbo" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oKD-mw-mAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-675" y="496"/>
+        </scene>
+        <!--Shopping Cart-->
+        <scene sceneID="NUx-7T-JfO">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Shopping Cart" id="fzq-UD-jWX" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aIv-je-VeQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-739" y="608"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="menu" width="33" height="33"/>
+        <image name="shopping bag" width="33" height="33"/>
+    </resources>
+</document>
