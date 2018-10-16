@@ -120,7 +120,7 @@
                         <viewLayoutGuide key="safeArea" id="bPA-nw-fGW"/>
                     </view>
                     <connections>
-                        <segue destination="OM4-ek-0p0" kind="custom" customClass="SWRevealViewControllerSegueSetController" id="X2e-3t-jwh"/>
+                        <segue destination="OM4-ek-0p0" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="X2e-3t-jwh"/>
                         <segue destination="bGL-gd-800" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="bv8-nm-Nlo"/>
                     </connections>
                 </viewController>
@@ -300,7 +300,6 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <segue destination="bGL-gd-800" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSeguePushController" id="928-UR-kj4"/>
                         <segue destination="VOt-A3-1lL" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="auB-rM-UzH"/>
                         <segue destination="FMr-WT-m2A" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="FSL-JV-9Ue"/>
                         <segue destination="7jY-Vn-1eQ" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="HRd-gD-DiS"/>
@@ -514,6 +513,5 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="qyI-be-cns"/>
-        <segue reference="928-UR-kj4"/>
     </inferredMetricsTieBreakers>
 </document>
