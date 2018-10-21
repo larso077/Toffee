@@ -151,6 +151,7 @@
 		DD558B16216FEECC0027B452 /* Photo Media.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD558B15216FEECC0027B452 /* Photo Media.storyboard */; };
 		DD558B18216FEF110027B452 /* Message Media.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD558B17216FEF110027B452 /* Message Media.storyboard */; };
 		DD558B1A216FFBC70027B452 /* Scan Codes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD558B19216FFBC70027B452 /* Scan Codes.storyboard */; };
+		DDDA8F22217C021800B11BA5 /* Retail Locations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDA8F21217C021800B11BA5 /* Retail Locations.storyboard */; };
 		FC155A62212B14FB00CE3F9D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FC155A61212B14FA00CE3F9D /* Default.png */; };
 		FC155A66212B1C4D00CE3F9D /* cp_icn01.png in Resources */ = {isa = PBXBuildFile; fileRef = FC155A63212B1C4D00CE3F9D /* cp_icn01.png */; };
 		FC155A67212B1C4D00CE3F9D /* cp_icn04.png in Resources */ = {isa = PBXBuildFile; fileRef = FC155A64212B1C4D00CE3F9D /* cp_icn04.png */; };
@@ -306,6 +307,7 @@
 		DD558B15216FEECC0027B452 /* Photo Media.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Photo Media.storyboard"; sourceTree = "<group>"; };
 		DD558B17216FEF110027B452 /* Message Media.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Message Media.storyboard"; sourceTree = "<group>"; };
 		DD558B19216FFBC70027B452 /* Scan Codes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Scan Codes.storyboard"; sourceTree = "<group>"; };
+		DDDA8F21217C021800B11BA5 /* Retail Locations.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Retail Locations.storyboard"; sourceTree = "<group>"; };
 		EE606F791F931654D1AE5FE4 /* Pods-KPToffee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KPToffee.release.xcconfig"; path = "Pods/Target Support Files/Pods-KPToffee/Pods-KPToffee.release.xcconfig"; sourceTree = "<group>"; };
 		F267285529BFA98294055F99 /* Pods-KPToffee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KPToffee.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KPToffee/Pods-KPToffee.debug.xcconfig"; sourceTree = "<group>"; };
 		FC155A61212B14FA00CE3F9D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -587,6 +589,7 @@
 				DD558B15216FEECC0027B452 /* Photo Media.storyboard */,
 				DD558B17216FEF110027B452 /* Message Media.storyboard */,
 				DD558B19216FFBC70027B452 /* Scan Codes.storyboard */,
+				DDDA8F21217C021800B11BA5 /* Retail Locations.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -692,6 +695,7 @@
 				D0E2F8F31EC77AC0000FC771 /* CheckoutMedia.xib in Resources */,
 				D0E604371ECE8E3D00D14850 /* close.png in Resources */,
 				D0FD794D1E7C31EF007EAEFB /* LaunchScreen.storyboard in Resources */,
+				DDDA8F22217C021800B11BA5 /* Retail Locations.storyboard in Resources */,
 				D0E604241ECE8E3700D14850 /* photo.png in Resources */,
 				D0E2F8E91EC7720E000FC771 /* CheckoutShippingAddress.xib in Resources */,
 				DD558B10216EC3D20027B452 /* Customer Service.storyboard in Resources */,

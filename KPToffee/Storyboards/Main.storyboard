@@ -188,6 +188,7 @@
                                         <color key="backgroundColor" red="0.94901960780000005" green="0.90196078430000004" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="selectedBackgroundView" destination="z9b-Lq-pVh" id="zXY-fY-AWu"/>
+                                            <segue destination="sJ5-zZ-aRM" kind="presentation" id="Zkq-Tc-wU7"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="MKD-iN-6gw" imageView="nms-2W-deJ" style="IBUITableViewCellStyleDefault" id="qN6-mp-BQ4">
@@ -213,6 +214,7 @@
                                         <color key="backgroundColor" red="0.94901960780000005" green="0.90196078430000004" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="selectedBackgroundView" destination="z9b-Lq-pVh" id="CYe-Kd-5qK"/>
+                                            <segue destination="FMr-WT-m2A" kind="presentation" id="fNw-Mo-CVa"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Le4-9O-2OO" imageView="SD1-6Q-hXo" style="IBUITableViewCellStyleDefault" id="am0-G5-FhC">
@@ -238,6 +240,7 @@
                                         <color key="backgroundColor" red="0.94901960780000005" green="0.90196078430000004" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="selectedBackgroundView" destination="z9b-Lq-pVh" id="pAW-Wt-qF6"/>
+                                            <segue destination="7jY-Vn-1eQ" kind="presentation" id="Dco-7b-hag"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="fnk-9C-DQN" imageView="xzl-H8-Oxf" style="IBUITableViewCellStyleDefault" id="9lD-A3-eRW">
@@ -264,6 +267,7 @@
                                         <color key="backgroundColor" red="0.94901960780000005" green="0.90196078430000004" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="selectedBackgroundView" destination="z9b-Lq-pVh" id="iQc-Wj-eDP"/>
+                                            <segue destination="lgc-rN-xRt" kind="presentation" id="wQ5-Ps-8jS"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="k39-bi-YHQ" imageView="BaU-xg-64F" style="IBUITableViewCellStyleDefault" id="Hao-SS-RBk">
@@ -289,6 +293,7 @@
                                         <color key="backgroundColor" red="0.94901960780000005" green="0.90196078430000004" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="selectedBackgroundView" destination="z9b-Lq-pVh" id="KtC-9b-rMA"/>
+                                            <segue destination="VOt-A3-1lL" kind="presentation" id="Ecm-2o-fxC"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -299,13 +304,6 @@
                             <outlet property="delegate" destination="OM4-ek-0p0" id="3sE-FL-V8c"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <segue destination="VOt-A3-1lL" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="auB-rM-UzH"/>
-                        <segue destination="FMr-WT-m2A" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="FSL-JV-9Ue"/>
-                        <segue destination="7jY-Vn-1eQ" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="HRd-gD-DiS"/>
-                        <segue destination="sJ5-zZ-aRM" kind="show" id="DbP-mT-nfg"/>
-                        <segue destination="HJE-xS-FB4" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="jQq-uz-S8A"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Lw-rY-voy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="z9b-Lq-pVh" userLabel="Selected">
@@ -418,64 +416,6 @@
             </objects>
             <point key="canvasLocation" x="-3786" y="-1218"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="OFF-fh-RqL">
-            <objects>
-                <navigationController id="HJE-xS-FB4" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="die-Y1-3yG">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="18m-wc-1JN" kind="relationship" relationship="rootViewController" id="Bx3-RB-awu"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3AX-2N-lbO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-4642" y="-474"/>
-        </scene>
-        <!--Retail Locations View Controller-->
-        <scene sceneID="cQT-gr-f16">
-            <objects>
-                <viewController id="18m-wc-1JN" customClass="RetailLocationsViewController" customModule="KPToffee" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="WzI-3S-ykj"/>
-                        <viewControllerLayoutGuide type="bottom" id="rGW-ya-5xF"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="g3G-jW-8Bh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cyQ-2p-iww">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                            </mapView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="rGW-ya-5xF" firstAttribute="top" secondItem="cyQ-2p-iww" secondAttribute="bottom" id="3tw-BV-F29"/>
-                            <constraint firstAttribute="trailing" secondItem="cyQ-2p-iww" secondAttribute="trailing" id="N0i-8v-fTf"/>
-                            <constraint firstItem="cyQ-2p-iww" firstAttribute="top" secondItem="WzI-3S-ykj" secondAttribute="bottom" id="fNv-13-Ena"/>
-                            <constraint firstItem="cyQ-2p-iww" firstAttribute="leading" secondItem="g3G-jW-8Bh" secondAttribute="leading" id="vRH-WP-Pzq"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="yB5-g6-qsW"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="buO-09-y7X">
-                        <barButtonItem key="leftBarButtonItem" image="menu" id="VFV-xM-ilb">
-                            <color key="tintColor" red="0.32156862749999998" green="0.12941176469999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="shopping bag" id="ik1-Nx-0Wy">
-                            <color key="tintColor" red="0.32156862749999998" green="0.12941176469999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="mapView" destination="cyQ-2p-iww" id="0Lw-zD-HSE"/>
-                        <outlet property="menuButton" destination="VFV-xM-ilb" id="z1k-r2-NLI"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uxY-7S-hNf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3786" y="-473"/>
-        </scene>
         <!--Scan Codes-->
         <scene sceneID="3Bz-y8-Mu5">
             <objects>
@@ -483,6 +423,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nHX-q5-EnV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-519" y="-1275"/>
+        </scene>
+        <!--Retail Locations-->
+        <scene sceneID="q62-PK-0Ra">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Retail Locations" id="lgc-rN-xRt" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9gU-US-KNd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-721" y="-1077"/>
         </scene>
         <!--Customer Service-->
         <scene sceneID="ceV-uE-gY3">
@@ -499,6 +447,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cor-Jt-0ZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-519" y="-1550"/>
+        </scene>
+        <!--Gift Cards View Controller-->
+        <scene sceneID="kZE-Ug-h66">
+            <objects>
+                <viewController id="QIe-AS-5Mi" customClass="GiftCardsViewController" customModule="KPToffee" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1zS-ex-w1A"/>
+                        <viewControllerLayoutGuide type="bottom" id="dYd-14-ZVL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sYe-Yc-6z8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.95294117649999999" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="mgT-0l-5nT"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OnI-04-55l">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="ZIX-Ea-Htv">
+                            <color key="tintColor" red="0.32156862749999998" green="0.12941176469999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="shopping bag" id="yKn-X9-zvw">
+                            <color key="tintColor" red="0.32156862749999998" green="0.12941176469999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="ZIX-Ea-Htv" id="RRP-gi-wkq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c4W-YT-VV7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="114" y="-1621"/>
         </scene>
     </scenes>
     <resources>
