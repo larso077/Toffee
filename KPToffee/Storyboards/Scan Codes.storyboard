@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8oA-rL-eDe">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="bYo-LQ-Jyp">
+            <objects>
+                <navigationController id="yE3-aG-2ve" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1ia-lI-Xc4">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Z0o-pe-lmc" kind="relationship" relationship="rootViewController" id="svl-xf-2Hj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wpY-NZ-JVT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2108" y="338"/>
+        </scene>
+        <!--Scan Code View Controller-->
+        <scene sceneID="gup-BT-Ga5">
+            <objects>
+                <viewController id="Z0o-pe-lmc" customClass="ScanCodeViewController" customModule="KPToffee" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZMZ-A2-a4M"/>
+                        <viewControllerLayoutGuide type="bottom" id="YBj-Yv-XuE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nGR-qB-0jh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.95294117649999999" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="pHg-aq-Wac"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qAd-dA-3YH">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="9pr-s2-IM1">
+                            <color key="tintColor" red="0.32156862749999998" green="0.12941176469999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="shopping bag" id="vOs-b4-f9S">
+                            <color key="tintColor" red="0.32156862749999998" green="0.12941176469999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="9pr-s2-IM1" id="8ve-sx-6MJ"/>
+                        <segue destination="PWf-GK-mij" kind="show" identifier="showMediaVideoSegue" id="qMj-74-XFs"/>
+                        <segue destination="596-5l-8Hf" kind="show" identifier="showMediaPhotoSegue" id="Phz-I9-L9e"/>
+                        <segue destination="vzM-2a-Gbo" kind="show" identifier="showMediaMessageSegue" id="XX0-eF-tyl"/>
+                        <segue destination="fzq-UD-jWX" kind="show" identifier="showCartForScanCodeSegue" id="o4d-V7-2a1"/>
+                        <segue destination="ChU-5F-w2R" kind="show" identifier="showLoginForScanCodeSegue" id="Utf-a5-SFl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V2b-sg-zRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1355" y="338"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="sIu-eA-GBD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="ChU-5F-w2R" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ASO-Ku-oZt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-626" y="-27"/>
+        </scene>
+        <!--Video Media-->
+        <scene sceneID="DCv-gt-2Mb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Video Media" id="PWf-GK-mij" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P8H-e6-2I2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-543" y="75"/>
+        </scene>
+        <!--Photo Media-->
+        <scene sceneID="ewa-h1-lKa">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Photo Media" id="596-5l-8Hf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1dc-FA-Wpc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-448" y="337"/>
+        </scene>
+        <!--Message Media-->
+        <scene sceneID="rbU-Yh-mFI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Message Media" id="vzM-2a-Gbo" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oKD-mw-mAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-675" y="496"/>
+        </scene>
+        <!--Shopping Cart-->
+        <scene sceneID="NUx-7T-JfO">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Shopping Cart" id="fzq-UD-jWX" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aIv-je-VeQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-739" y="608"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="F72-YN-fOr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="hhz-Fc-iTd" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mtK-zN-nGG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3942" y="55"/>
+        </scene>
+        <!--Scan Codes-->
+        <scene sceneID="g6o-za-Us4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Scan Codes" id="0mQ-dC-1TG" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WUa-4Y-O8G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3933" y="157"/>
+        </scene>
+        <!--Customer Service-->
+        <scene sceneID="exe-hO-wwL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Customer Service" id="Sm2-6L-rYd" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TC6-0v-bAj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3933" y="291"/>
+        </scene>
+        <!--Your Account-->
+        <scene sceneID="74e-EQ-pBn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Your Account" id="k2S-nz-vWh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8uy-kN-zSC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3924" y="412"/>
+        </scene>
+        <!--Gift Cards-->
+        <scene sceneID="0Qu-TR-SsH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Gift Cards" id="TEK-iB-Xrs" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oaS-eG-XIU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3924" y="509"/>
+        </scene>
+        <!--Retail Locations-->
+        <scene sceneID="dDb-Yl-un1">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Retail Locations" id="i8z-9c-BN2" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zpN-II-pLW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3947" y="591"/>
+        </scene>
+        <!--Menu Table Table View Controller-->
+        <scene sceneID="MP9-tu-vSB">
+            <objects>
+                <tableViewController id="9rC-xh-vcM" customClass="MenuTableTableViewController" customModule="KPToffee" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="0Q8-yL-zVM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.94901960780000005" green="0.90196078430000004" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.94901960780000005" green="0.90196078430000004" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <sections>
+                            <tableViewSection id="PJr-Ps-bEr">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Cn0-i7-Jsz" imageView="PmW-JZ-2xH" style="IBUITableViewCellStyleDefault" id="4UZ-cl-rqW">
+                                        <rect key="frame" x="0.0" y="35" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4UZ-cl-rqW" id="cGd-MT-h4w">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cn0-i7-Jsz">
+                                                    <rect key="frame" x="64" y="0.0" width="295" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="home" id="PmW-JZ-2xH">
+                                                    <rect key="frame" x="16" y="5" width="33" height="33"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.94901960780000005" green="0.90196078430000004" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="selectedBackgroundView" destination="gbM-Zy-shT" id="1SE-Wn-PBQ"/>
+                                            <segue destination="hhz-Fc-iTd" kind="presentation" id="KOR-ge-O83"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="YQN-Tm-gDo" imageView="BhW-iM-Uhc" style="IBUITableViewCellStyleDefault" id="UNC-FS-YAp">
+                                        <rect key="frame" x="0.0" y="79" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UNC-FS-YAp" id="ZIG-L0-dX8">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Scan Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YQN-Tm-gDo">
+                                                    <rect key="frame" x="64" y="0.0" width="295" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="scan qr" id="BhW-iM-Uhc">
+                                                    <rect key="frame" x="16" y="5" width="33" height="33"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.94901960780000005" green="0.90196078430000004" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="selectedBackgroundView" destination="gbM-Zy-shT" id="wgo-6y-R3O"/>
+                                            <segue destination="0mQ-dC-1TG" kind="presentation" id="72X-u2-57X"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="WGt-D6-6BQ" imageView="cIS-0f-cDc" style="IBUITableViewCellStyleDefault" id="wZQ-Nk-3eF">
+                                        <rect key="frame" x="0.0" y="123" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wZQ-Nk-3eF" id="V28-Pq-C9J">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Your Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WGt-D6-6BQ">
+                                                    <rect key="frame" x="64" y="0.0" width="295" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="account" id="cIS-0f-cDc">
+                                                    <rect key="frame" x="16" y="5" width="33" height="33"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.94901960780000005" green="0.90196078430000004" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="selectedBackgroundView" destination="gbM-Zy-shT" id="y8B-oH-GQW"/>
+                                            <segue destination="k2S-nz-vWh" kind="presentation" id="CUU-RH-jSn"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="4JC-VW-Q1V" imageView="egF-uh-3jN" style="IBUITableViewCellStyleDefault" id="goK-xQ-bD5">
+                                        <rect key="frame" x="0.0" y="167" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="goK-xQ-bD5" id="aBa-nr-t4Y">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Contact Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4JC-VW-Q1V">
+                                                    <rect key="frame" x="64" y="0.0" width="295" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="customer service" id="egF-uh-3jN">
+                                                    <rect key="frame" x="16" y="5" width="33" height="33"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.94901960780000005" green="0.90196078430000004" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="selectedBackgroundView" destination="gbM-Zy-shT" id="NOq-ac-E0a"/>
+                                            <segue destination="Sm2-6L-rYd" kind="presentation" id="0jo-k9-EyB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="alE-ds-1dR" imageView="mNI-Ga-Ohv" style="IBUITableViewCellStyleDefault" id="EH1-qx-yUI">
+                                        <rect key="frame" x="0.0" y="211" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EH1-qx-yUI" id="mPf-8N-I3c">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Retail Locations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="alE-ds-1dR">
+                                                    <rect key="frame" x="64" y="0.0" width="295" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="minus" id="mNI-Ga-Ohv">
+                                                    <rect key="frame" x="16" y="5" width="33" height="33"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.94901960780000005" green="0.90196078430000004" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.94901960780000005" green="0.90196078430000004" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="selectedBackgroundView" destination="gbM-Zy-shT" id="LwD-2I-F71"/>
+                                            <segue destination="i8z-9c-BN2" kind="presentation" id="f1I-SF-TMx"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="jCq-fk-N4e" imageView="Eke-bd-Zo1" style="IBUITableViewCellStyleDefault" id="miR-fm-hsJ">
+                                        <rect key="frame" x="0.0" y="255" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="miR-fm-hsJ" id="5YT-Sg-fbG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Gift Cards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jCq-fk-N4e">
+                                                    <rect key="frame" x="64" y="0.0" width="295" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="gift cards" id="Eke-bd-Zo1">
+                                                    <rect key="frame" x="16" y="5" width="33" height="33"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.94901960780000005" green="0.90196078430000004" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="selectedBackgroundView" destination="gbM-Zy-shT" id="XHt-k2-S9n"/>
+                                            <segue destination="TEK-iB-Xrs" kind="presentation" id="Zln-FO-dXA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="9rC-xh-vcM" id="o5r-Tv-lxZ"/>
+                            <outlet property="delegate" destination="9rC-xh-vcM" id="XqF-3v-2zF"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mSG-XA-n25" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="gbM-Zy-shT" userLabel="Selected">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.90311092140000004" green="0.86413526539999996" blue="0.77199989560000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <viewLayoutGuide key="safeArea" id="Rwl-mj-5ro"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="-3146" y="338"/>
+        </scene>
+        <!--Reveal View Controller-->
+        <scene sceneID="VR0-lG-Cgf">
+            <objects>
+                <viewController storyboardIdentifier="SWRevealViewController" id="8oA-rL-eDe" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IV1-wL-y5g"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kja-mb-yUR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JJw-Kw-fbN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Mb0-Yt-XFx"/>
+                    </view>
+                    <connections>
+                        <segue destination="9rC-xh-vcM" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="PwU-if-zsT"/>
+                        <segue destination="yE3-aG-2ve" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="S0U-85-3XV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fJN-Bc-yAo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2108" y="-583"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="account" width="33" height="33"/>
+        <image name="customer service" width="33" height="33"/>
+        <image name="gift cards" width="33" height="33"/>
+        <image name="home" width="33" height="33"/>
+        <image name="menu" width="33" height="33"/>
+        <image name="minus" width="33" height="33"/>
+        <image name="scan qr" width="33" height="33"/>
+        <image name="shopping bag" width="33" height="33"/>
+    </resources>
+</document>

@@ -10,7 +10,7 @@ import UIKit
 
 class MenuTableTableViewController: UITableViewController {
     private var headerHeight: CGFloat = 70
-    
+    var menuSelection : MenuSelection? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -31,6 +31,29 @@ class MenuTableTableViewController: UITableViewController {
         
         return headerView
     }
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        switch indexPath.row{
+//        case 0:
+//            menuSelection = .contactUs
+//            initStoryboard(controller: self, storyboardName: "Customer Service")
+//        
+//        case 1:
+//            menuSelection = .giftCards
+//            initStoryboard(controller: self, storyboardName: "Gift Cards")
+//        case 2:
+//            menuSelection = .retailLocations
+//            // do nothing, this vc is already on this sb.
+//        case 3:
+//            menuSelection = .scanCodes
+//            initStoryboard(controller: self, storyboardName: "Scan Codes")
+//        case 4:
+//            menuSelection = .yourAccount
+//            initStoryboard(controller: self, storyboardName: "Your Account")
+//        default:
+//            menuSelection = nil
+//        }
+//
+//    }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return headerHeight
@@ -39,5 +62,49 @@ class MenuTableTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "KP"
     }
+//    func initStoryboard(controller: UIViewController, storyboardName: String)
+//    {
+//
+//        let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
+//        if menuSelection != nil {
+//        switch menuSelection!{
+//        case .contactUs:
+//            let childController = storyboard.instantiateInitialViewController() as! CustomerServiceTableViewController
+//                addChildViewController(childController)
+//                controller.view.addSubview(childController.view)
+//                controller.didMove(toParentViewController: childController)
+//        case .giftCards:
+//                let childController = storyboard.instantiateInitialViewController() as! GiftCardsViewController
+//                addChildViewController(childController)
+//                controller.view.addSubview(childController.view)
+//                controller.didMove(toParentViewController: childController)
+//        case .retailLocations:
+//                let childController = storyboard.instantiateInitialViewController() as! RetailLocationsViewController
+//                addChildViewController(childController)
+//                controller.view.addSubview(childController.view)
+//                controller.didMove(toParentViewController: childController)
+//        case .scanCodes:
+//                let childController = storyboard.instantiateInitialViewController() as! ScanCodeViewController
+//                addChildViewController(childController)
+//                controller.view.addSubview(childController.view)
+//                controller.didMove(toParentViewController: childController)
+//        case .yourAccount:
+//                let childController = storyboard.instantiateInitialViewController() as! YourAccountViewController
+//                addChildViewController(childController)
+//                controller.view.addSubview(childController.view)
+//                controller.didMove(toParentViewController: childController)
+//            }
+//        }
+//
+//    }
+    
+
+}
+enum MenuSelection{
+    case scanCodes
+    case yourAccount
+    case contactUs
+    case retailLocations
+    case giftCards
 }
 

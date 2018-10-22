@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zW1-4Q-n6E">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Media Video View Controller-->
+        <scene sceneID="SX9-NE-7AO">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="zW1-4Q-n6E" customClass="MediaVideoViewController" customModule="KPToffee" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GsV-Pc-Tmu"/>
+                        <viewControllerLayoutGuide type="bottom" id="rxz-5M-vYl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BGE-sc-P6f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehm-5P-Bu6">
+                                <rect key="frame" x="0.0" y="20" width="375" height="260"/>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.86274509799999999" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="260" id="g71-ba-P3r"/>
+                                </constraints>
+                            </webView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="O3x-hL-Zrb">
+                                <rect key="frame" x="20" y="288" width="335" height="359"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.95294117649999999" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" red="0.32156862749999998" green="0.12941176469999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.95294117649999999" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ehm-5P-Bu6" firstAttribute="leading" secondItem="BGE-sc-P6f" secondAttribute="leading" id="2H4-rF-Jeg"/>
+                            <constraint firstAttribute="trailing" secondItem="O3x-hL-Zrb" secondAttribute="trailing" constant="20" symbolic="YES" id="5XT-4Q-jtH"/>
+                            <constraint firstItem="rxz-5M-vYl" firstAttribute="top" secondItem="O3x-hL-Zrb" secondAttribute="bottom" constant="20" id="B5j-5h-h3p"/>
+                            <constraint firstItem="O3x-hL-Zrb" firstAttribute="leading" secondItem="BGE-sc-P6f" secondAttribute="leading" constant="20" symbolic="YES" id="DWn-Ie-69y"/>
+                            <constraint firstAttribute="trailing" secondItem="ehm-5P-Bu6" secondAttribute="trailing" id="frg-yg-55g"/>
+                            <constraint firstItem="O3x-hL-Zrb" firstAttribute="top" secondItem="ehm-5P-Bu6" secondAttribute="bottom" constant="8" symbolic="YES" id="lYC-0P-Zjy"/>
+                            <constraint firstItem="ehm-5P-Bu6" firstAttribute="top" secondItem="GsV-Pc-Tmu" secondAttribute="bottom" id="nYc-WD-yO0"/>
+                            <constraint firstItem="ehm-5P-Bu6" firstAttribute="top" secondItem="GsV-Pc-Tmu" secondAttribute="bottom" id="sP0-Uh-Fai"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eID-os-AcE"/>
+                    </view>
+                    <connections>
+                        <outlet property="txtPersonalMessage" destination="O3x-hL-Zrb" id="PcK-Bl-XkZ"/>
+                        <outlet property="videoWebView" destination="ehm-5P-Bu6" id="ytg-os-KGR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Al-cF-KLx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5855" y="157"/>
+        </scene>
+    </scenes>
+</document>
