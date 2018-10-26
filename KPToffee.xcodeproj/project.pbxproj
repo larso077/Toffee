@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		040F6D6C96778E491668603D /* Pods_KPToffee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D5F1E489F43FADD9CB956C /* Pods_KPToffee.framework */; };
 		09A0FD351EEF77DD00FF79C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09A0FD341EEF77DD00FF79C4 /* Assets.xcassets */; };
-		3C840A55D091E277B40DF904 /* Pods_KPToffee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 769B43A020281A13DE595B99 /* Pods_KPToffee.framework */; };
 		472CE38B2124ACC400B37925 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472CE38A2124ACC400B37925 /* PopupViewController.swift */; };
 		472CE38D2124AE6E00B37925 /* FirstPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472CE38C2124AE6E00B37925 /* FirstPopupView.swift */; };
 		472CE38F2124AE7200B37925 /* SecondPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 472CE38E2124AE7200B37925 /* SecondPopup.xib */; };
@@ -160,7 +158,6 @@
 
 /* Begin PBXFileReference section */
 		09A0FD341EEF77DD00FF79C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		34D5F1E489F43FADD9CB956C /* Pods_KPToffee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KPToffee.framework; path = "../../../Library/Developer/Xcode/DerivedData/KPToffee-bwtnaafmdwpmpueuxllhfldjhlop/Build/Products/Debug-iphoneos/Pods_KPToffee.framework"; sourceTree = SOURCE_ROOT; };
 		472CE38A2124ACC400B37925 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		472CE38C2124AE6E00B37925 /* FirstPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstPopupView.swift; sourceTree = "<group>"; };
 		472CE38E2124AE7200B37925 /* SecondPopup.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondPopup.xib; sourceTree = "<group>"; };
@@ -168,7 +165,6 @@
 		472CE3922124AE7F00B37925 /* SecondPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondPopupView.swift; sourceTree = "<group>"; };
 		47B950A82123294F001A633D /* RetailLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetailLocation.swift; sourceTree = "<group>"; };
 		47B950AA212329E3001A633D /* Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
-		769B43A020281A13DE595B99 /* Pods_KPToffee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KPToffee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D144F372108E08E00E63127 /* SavedItemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedItemsTableViewController.swift; sourceTree = "<group>"; };
 		9D147CE22118D37A0091BF32 /* SCBadgeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCBadgeButton.swift; sourceTree = "<group>"; };
 		9D165B18211A05620061DFE6 /* RetailLocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetailLocationsViewController.swift; sourceTree = "<group>"; };
@@ -308,8 +304,6 @@
 		DD558B17216FEF110027B452 /* Message Media.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Message Media.storyboard"; sourceTree = "<group>"; };
 		DD558B19216FFBC70027B452 /* Scan Codes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Scan Codes.storyboard"; sourceTree = "<group>"; };
 		DDDA8F21217C021800B11BA5 /* Retail Locations.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Retail Locations.storyboard"; sourceTree = "<group>"; };
-		EE606F791F931654D1AE5FE4 /* Pods-KPToffee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KPToffee.release.xcconfig"; path = "Pods/Target Support Files/Pods-KPToffee/Pods-KPToffee.release.xcconfig"; sourceTree = "<group>"; };
-		F267285529BFA98294055F99 /* Pods-KPToffee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KPToffee.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KPToffee/Pods-KPToffee.debug.xcconfig"; sourceTree = "<group>"; };
 		FC155A61212B14FA00CE3F9D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		FC155A63212B1C4D00CE3F9D /* cp_icn01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cp_icn01.png; path = cp_icn01.imageset/cp_icn01.png; sourceTree = "<group>"; };
 		FC155A64212B1C4D00CE3F9D /* cp_icn04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cp_icn04.png; path = cp_icn04.imageset/cp_icn04.png; sourceTree = "<group>"; };
@@ -321,32 +315,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				040F6D6C96778E491668603D /* Pods_KPToffee.framework in Frameworks */,
-				3C840A55D091E277B40DF904 /* Pods_KPToffee.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1F8455DED356983086AAF688 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				34D5F1E489F43FADD9CB956C /* Pods_KPToffee.framework */,
-				769B43A020281A13DE595B99 /* Pods_KPToffee.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		3513FA1F39075BD779FE2931 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F267285529BFA98294055F99 /* Pods-KPToffee.debug.xcconfig */,
-				EE606F791F931654D1AE5FE4 /* Pods-KPToffee.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		6A2EDB432106841300165E76 /* Checkout */ = {
 			isa = PBXGroup;
 			children = (
@@ -538,9 +512,7 @@
 		D0FD79361E7C31EF007EAEFB = {
 			isa = PBXGroup;
 			children = (
-				1F8455DED356983086AAF688 /* Frameworks */,
 				D0FD79411E7C31EF007EAEFB /* KPToffee */,
-				3513FA1F39075BD779FE2931 /* Pods */,
 				D0FD79401E7C31EF007EAEFB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -601,11 +573,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0FD79511E7C31F0007EAEFB /* Build configuration list for PBXNativeTarget "KPToffee" */;
 			buildPhases = (
-				BDD0B7A8416D9B2B7A66B8C7 /* [CP] Check Pods Manifest.lock */,
 				D0FD793B1E7C31EF007EAEFB /* Sources */,
 				D0FD793C1E7C31EF007EAEFB /* Frameworks */,
 				D0FD793D1E7C31EF007EAEFB /* Resources */,
-				882E3CF8074148070FA6C926 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -726,51 +696,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		882E3CF8074148070FA6C926 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-KPToffee/Pods-KPToffee-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/InputMask/InputMask.framework",
-				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
-				"${BUILT_PRODUCTS_DIR}/UITextView+Placeholder/UITextView_Placeholder.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InputMask.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITextView_Placeholder.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KPToffee/Pods-KPToffee-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BDD0B7A8416D9B2B7A66B8C7 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-KPToffee-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D0FD793B1E7C31EF007EAEFB /* Sources */ = {
@@ -986,7 +911,6 @@
 		};
 		D0FD79521E7C31F0007EAEFB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F267285529BFA98294055F99 /* Pods-KPToffee.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1008,7 +932,6 @@
 		};
 		D0FD79531E7C31F0007EAEFB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE606F791F931654D1AE5FE4 /* Pods-KPToffee.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
