@@ -71,6 +71,7 @@ class ProductsViewController: UICollectionViewController, UpdateBadgeDelegate {
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:"InitialPopupViewController")
             
             self.present(vc as! InitialPopupViewController, animated: true, completion: nil)
+            PopupsController.shared .setShowInitialPopup(bool: false)
         }
         
 
