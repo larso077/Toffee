@@ -74,10 +74,12 @@ class ProductsViewController: UICollectionViewController, UpdateBadgeDelegate {
             view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         }
         
+        // Adds image above the collection view
         let newImgThumb = UIImageView(frame: CGRect(x: (screenWidth * 0.37), y: (screenHeight * 0.11), width: (screenWidth * 0.25), height: (screenHeight * 0.25)))
         newImgThumb.contentMode = .scaleAspectFill
         newImgThumb.image = UIImage(named: "banner.jpg")
         topImageView.addSubview(newImgThumb)
+        //
         
         loadProducts();
         
