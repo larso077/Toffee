@@ -5,6 +5,8 @@
 //  Created by Erik Fisch on 4/8/17.
 //  Copyright © 2017 Erik Fisch. All rights reserved.
 //
+//NOTE FROM DERREK: THERE IS ALREADY A FUNCTION TO CONVERT HTML TO AN ATTRIBUTED TEXT
+//STRING, SIMPLY PASS THAT OUTPUT INTO THE PRODUCT LABEL WHEN SERVER SIDE IS READY
 
 import UIKit
 
@@ -177,6 +179,16 @@ class ProductsViewController: UICollectionViewController, UpdateBadgeDelegate {
             }
         }
     }
+    //FOR STYLISH PRODUCT LABELS OR ANY OTHER HTML TEXT FOR LABELS.
+    private func getStringForLabel(label: UILabel, text: String){
+        guard let data = text.data(using: String.Encoding.unicode) else {return}
+        let attrString = try? NSMutableAttributedString(
+            data: data,
+            options: [NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html],
+            documentAttributes: nil)
+        label.attributedText = attrString
+    }
+
     
     private func parseProductsJSON(json: [String: Any?]) {
         products = []
