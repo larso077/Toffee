@@ -12,7 +12,9 @@ import UIKit
 
 private let reuseIdentifier = "ProductCell"
 
-class ProductsViewController: UICollectionViewController, UpdateBadgeDelegate {
+class ProductsViewController: UICollectionViewController, UpdateBadgeDelegate{
+
+    
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     var currProductCount: Int = 0
@@ -63,7 +65,11 @@ class ProductsViewController: UICollectionViewController, UpdateBadgeDelegate {
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         }
-        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(ProductsViewController.handleModalDismissed),
+                                               name: NSNotification.Name(rawValue: "modalIsDimissed"),
+                                               object: nil)
+    
         loadProducts();
         
         menuButton.width = CGFloat(0.0)
@@ -114,8 +120,12 @@ class ProductsViewController: UICollectionViewController, UpdateBadgeDelegate {
         LoadingHandler.shared.showOverlayModal(viewController: self)
         KPService.getJSON(withURLString: loadURL, params: nil) { (values, error) in
             if let safeError = error {
-                MessageCenter.showMessage(rootViewController: self, message: safeError)
-                return
+//                MessageCenter.showMessage(rootViewController: self, message: safeError)
+                let alert = CustomAlert(title: "No Network Connection", image: UIImage(named: "AppIcon")!)
+                DispatchQueue.main.asyncAfter(deadline: .now()+4, execute: {
+                    alert.show(animated: true)
+                    return
+                })
             }
             
             guard let json = values else {
@@ -130,6 +140,9 @@ class ProductsViewController: UICollectionViewController, UpdateBadgeDelegate {
             
             LoadingHandler.shared.hideOverlayModal(viewController: self)
         }
+    }
+    @objc private func handleModalDismissed() {
+    loadRealProducts()
     }
     
     private func parseSettingsJSON(json: [String: Any?]) {
