@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		09A0FD351EEF77DD00FF79C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09A0FD341EEF77DD00FF79C4 /* Assets.xcassets */; };
+		45545BF6D109E33ED6E52372 /* Pods_KPToffee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0496BBFC37203097E912C6FC /* Pods_KPToffee.framework */; };
 		472CE38B2124ACC400B37925 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472CE38A2124ACC400B37925 /* PopupViewController.swift */; };
 		472CE38D2124AE6E00B37925 /* FirstPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472CE38C2124AE6E00B37925 /* FirstPopupView.swift */; };
 		472CE38F2124AE7200B37925 /* SecondPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 472CE38E2124AE7200B37925 /* SecondPopup.xib */; };
@@ -158,8 +159,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0496BBFC37203097E912C6FC /* Pods_KPToffee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KPToffee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A0FD341EEF77DD00FF79C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		427DA05AA3AFF8F9730301BC /* Pods_KPToffee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KPToffee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+=======
+		3C11447D642C50CA956D564E /* Pods-KPToffee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KPToffee.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KPToffee/Pods-KPToffee.debug.xcconfig"; sourceTree = "<group>"; };
+>>>>>>> origin/Page-Viewer-On-Main-Page
 		472CE38A2124ACC400B37925 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		472CE38C2124AE6E00B37925 /* FirstPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstPopupView.swift; sourceTree = "<group>"; };
 		472CE38E2124AE7200B37925 /* SecondPopup.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondPopup.xib; sourceTree = "<group>"; };
@@ -167,7 +173,11 @@
 		472CE3922124AE7F00B37925 /* SecondPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondPopupView.swift; sourceTree = "<group>"; };
 		47B950A82123294F001A633D /* RetailLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetailLocation.swift; sourceTree = "<group>"; };
 		47B950AA212329E3001A633D /* Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		5D56869223764DC2960235CF /* Pods-KPToffee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KPToffee.release.xcconfig"; path = "Pods/Target Support Files/Pods-KPToffee/Pods-KPToffee.release.xcconfig"; sourceTree = "<group>"; };
+=======
+		5D903095C463822627DB7B47 /* Pods-KPToffee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KPToffee.release.xcconfig"; path = "Pods/Target Support Files/Pods-KPToffee/Pods-KPToffee.release.xcconfig"; sourceTree = "<group>"; };
+>>>>>>> origin/Page-Viewer-On-Main-Page
 		9D144F372108E08E00E63127 /* SavedItemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedItemsTableViewController.swift; sourceTree = "<group>"; };
 		9D147CE22118D37A0091BF32 /* SCBadgeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCBadgeButton.swift; sourceTree = "<group>"; };
 		9D165B18211A05620061DFE6 /* RetailLocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetailLocationsViewController.swift; sourceTree = "<group>"; };
@@ -319,13 +329,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				D5F33FFF208175B6638B20B7 /* Pods_KPToffee.framework in Frameworks */,
+=======
+				45545BF6D109E33ED6E52372 /* Pods_KPToffee.framework in Frameworks */,
+>>>>>>> origin/Page-Viewer-On-Main-Page
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25A71DA8F2A3262DC0687828 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0496BBFC37203097E912C6FC /* Pods_KPToffee.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6A2EDB432106841300165E76 /* Checkout */ = {
 			isa = PBXGroup;
 			children = (
@@ -396,11 +418,19 @@
 			name = Delegate;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		6AE947B95CD4269032E8B677 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				B06FCC26D5CB694FD0E1FAA0 /* Pods-KPToffee.debug.xcconfig */,
 				5D56869223764DC2960235CF /* Pods-KPToffee.release.xcconfig */,
+=======
+		A9B8C90A7A4E0CD4EBB4FDFE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C11447D642C50CA956D564E /* Pods-KPToffee.debug.xcconfig */,
+				5D903095C463822627DB7B47 /* Pods-KPToffee.release.xcconfig */,
+>>>>>>> origin/Page-Viewer-On-Main-Page
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -528,8 +558,13 @@
 			children = (
 				D0FD79411E7C31EF007EAEFB /* KPToffee */,
 				D0FD79401E7C31EF007EAEFB /* Products */,
+<<<<<<< HEAD
 				6AE947B95CD4269032E8B677 /* Pods */,
 				FC3A864C04269D3A7D5399FD /* Frameworks */,
+=======
+				A9B8C90A7A4E0CD4EBB4FDFE /* Pods */,
+				25A71DA8F2A3262DC0687828 /* Frameworks */,
+>>>>>>> origin/Page-Viewer-On-Main-Page
 			);
 			sourceTree = "<group>";
 		};
@@ -597,11 +632,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0FD79511E7C31F0007EAEFB /* Build configuration list for PBXNativeTarget "KPToffee" */;
 			buildPhases = (
+<<<<<<< HEAD
 				3B265F11AEB35F8D64689E77 /* [CP] Check Pods Manifest.lock */,
 				D0FD793B1E7C31EF007EAEFB /* Sources */,
 				D0FD793C1E7C31EF007EAEFB /* Frameworks */,
 				D0FD793D1E7C31EF007EAEFB /* Resources */,
 				FD465C466B3FBA5E70D2B58B /* [CP] Embed Pods Frameworks */,
+=======
+				EBF1E44FBB4D65085047A138 /* [CP] Check Pods Manifest.lock */,
+				D0FD793B1E7C31EF007EAEFB /* Sources */,
+				D0FD793C1E7C31EF007EAEFB /* Frameworks */,
+				D0FD793D1E7C31EF007EAEFB /* Resources */,
+				0BE150D11384BC52D57EB183 /* [CP] Embed Pods Frameworks */,
+>>>>>>> origin/Page-Viewer-On-Main-Page
 			);
 			buildRules = (
 			);
@@ -724,11 +767,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+<<<<<<< HEAD
 		3B265F11AEB35F8D64689E77 /* [CP] Check Pods Manifest.lock */ = {
+=======
+		0BE150D11384BC52D57EB183 /* [CP] Embed Pods Frameworks */ = {
+>>>>>>> origin/Page-Viewer-On-Main-Page
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+<<<<<<< HEAD
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
@@ -746,6 +794,9 @@
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+=======
+			inputFileListPaths = (
+>>>>>>> origin/Page-Viewer-On-Main-Page
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-KPToffee/Pods-KPToffee-frameworks.sh",
@@ -755,6 +806,11 @@
 				"${BUILT_PRODUCTS_DIR}/UITextView+Placeholder/UITextView_Placeholder.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
+<<<<<<< HEAD
+=======
+			outputFileListPaths = (
+			);
+>>>>>>> origin/Page-Viewer-On-Main-Page
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InputMask.framework",
@@ -766,6 +822,31 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KPToffee/Pods-KPToffee-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+<<<<<<< HEAD
+=======
+		EBF1E44FBB4D65085047A138 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KPToffee-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+>>>>>>> origin/Page-Viewer-On-Main-Page
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -982,7 +1063,11 @@
 		};
 		D0FD79521E7C31F0007EAEFB /* Debug */ = {
 			isa = XCBuildConfiguration;
+<<<<<<< HEAD
 			baseConfigurationReference = B06FCC26D5CB694FD0E1FAA0 /* Pods-KPToffee.debug.xcconfig */;
+=======
+			baseConfigurationReference = 3C11447D642C50CA956D564E /* Pods-KPToffee.debug.xcconfig */;
+>>>>>>> origin/Page-Viewer-On-Main-Page
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1004,7 +1089,11 @@
 		};
 		D0FD79531E7C31F0007EAEFB /* Release */ = {
 			isa = XCBuildConfiguration;
+<<<<<<< HEAD
 			baseConfigurationReference = 5D56869223764DC2960235CF /* Pods-KPToffee.release.xcconfig */;
+=======
+			baseConfigurationReference = 5D903095C463822627DB7B47 /* Pods-KPToffee.release.xcconfig */;
+>>>>>>> origin/Page-Viewer-On-Main-Page
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

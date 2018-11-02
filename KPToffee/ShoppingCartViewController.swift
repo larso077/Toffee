@@ -125,7 +125,7 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
         if indexPath != nil {
             if currentProduct.quantity < 99 {
                 currentProduct.quantity += 1
-                
+                KPShoppingCart.instance.productCount += 1
             }
         }
         self.setCartValues()
@@ -141,6 +141,7 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
             
             if currentProduct.quantity > 1 {
                 currentProduct.quantity -= 1
+                KPShoppingCart.instance.productCount -= 1
             }
         }
         self.setCartValues()
@@ -165,6 +166,10 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
         if editingStyle == .delete {
             if let product = KPShoppingCart.instance.products?[indexPath.row] {
                 KPShoppingCart.instance.productCount -= product.quantity
+                if KPShoppingCart.instance.productCount < 0
+                {
+                    KPShoppingCart.instance.productCount = 0
+                }
                 KPShoppingCart.instance.removeProduct(product: product.product, quantity: product.quantity)
                 
                 tableView.deleteRows(at: [indexPath], with: .fade)
