@@ -63,26 +63,11 @@ class SingleProductViewController: UIViewController, UIScrollViewDelegate {
 
     
     @IBAction func btnAddToCart(_ sender: Any) {
-        let price : String = totalPrice.text!
-        let quantity : String = txtQuantity.text!
-        let itemName : String = lblProductName.text!
-        
         if let safeProduct = product {
-            let alert = UIAlertController(title: "Are you sure?", message: "Are you sure you want to add \(quantity) \(itemName) for \(price) to your basket?", preferredStyle: .alert)
-            
-            alert.addAction(UIAlertAction(title: NSLocalizedString("Yes", comment: ""), style: .default, handler: { _ in
-                alert.dismiss(animated: true, completion: nil)
-                
-                KPShoppingCart.instance.addProduct(product: safeProduct, quantity: Int(self.txtQuantity.text!)!)
-                KPShoppingCart.instance.productCount += Int(self.txtQuantity.text!)!
-                
-                self.showAddedToCart()
-            }))
-            alert.addAction(UIAlertAction(title: NSLocalizedString("No", comment: ""), style: .destructive, handler: { _ in
-                alert.dismiss(animated: true, completion: nil)
-            }))
-            
-            present(alert, animated: true, completion: nil)
+        KPShoppingCart.instance.addProduct(product: safeProduct, quantity: Int(self.txtQuantity.text!)!)
+        KPShoppingCart.instance.productCount += Int(self.txtQuantity.text!)!
+        
+        self.showAddedToCart()
         }
     }
     
