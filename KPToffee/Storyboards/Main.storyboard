@@ -34,27 +34,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.99215686270000003" green="0.93725490199999995" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TkQ-5a-udi">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TkQ-5a-udi">
                             <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="headerReferenceSize" width="50" height="229"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
-                        <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" id="CbK-b4-NPr">
-                            <rect key="frame" x="0.0" y="-64" width="414" height="736"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
-                        </imageView>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" id="4KY-RU-nul">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="ProductCell" id="uqN-M3-jTH">
+                                <rect key="frame" x="0.0" y="229" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </view>
                             </collectionViewCell>
                         </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCollectionHeader" id="Lk9-vV-lyi">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="229"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="82f-v7-b6F" id="IwI-gO-RP8"/>
                             <outlet property="delegate" destination="82f-v7-b6F" id="mUj-5y-37l"/>
@@ -72,7 +71,6 @@
                     <size key="freeformSize" width="414" height="736"/>
                     <connections>
                         <outlet property="menuButton" destination="QLs-rA-lc8" id="252-Af-GCA"/>
-                        <outlet property="topImageView" destination="CbK-b4-NPr" id="cS6-J0-TGS"/>
                         <segue destination="kT9-Xf-dy1" kind="show" identifier="showSingleProductSegue" id="L4Q-Ve-HQN"/>
                         <segue destination="kai-FY-g84" kind="show" identifier="showCartForProductsSegue" id="AFT-Se-TyN"/>
                         <segue destination="kai-FY-g84" kind="show" identifier="cartSegue" id="qyI-be-cns"/>
@@ -150,14 +148,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZB2-mj-5Lr">
-                                                    <rect key="frame" x="65" y="0.0" width="294" height="44"/>
+                                                    <rect key="frame" x="64" y="0.0" width="295" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="home" id="8Zj-BY-QU5">
-                                                    <rect key="frame" x="16" y="5" width="34" height="34"/>
+                                                    <rect key="frame" x="16" y="5" width="33" height="33"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -176,14 +174,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Scan Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lqa-f9-JDd">
-                                                    <rect key="frame" x="65" y="0.0" width="294" height="44"/>
+                                                    <rect key="frame" x="64" y="0.0" width="295" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="scan qr" id="S8F-Vw-dQU">
-                                                    <rect key="frame" x="16" y="5" width="34" height="34"/>
+                                                    <rect key="frame" x="16" y="5" width="33" height="33"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -202,14 +200,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Your Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MKD-iN-6gw">
-                                                    <rect key="frame" x="65" y="0.0" width="294" height="44"/>
+                                                    <rect key="frame" x="64" y="0.0" width="295" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="account" id="nms-2W-deJ">
-                                                    <rect key="frame" x="16" y="5" width="34" height="34"/>
+                                                    <rect key="frame" x="16" y="5" width="33" height="33"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -228,14 +226,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Contact Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Le4-9O-2OO">
-                                                    <rect key="frame" x="65" y="0.0" width="294" height="44"/>
+                                                    <rect key="frame" x="64" y="0.0" width="295" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="customer service" id="SD1-6Q-hXo">
-                                                    <rect key="frame" x="16" y="5" width="34" height="34"/>
+                                                    <rect key="frame" x="16" y="5" width="33" height="33"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -254,14 +252,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Retail Locations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fnk-9C-DQN">
-                                                    <rect key="frame" x="65" y="0.0" width="294" height="44"/>
+                                                    <rect key="frame" x="64" y="0.0" width="295" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="minus" id="xzl-H8-Oxf">
-                                                    <rect key="frame" x="16" y="5" width="34" height="34"/>
+                                                    <rect key="frame" x="16" y="5" width="33" height="33"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -281,14 +279,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Gift Cards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k39-bi-YHQ">
-                                                    <rect key="frame" x="65" y="0.0" width="294" height="44"/>
+                                                    <rect key="frame" x="64" y="0.0" width="295" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="gift cards" id="BaU-xg-64F">
-                                                    <rect key="frame" x="16" y="5" width="34" height="34"/>
+                                                    <rect key="frame" x="16" y="5" width="33" height="33"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -491,14 +489,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="account" width="33.5" height="33.5"/>
-        <image name="customer service" width="33.5" height="33.5"/>
-        <image name="gift cards" width="33.5" height="33.5"/>
-        <image name="home" width="33.5" height="33.5"/>
-        <image name="menu" width="33.5" height="33.5"/>
-        <image name="minus" width="33.5" height="33.5"/>
-        <image name="scan qr" width="33.5" height="33.5"/>
-        <image name="shopping bag" width="33.5" height="33.5"/>
+        <image name="account" width="33" height="33"/>
+        <image name="customer service" width="33" height="33"/>
+        <image name="gift cards" width="33" height="33"/>
+        <image name="home" width="33" height="33"/>
+        <image name="menu" width="33" height="33"/>
+        <image name="minus" width="33" height="33"/>
+        <image name="scan qr" width="33" height="33"/>
+        <image name="shopping bag" width="33" height="33"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="qyI-be-cns"/>

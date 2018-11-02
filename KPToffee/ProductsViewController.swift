@@ -12,20 +12,8 @@ import UIKit
 
 private let reuseIdentifier = "ProductCell"
 
-// Screen width.
-public var screenWidth: CGFloat {
-    return UIScreen.main.bounds.width
-}
-
-// Screen height.
-public var screenHeight: CGFloat {
-    return UIScreen.main.bounds.height
-}
-
 class ProductsViewController: UICollectionViewController, UpdateBadgeDelegate {
     @IBOutlet weak var menuButton: UIBarButtonItem!
-    @IBOutlet weak var topImageView: UIImageView!
-    
     
     var currProductCount: Int = 0
     
@@ -48,6 +36,7 @@ class ProductsViewController: UICollectionViewController, UpdateBadgeDelegate {
     
     
     let itemsPerRow: CGFloat = 2
+    let sectionInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     let tileExtraSpace: CGFloat = 50
     var products: [Product] = []
     var isUnwinding: Bool = false
@@ -74,13 +63,6 @@ class ProductsViewController: UICollectionViewController, UpdateBadgeDelegate {
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         }
-        
-        // Adds image above the collection view
-        let newImgThumb = UIImageView(frame: CGRect(x: (screenWidth * 0.37), y: (screenHeight * 0.11), width: (screenWidth * 0.25), height: (screenHeight * 0.25)))
-        newImgThumb.contentMode = .scaleAspectFill
-        newImgThumb.image = UIImage(named: "banner.jpg")
-        topImageView.addSubview(newImgThumb)
-        //
         
         loadProducts();
         
@@ -333,6 +315,13 @@ class ProductsViewController: UICollectionViewController, UpdateBadgeDelegate {
         if kind == UICollectionElementKindSectionHeader {
             daView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier:"ProductCollectionHeader", for: indexPath)
             
+            if daView.subviews.count == 0 {
+                let imageView = UIImageView(frame: daView.frame)
+                
+                imageView.image = UIImage(named: "banner.jpg")
+                
+                daView.addSubview(imageView)
+            }
         }
         
         return daView
@@ -366,6 +355,7 @@ extension ProductsViewController : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return sectionInsets.left
     }
 }
 
