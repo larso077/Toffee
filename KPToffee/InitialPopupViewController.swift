@@ -36,6 +36,9 @@ class InitialPopupViewController: UIViewController, UIScrollViewDelegate {
         let url = Bundle.main.url(forResource: "coffee", withExtension: "mp3")!
         
         do {
+            try AVAudioSession.sharedInstance().setCategory({AVAudioSessionCategorySoloAmbient}())
+            try AVAudioSession.sharedInstance().setActive(true)
+            
             player = try AVAudioPlayer(contentsOf: url)
             guard let player = player else { return }
             
