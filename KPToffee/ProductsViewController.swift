@@ -48,6 +48,7 @@ class ProductsViewController: UICollectionViewController, UpdateBadgeDelegate {
     
     
     let itemsPerRow: CGFloat = 2
+    let sectionInsets = UIEdgeInsets(top: (screenHeight * 0.27), left: 10, bottom: 10, right: 10)
     let tileExtraSpace: CGFloat = 50
     var products: [Product] = []
     var isUnwinding: Bool = false
@@ -333,6 +334,13 @@ class ProductsViewController: UICollectionViewController, UpdateBadgeDelegate {
         if kind == UICollectionElementKindSectionHeader {
             daView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier:"ProductCollectionHeader", for: indexPath)
             
+//            if daView.subviews.count == 0 {
+//                let imageView = UIImageView(frame: daView.frame)
+//
+//                imageView.image = UIImage(named: "banner.jpg")
+//
+//                daView.addSubview(imageView)
+//            }
         }
         
         return daView
@@ -366,6 +374,7 @@ extension ProductsViewController : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return sectionInsets.bottom
     }
 }
 
