@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e6z-Bg-fsN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e6z-Bg-fsN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -148,14 +148,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZB2-mj-5Lr">
-                                                    <rect key="frame" x="64" y="0.0" width="295" height="44"/>
+                                                    <rect key="frame" x="65" y="0.0" width="294" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="home" id="8Zj-BY-QU5">
-                                                    <rect key="frame" x="16" y="5" width="33" height="33"/>
+                                                    <rect key="frame" x="16" y="5" width="34" height="34"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -174,14 +174,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Scan Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lqa-f9-JDd">
-                                                    <rect key="frame" x="64" y="0.0" width="295" height="44"/>
+                                                    <rect key="frame" x="65" y="0.0" width="294" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="scan qr" id="S8F-Vw-dQU">
-                                                    <rect key="frame" x="16" y="5" width="33" height="33"/>
+                                                    <rect key="frame" x="16" y="5" width="34" height="34"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -200,14 +200,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Your Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MKD-iN-6gw">
-                                                    <rect key="frame" x="64" y="0.0" width="295" height="44"/>
+                                                    <rect key="frame" x="65" y="0.0" width="294" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="account" id="nms-2W-deJ">
-                                                    <rect key="frame" x="16" y="5" width="33" height="33"/>
+                                                    <rect key="frame" x="16" y="5" width="34" height="34"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -226,14 +226,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Contact Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Le4-9O-2OO">
-                                                    <rect key="frame" x="64" y="0.0" width="295" height="44"/>
+                                                    <rect key="frame" x="65" y="0.0" width="294" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="customer service" id="SD1-6Q-hXo">
-                                                    <rect key="frame" x="16" y="5" width="33" height="33"/>
+                                                    <rect key="frame" x="16" y="5" width="34" height="34"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -244,49 +244,22 @@
                                             <segue destination="7jY-Vn-1eQ" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="Dco-7b-hag"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="fnk-9C-DQN" imageView="xzl-H8-Oxf" style="IBUITableViewCellStyleDefault" id="9lD-A3-eRW">
-                                        <rect key="frame" x="0.0" y="211" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9lD-A3-eRW" id="qra-OW-sUA">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Retail Locations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fnk-9C-DQN">
-                                                    <rect key="frame" x="64" y="0.0" width="295" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="minus" id="xzl-H8-Oxf">
-                                                    <rect key="frame" x="16" y="5" width="33" height="33"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </imageView>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.94901960780000005" green="0.90196078430000004" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.94901960780000005" green="0.90196078430000004" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <outlet property="selectedBackgroundView" destination="z9b-Lq-pVh" id="iQc-Wj-eDP"/>
-                                            <segue destination="lgc-rN-xRt" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="wQ5-Ps-8jS"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="k39-bi-YHQ" imageView="BaU-xg-64F" style="IBUITableViewCellStyleDefault" id="Hao-SS-RBk">
-                                        <rect key="frame" x="0.0" y="255" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="211" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hao-SS-RBk" id="Tpi-uC-MLR">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Gift Cards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k39-bi-YHQ">
-                                                    <rect key="frame" x="64" y="0.0" width="295" height="44"/>
+                                                    <rect key="frame" x="65" y="0.0" width="294" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="gift cards" id="BaU-xg-64F">
-                                                    <rect key="frame" x="16" y="5" width="33" height="33"/>
+                                                    <rect key="frame" x="16" y="5" width="34" height="34"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -425,14 +398,6 @@
             </objects>
             <point key="canvasLocation" x="-519" y="-1275"/>
         </scene>
-        <!--Retail Locations-->
-        <scene sceneID="q62-PK-0Ra">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Retail Locations" id="lgc-rN-xRt" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9gU-US-KNd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-721" y="-1077"/>
-        </scene>
         <!--Customer Service-->
         <scene sceneID="ceV-uE-gY3">
             <objects>
@@ -489,14 +454,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="account" width="33" height="33"/>
-        <image name="customer service" width="33" height="33"/>
-        <image name="gift cards" width="33" height="33"/>
-        <image name="home" width="33" height="33"/>
-        <image name="menu" width="33" height="33"/>
-        <image name="minus" width="33" height="33"/>
-        <image name="scan qr" width="33" height="33"/>
-        <image name="shopping bag" width="33" height="33"/>
+        <image name="account" width="33.5" height="33.5"/>
+        <image name="customer service" width="33.5" height="33.5"/>
+        <image name="gift cards" width="33.5" height="33.5"/>
+        <image name="home" width="33.5" height="33.5"/>
+        <image name="menu" width="33.5" height="33.5"/>
+        <image name="scan qr" width="33.5" height="33.5"/>
+        <image name="shopping bag" width="33.5" height="33.5"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="qyI-be-cns"/>
