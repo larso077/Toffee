@@ -137,6 +137,8 @@
 		D0FF6D6D1E884A9500466C1C /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FF6D6C1E884A9500466C1C /* LandingViewController.swift */; };
 		D0FFEE491ED623DB005D7FC4 /* PastOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FFEE481ED623DB005D7FC4 /* PastOrderCell.swift */; };
 		D5F33FFF208175B6638B20B7 /* Pods_KPToffee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 427DA05AA3AFF8F9730301BC /* Pods_KPToffee.framework */; };
+		DD371866218CD47A0034EC6A /* ModalPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD371865218CD47A0034EC6A /* ModalPopup.swift */; };
+		DD371868218CD4CF0034EC6A /* NetworkUnavailabilityPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD371867218CD4CF0034EC6A /* NetworkUnavailabilityPopup.swift */; };
 		DD558B02216EB1860027B452 /* Not Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD558B01216EB1860027B452 /* Not Main.storyboard */; };
 		DD558B04216EB8D40027B452 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD558B03216EB8D40027B452 /* Main.storyboard */; };
 		DD558B06216EBA530027B452 /* Single Product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD558B05216EBA530027B452 /* Single Product.storyboard */; };
@@ -294,6 +296,8 @@
 		D0FF6D6A1E8840B700466C1C /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		D0FF6D6C1E884A9500466C1C /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		D0FFEE481ED623DB005D7FC4 /* PastOrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastOrderCell.swift; sourceTree = "<group>"; };
+		DD371865218CD47A0034EC6A /* ModalPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalPopup.swift; sourceTree = "<group>"; };
+		DD371867218CD4CF0034EC6A /* NetworkUnavailabilityPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUnavailabilityPopup.swift; sourceTree = "<group>"; };
 		DD558B01216EB1860027B452 /* Not Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Not Main.storyboard"; sourceTree = "<group>"; };
 		DD558B03216EB8D40027B452 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DD558B05216EBA530027B452 /* Single Product.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Single Product.storyboard"; sourceTree = "<group>"; };
@@ -383,6 +387,8 @@
 				D0A0B6AF1E91BB4500B56CE6 /* YourAccountViewController.swift */,
 				472CE38A2124ACC400B37925 /* PopupViewController.swift */,
 				9DFDE92E212C881100960646 /* InitialPopupViewController.swift */,
+				DD371865218CD47A0034EC6A /* ModalPopup.swift */,
+				DD371867218CD4CF0034EC6A /* NetworkUnavailabilityPopup.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -811,6 +817,7 @@
 				47B950AB212329E3001A633D /* Locations.swift in Sources */,
 				D0FFEE491ED623DB005D7FC4 /* PastOrderCell.swift in Sources */,
 				D0FF6D631E8828CE00466C1C /* LoginViewController.swift in Sources */,
+				DD371866218CD47A0034EC6A /* ModalPopup.swift in Sources */,
 				D0AC32DC1F1BEE5A0091BAA2 /* Address.swift in Sources */,
 				9DFDE931212C883200960646 /* PopupsController.swift in Sources */,
 				D0D3D4101EA1839700273897 /* SingleProductViewController.swift in Sources */,
@@ -825,6 +832,7 @@
 				D0A0B6A81E88902C00B56CE6 /* MenuItem.swift in Sources */,
 				9D40D26B2110AB210005B280 /* KPSavedForLater.swift in Sources */,
 				D05265D51F0DA76800FC663B /* EULAViewController.swift in Sources */,
+				DD371868218CD4CF0034EC6A /* NetworkUnavailabilityPopup.swift in Sources */,
 				D0D3D40E1E9961AB00273897 /* ProductsViewController.swift in Sources */,
 				D0E2F8F71EC77BAB000FC771 /* CheckoutViewController.swift in Sources */,
 				D05265D31F0DA01D00FC663B /* MediaMessageViewController.swift in Sources */,
