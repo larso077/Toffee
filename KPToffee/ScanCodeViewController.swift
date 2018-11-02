@@ -64,9 +64,20 @@ class ScanCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDe
         }
         
         do {
-            try setupScanner()
-            
-            createQRReaderFrame()
+            if UIImagePickerController.isSourceTypeAvailable(.camera)
+            {
+                try setupScanner()
+                
+                createQRReaderFrame()
+            }
+            else
+            {
+                let alert = UIAlertController(title: "Camera Error", message: "There was no camera detected on this device. To use this feature please make sure you use a device with a camera available.", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+                
+                self.present(alert, animated: true)
+            }
         } catch {
             print(error.localizedDescription)
         }
