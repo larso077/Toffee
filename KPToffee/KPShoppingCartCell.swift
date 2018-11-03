@@ -30,7 +30,7 @@ public class KPShoppingCartCell: UITableViewCell {
     @IBAction func decreaseQuantity(_ sender: UIButton) {
         let currentQuantity = Int(lblQuantity.text!)
         
-        if currentQuantity! > 1 {
+        if currentQuantity! >= 1 {
             lblQuantity.text = "\(currentQuantity! - 1)"
             
         }

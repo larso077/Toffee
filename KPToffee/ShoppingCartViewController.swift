@@ -34,7 +34,9 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
         
         setCartValues()
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
     fileprivate func setCartValues() {
         lblSubtotal.text = "$ \(KPShoppingCart.instance.subtotal.format(f: ".2"))"
         lblTax.text = "$ \(KPShoppingCart.instance.tax.format(f: ".2"))"
@@ -140,9 +142,12 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
         let cell = tableView.cellForRow(at: indexPath!) as! KPShoppingCartCell
         if indexPath != nil {
             
-            if currentProduct.quantity > 1 {
+            if currentProduct.quantity >= 1 {
                 currentProduct.quantity -= 1
                 KPShoppingCart.instance.productCount -= 1
+                if currentProduct.quantity == 0 {
+                    KPShoppingCart.instance.removeProduct(product: currentProduct.product, quantity: currentProduct.quantity)
+                }
             }
         }
         self.setCartValues()
