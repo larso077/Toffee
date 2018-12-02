@@ -63,7 +63,7 @@
                         <barButtonItem key="leftBarButtonItem" image="menu" id="QLs-rA-lc8">
                             <color key="tintColor" red="0.32156862749999998" green="0.12941176469999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="shopping bag" id="Dup-CL-pbR">
+                        <barButtonItem key="rightBarButtonItem" image="shopping-basket" id="Dup-CL-pbR">
                             <color key="tintColor" red="0.32156862749999998" green="0.12941176469999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
@@ -148,14 +148,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZB2-mj-5Lr">
-                                                    <rect key="frame" x="65" y="0.0" width="294" height="44"/>
+                                                    <rect key="frame" x="64" y="0.0" width="295" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="home" id="8Zj-BY-QU5">
-                                                    <rect key="frame" x="16" y="5" width="34" height="34"/>
+                                                    <rect key="frame" x="16" y="5" width="33" height="33"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -174,14 +174,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Scan Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lqa-f9-JDd">
-                                                    <rect key="frame" x="65" y="0.0" width="294" height="44"/>
+                                                    <rect key="frame" x="64" y="0.0" width="295" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="scan qr" id="S8F-Vw-dQU">
-                                                    <rect key="frame" x="16" y="5" width="34" height="34"/>
+                                                    <rect key="frame" x="16" y="5" width="33" height="33"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -200,14 +200,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Your Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MKD-iN-6gw">
-                                                    <rect key="frame" x="65" y="0.0" width="294" height="44"/>
+                                                    <rect key="frame" x="64" y="0.0" width="295" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="account" id="nms-2W-deJ">
-                                                    <rect key="frame" x="16" y="5" width="34" height="34"/>
+                                                    <rect key="frame" x="16" y="5" width="33" height="33"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -226,14 +226,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Contact Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Le4-9O-2OO">
-                                                    <rect key="frame" x="65" y="0.0" width="294" height="44"/>
+                                                    <rect key="frame" x="64" y="0.0" width="295" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="customer service" id="SD1-6Q-hXo">
-                                                    <rect key="frame" x="16" y="5" width="34" height="34"/>
+                                                    <rect key="frame" x="16" y="5" width="33" height="33"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -252,14 +252,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Gift Cards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k39-bi-YHQ">
-                                                    <rect key="frame" x="65" y="0.0" width="294" height="44"/>
+                                                    <rect key="frame" x="64" y="0.0" width="295" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="gift cards" id="BaU-xg-64F">
-                                                    <rect key="frame" x="16" y="5" width="34" height="34"/>
+                                                    <rect key="frame" x="16" y="5" width="33" height="33"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -454,13 +454,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="account" width="33.5" height="33.5"/>
-        <image name="customer service" width="33.5" height="33.5"/>
-        <image name="gift cards" width="33.5" height="33.5"/>
-        <image name="home" width="33.5" height="33.5"/>
-        <image name="menu" width="33.5" height="33.5"/>
-        <image name="scan qr" width="33.5" height="33.5"/>
-        <image name="shopping bag" width="33.5" height="33.5"/>
+        <image name="account" width="33" height="33"/>
+        <image name="customer service" width="33" height="33"/>
+        <image name="gift cards" width="33" height="33"/>
+        <image name="home" width="33" height="33"/>
+        <image name="menu" width="33" height="33"/>
+        <image name="scan qr" width="33" height="33"/>
+        <image name="shopping bag" width="33" height="33"/>
+        <image name="shopping-basket" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="qyI-be-cns"/>
