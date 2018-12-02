@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ntd-9m-EDX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ntd-9m-EDX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -424,7 +424,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="New-Yk-uZb"/>
                                     <constraint firstAttribute="height" constant="37" id="zeN-Pm-qAw"/>
                                 </constraints>
-                                <state key="normal" image="X-512.png"/>
+                                <state key="normal" image="shopping-basket"/>
                                 <connections>
                                     <action selector="exitBtn:" destination="tSK-5v-Y8U" eventType="touchUpInside" id="5hC-Wu-WOK"/>
                                 </connections>
@@ -471,10 +471,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="X-512.png" width="16" height="16"/>
         <image name="close" width="33" height="33"/>
         <image name="kp-toffee-product.jpg" width="350" height="300"/>
         <image name="minus-32.png" width="32" height="32"/>
         <image name="plus-32.png" width="32" height="32"/>
+        <image name="shopping-basket" width="32" height="32"/>
     </resources>
 </document>
