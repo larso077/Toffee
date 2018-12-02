@@ -107,6 +107,8 @@ class CheckoutModalViewController: UIViewController, UITableViewDelegate, UITabl
 
                 if result == "Success" {
                     self.goBackToProductsView()
+                    KPShoppingCart.instance.products = []
+                    KPShoppingCart.instance.productCount = 0
                 } else {
                     MessageCenter.showMessage(rootViewController: self, message: "There was an error processing the order, please try again.")
                 }

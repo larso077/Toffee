@@ -189,6 +189,9 @@
                                         <state key="normal" title="Checkout">
                                             <color key="titleColor" red="0.32156862749999998" green="0.12941176469999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="zzw-jf-fMQ" kind="show" id="jcH-TZ-Ud7"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVt-Ei-UNd">
                                         <rect key="frame" x="223" y="101" width="119" height="21"/>
@@ -262,7 +265,6 @@
                         <outlet property="lblTax" destination="eoA-CN-6Om" id="JVf-sq-Bjd"/>
                         <outlet property="lblTotal" destination="lVt-Ei-UNd" id="f4v-Zo-CrD"/>
                         <outlet property="tableView" destination="hcb-iw-qEb" id="Tdt-bH-ywj"/>
-                        <segue destination="zzw-jf-fMQ" kind="show" id="gTX-PS-eqo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="At7-rp-fPk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -424,7 +426,10 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="New-Yk-uZb"/>
                                     <constraint firstAttribute="height" constant="37" id="zeN-Pm-qAw"/>
                                 </constraints>
-                                <state key="normal" image="X-512.png"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="57"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="0.32156862745098036" green="0.12941176470588234" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="exitBtn:" destination="tSK-5v-Y8U" eventType="touchUpInside" id="5hC-Wu-WOK"/>
                                 </connections>
@@ -471,7 +476,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="X-512.png" width="16" height="16"/>
         <image name="close" width="33" height="33"/>
         <image name="kp-toffee-product.jpg" width="350" height="300"/>
         <image name="minus-32.png" width="32" height="32"/>

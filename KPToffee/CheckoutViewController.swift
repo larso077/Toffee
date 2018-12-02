@@ -72,14 +72,14 @@ class CheckoutViewController: UIViewController, UIScrollViewDelegate{
     
     
     fileprivate func getShippingAddress() -> Address {
-        let shippingView = checkoutViews[0] as! CheckoutShippingAddressView
+        let shippingView = checkoutViews[1] as! CheckoutShippingAddressView
         let address = Address(firstName: shippingView.txtFirstName.text!, lastName: shippingView.txtLastName.text!, street: shippingView.txtAddress.text!, line2: shippingView.txtAddressLine2.text!, city: shippingView.txtCity.text!, stateId: Int(shippingView.txtState.tag), zipcode: Int(shippingView.txtPostalCode.text!)!)
         
         return address
     }
     
     fileprivate func getBillingAddress() -> BillingAddress {
-        let billingView = checkoutViews[2] as! CheckoutBillingView
+        let billingView = checkoutViews[3] as! CheckoutBillingView
         
         if billingView.switchUseShippingAddress.isOn {
             let shipping = getShippingAddress()
@@ -94,14 +94,14 @@ class CheckoutViewController: UIViewController, UIScrollViewDelegate{
     }
     
     fileprivate func getPaymentInfo() -> PaymentInformation {
-        let paymentView = checkoutViews[1] as! CheckoutCardInfoView
+        let paymentView = checkoutViews[2] as! CheckoutCardInfoView
         let info = PaymentInformation(cardNumber: paymentView.txtCardNumber.text!, expirationDate: paymentView.txtExpirationDate.text!, cvv: Int(paymentView.txtCVV.text!)!)
         
         return info
     }
     
     fileprivate func getMediaInfo() -> MediaInfo {
-        let mediaView = checkoutViews.last as! CheckoutMediaView
+        let mediaView = checkoutViews.first as! CheckoutMediaView
         
         return mediaView.getMediaInformation()
     }
@@ -166,31 +166,31 @@ class CheckoutViewController: UIViewController, UIScrollViewDelegate{
     
     fileprivate func loadCheckoutViews() {
         checkoutViews = []
-        
-        if let safeView = getShippingView() {
+        if let safeView = getMediaView() {
             safeView.btnNextStep.tag = 0
             checkoutViews.append(safeView)
             addSlideToScrollView(theView: safeView, index: 0)
         }
         
-        if let safeView = getCardInfoView() {
+        
+        if let safeView = getShippingView() {
             safeView.btnNextStep.tag = 1
             checkoutViews.append(safeView)
             addSlideToScrollView(theView: safeView, index: 1)
         }
         
-        if let safeView = getBillingView() {
+        if let safeView = getCardInfoView() {
             safeView.btnNextStep.tag = 2
             checkoutViews.append(safeView)
             addSlideToScrollView(theView: safeView, index: 2)
         }
         
-        if let safeView = getMediaView() {
+        if let safeView = getBillingView() {
             safeView.btnNextStep.tag = 3
             checkoutViews.append(safeView)
             addSlideToScrollView(theView: safeView, index: 3)
         }
-        
+    
         scrollView.contentSize = CGSize(width: self.view.bounds.width * CGFloat(checkoutViews.count), height: scrollView.frame.height)
     }
     
@@ -222,7 +222,7 @@ class CheckoutViewController: UIViewController, UIScrollViewDelegate{
     fileprivate func getBillingView() -> CheckoutBillingView? {
         let theView = Bundle.main.loadNibNamed("CheckoutBilling", owner: self, options: nil)?.first as? CheckoutBillingView
         
-        theView?.btnNextStep.addTarget(self, action:#selector(setStep(sender:)), for: .touchUpInside)
+        theView?.btnNextStep.addTarget(self, action:#selector(showCheckoutModal(sender:)), for: .touchUpInside)
         
         return theView
     }
@@ -230,7 +230,7 @@ class CheckoutViewController: UIViewController, UIScrollViewDelegate{
     fileprivate func getMediaView() -> CheckoutMediaView? {
         let theView: CheckoutMediaView? = Bundle.main.loadNibNamed("CheckoutMedia", owner: self, options: nil)?.first as? CheckoutMediaView
         
-        theView?.btnNextStep.addTarget(self, action: #selector(showCheckoutModal(sender:)), for: .touchUpInside)
+        theView?.btnNextStep.addTarget(self, action: #selector(setStep(sender:)), for: .touchUpInside)
         theView?.btnRemoveMedia.isHidden = true
         
         return theView
