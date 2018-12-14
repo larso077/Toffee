@@ -149,6 +149,24 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
         cell.lblProductPrice.text = "$\(currentProduct.saleTotal.format(f: ".2")) for \(currentProduct.quantity)"
     }
     
+    @IBAction func removeButton(_ sender: Any) {
+        let buttonPosition = (sender as AnyObject).convert(CGPoint.zero, to: tableView)
+        let indexPath = tableView.indexPathForRow(at: buttonPosition)
+        let product = KPShoppingCart.instance.products! [(indexPath?.row)!]
+        
+        KPShoppingCart.instance.productCount -= product.quantity
+        
+        if KPShoppingCart.instance.productCount < 0
+        {
+            KPShoppingCart.instance.productCount = 0
+        }
+        
+        KPShoppingCart.instance.removeProduct(product: product.product, quantity: product.quantity)
+        
+        tableView.deleteRows(at: [indexPath!], with: .fade)
+        
+        self.setCartValues()
+    }
     
     
     
