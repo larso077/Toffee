@@ -89,7 +89,7 @@ class YourAccountTableViewController: UITableViewController, UpdateBadgeDelegate
                 self.performSegue(withIdentifier: "showLoginForAccountSegue", sender: nil)
                 }
             case 1: if KPAuthentication.shared.isLoggedIn(){
-                self.performSegue(withIdentifier: "showMyGiftsListSegue", sender: nil)
+                self.performSegue(withIdentifier: "showMyGiftListSegue", sender: nil)
             }else{
                 self.performSegue(withIdentifier: "showLoginForAccountSegue", sender: nil)
                 }

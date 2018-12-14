@@ -34,6 +34,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBAction func btnSignIn(_ sender: UIButton) {
         runLogin()
     }
+    @IBAction func btnCreateAccount(_ sender: Any) {
+        self.performSegue(withIdentifier: "createAccount", sender: nil)
+    }
     
     private func runLogin() {
         dismissKeyboard()
