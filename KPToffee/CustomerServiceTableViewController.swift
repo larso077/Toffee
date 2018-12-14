@@ -21,7 +21,8 @@ class CustomerServiceTableViewController: UITableViewController {
     func drawBadge(quantity: Int?) {
         let notificationButton = BasketBadgeButton()
         notificationButton.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
-        notificationButton.setImage(UIImage(named: "shopping bag")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        notificationButton.setImage(UIImage(named: "shopping-basket")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        notificationButton.imageView?.tintColor = UIColor(rgb: 0x522100)
         notificationButton.badgeEdgeInsets = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 15)
         var num = quantity
         if num == nil { num = 0 }
