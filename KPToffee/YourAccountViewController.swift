@@ -48,6 +48,7 @@ class YourAccountViewController: UIViewController, UpdateBadgeDelegate {
     
     
     override func viewDidLoad() {
+        self.navigationItem.backBarButtonItem?.tintColor = UIColor.init(rgb: 0x522100)
         
         if revealViewController() != nil {
             menuButton.target = revealViewController()
