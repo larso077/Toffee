@@ -26,13 +26,21 @@
             </objects>
             <point key="canvasLocation" x="-1919" y="1943"/>
         </scene>
+        <!--Customer Service-->
+        <scene sceneID="Vlh-F9-0Lf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Customer Service" id="gFt-hn-PmQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F16-bO-iEa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2250" y="2396"/>
+        </scene>
         <!--Login-->
         <scene sceneID="vv9-KH-LJb">
             <objects>
                 <viewControllerPlaceholder storyboardName="Login" id="ll0-Px-E6l" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nuh-Aq-cYF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1937" y="2396"/>
+            <point key="canvasLocation" x="-2015" y="2476"/>
         </scene>
         <!--Shopping Cart-->
         <scene sceneID="kKC-CV-iIC">
@@ -246,12 +254,13 @@
                     <connections>
                         <outlet property="menuButton" destination="0fL-u2-3yH" id="UQN-pV-iRh"/>
                         <outlet property="welcomeBackLabel" destination="FPn-VN-7dh" id="V7k-Xv-g9o"/>
-                        <segue destination="u7V-rD-dio" kind="show" id="vNV-Cr-M2y"/>
+                        <segue destination="u7V-rD-dio" kind="show" identifier="modalSavedItems" id="vNV-Cr-M2y"/>
                         <segue destination="0iR-Zl-B2J" kind="show" identifier="showPastOrdersSegue" id="VR2-Z7-4SV"/>
-                        <segue destination="WT0-kP-HHk" kind="show" id="RQV-nq-F9g"/>
+                        <segue destination="WT0-kP-HHk" kind="show" identifier="showPrivacyPolicy" id="RQV-nq-F9g"/>
                         <segue destination="ll0-Px-E6l" kind="presentation" identifier="showLoginForAccountSegue" id="ygM-Ty-3RU"/>
-                        <segue destination="3lM-Gv-8qR" kind="show" identifier="showCartForAccountSegue" id="3Dg-Zf-sLz"/>
+                        <segue destination="3lM-Gv-8qR" kind="show" identifier="showCartForAccountSegue" customClass="SWRevealViewControllerSeguePushController" id="3Dg-Zf-sLz"/>
                         <segue destination="Vtt-TZ-Fjd" kind="show" identifier="showMyGiftListSegue" id="EGU-mc-W8O"/>
+                        <segue destination="gFt-hn-PmQ" kind="show" identifier="showCustomerService" customClass="SWRevealViewControllerSeguePushController" id="abY-iv-hyt"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8P9-7t-BgU" userLabel="First Responder" sceneMemberID="firstResponder"/>

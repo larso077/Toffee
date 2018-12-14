@@ -81,8 +81,33 @@ class YourAccountTableViewController: UITableViewController, UpdateBadgeDelegate
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 1, indexPath.row == 2, let reveal = revealViewController(), let vc = storyboard?.instantiateViewController(withIdentifier: "CustomerServiceNavViewController") {
-            reveal.pushFrontViewController(vc, animated: true)
+        if indexPath.section == 0 {
+            switch indexPath.row{
+            case 0: if KPAuthentication.shared.isLoggedIn(){
+                self.performSegue(withIdentifier: "showPastOrdersSegue", sender: nil)}else{
+                self.performSegue(withIdentifier: "showLoginForAccountSegue", sender: nil)
+                }
+            case 1: if KPAuthentication.shared.isLoggedIn(){
+                self.performSegue(withIdentifier: "showMyGiftsListSegue", sender: nil)
+            }else{
+                self.performSegue(withIdentifier: "showLoginForAccountSegue", sender: nil)
+                }
+            case 2: if KPAuthentication.shared.isLoggedIn(){
+                self.performSegue(withIdentifier: "modalSavedItems", sender: nil)
+            }else{
+                self.performSegue(withIdentifier: "showLoginForAccountSegue", sender: nil)
+                }
+            default:
+                print("tableView did an oopsie, this should never print")
+            }
+        }
+        if indexPath.section == 1{
+            switch indexPath.row{
+            case 0: self.performSegue(withIdentifier: "showPrivacyPolicy", sender: nil)
+            case 1: print("where the heck is the user agreement?")
+            case 2: self.performSegue(withIdentifier: "showCustomerService", sender: nil)
+            default: print("this should never happen, debug")
+        }
         } else if indexPath.section == 2, let reveal = revealViewController(), let vc = storyboard?.instantiateViewController(withIdentifier: "ProductsNavViewController") {
             
             KPAuthentication.shared.logout()
