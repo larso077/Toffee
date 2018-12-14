@@ -11,7 +11,8 @@ import UIKit
 class YourAccountTableViewController: UITableViewController, UpdateBadgeDelegate {
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var welcomeBackLabel: UILabel!
-
+    @IBOutlet weak var signInOutCell: UITableViewCell!
+    
     func updateQuantity(_ quantity: Int?) {
         drawBadge(quantity: quantity)
     }
@@ -49,11 +50,18 @@ class YourAccountTableViewController: UITableViewController, UpdateBadgeDelegate
             view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         }
         
+        
         tableView.tableFooterView = UIView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
+        if KPAuthentication.shared.isLoggedIn(){
+            signInOutCell.textLabel?.text = "Sign Out"
+            tableView.reloadData()
+        }else{
+            signInOutCell.textLabel?.text = "Sign In"
+            tableView.reloadData()
+        }
         let theShoppingCart = KPShoppingCart.instance
         let quantity = theShoppingCart.productCount
         
@@ -74,9 +82,6 @@ class YourAccountTableViewController: UITableViewController, UpdateBadgeDelegate
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        if !KPAuthentication.shared.isLoggedIn() {
-            return 2
-        }
         
         return 3
     }
@@ -109,10 +114,30 @@ class YourAccountTableViewController: UITableViewController, UpdateBadgeDelegate
             case 2: self.performSegue(withIdentifier: "showCustomerService", sender: nil)
             default: print("this should never happen, debug")
         }
-        } else if indexPath.section == 2, let reveal = revealViewController(), let vc = storyboard?.instantiateViewController(withIdentifier: "ProductsNavViewController") {
-            
-            KPAuthentication.shared.logout()
-            reveal.pushFrontViewController(vc, animated: true)
+        }
+        if indexPath.section == 2 {
+            if KPAuthentication.shared.isLoggedIn(){
+                
+                //When log out is pressed presents a confimation page
+                let alertVC = UIAlertController(title: "Logout", message: "Are your sure your want to logout?", preferredStyle: .actionSheet)
+                //Allows user to cancel logout
+                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                // Handle logging out inside the closure
+                let logoutAction = UIAlertAction(title: "Logout", style: .destructive) { (action) in
+                    print("Logging out")
+                    KPAuthentication.shared.logout()
+                    self.signInOutCell.textLabel?.text = "Sign In"
+                    self.welcomeBackLabel.text = "Signed Out"
+                }
+                
+                //Adds the acitons to preform based on the click
+                alertVC.addAction(logoutAction)
+                alertVC.addAction(cancelAction)
+                self.present(alertVC, animated: true, completion: nil)
+                tableView.reloadData()
+            }else{
+                performSegue(withIdentifier: "showLoginForAccountSegue", sender: nil)
+            }
         }
     }
     

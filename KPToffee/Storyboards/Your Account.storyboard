@@ -260,6 +260,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="0fL-u2-3yH" id="UQN-pV-iRh"/>
+                        <outlet property="signInOutCell" destination="uL4-kt-2L5" id="De2-mg-6IO"/>
                         <outlet property="welcomeBackLabel" destination="FPn-VN-7dh" id="V7k-Xv-g9o"/>
                         <segue destination="u7V-rD-dio" kind="show" identifier="modalSavedItems" id="vNV-Cr-M2y"/>
                         <segue destination="0iR-Zl-B2J" kind="show" identifier="showPastOrdersSegue" id="VR2-Z7-4SV"/>
