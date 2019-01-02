@@ -71,7 +71,7 @@ extern STPContactField const STPContactFieldName;
 /**
  STPAddress Contains an address as represented by the Stripe API.
  */
-@interface STPAddress : NSObject<STPAPIResponseDecodable, STPFormEncodable, NSCopying>
+@interface STPAddress : NSObject<STPAPIResponseDecodable, STPFormEncodable>
 
 /**
  The user's full name (e.g. "Jane Doe")

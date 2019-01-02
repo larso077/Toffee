@@ -20,7 +20,7 @@
 
  @see https://stripe.com/docs/api#cards
  */
-@interface STPCardParams : NSObject<STPFormEncodable, NSCopying>
+@interface STPCardParams : NSObject<STPFormEncodable>
 
 /**
  The card's number.
@@ -58,9 +58,8 @@
 /**
  The cardholder's address.
  
- @note Setting `address` to a new value will also change the `name` property to
- be the value of `address.name`. However, changing `address.name` directly will
- *not* change `name`.
+ @note Changing this property will also changing the name of the 
+ param's `name` property
  */
 @property (nonatomic, strong, nonnull) STPAddress *address;
 
