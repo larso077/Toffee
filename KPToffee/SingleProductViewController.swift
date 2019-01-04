@@ -139,7 +139,10 @@ class SingleProductViewController: UIViewController, UIScrollViewDelegate {
                 let image = imageArray[i]
                 let imageView = UIImageView()
                 
-                imageView.downloadedFrom(link: image, contentMode: .scaleAspectFit)
+                var url = "http://"
+                url.append(image)
+                
+                imageView.downloadedFrom(link: url, contentMode: .scaleAspectFit)
                 addImageToScrollView(theView: imageView, index: i)
             }
             
