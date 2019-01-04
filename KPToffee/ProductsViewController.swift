@@ -304,8 +304,11 @@ class ProductsViewController: UICollectionViewController, UpdateBadgeDelegate{
     
     fileprivate func getCellImage(cell: UICollectionViewCell, product: Product) -> UIImageView {
         let imageView = UIImageView(frame: CGRect(x: 10, y: 0, width: cell.contentView.frame.width - 20, height: cell.contentView.frame.height - tileExtraSpace - 10))
+       
+        var url = "http://"
+        url.append(product.images[0])
         
-        imageView.downloadedFrom(link: product.images[0])
+        imageView.downloadedFrom(link: url)
         
         return imageView
     }
