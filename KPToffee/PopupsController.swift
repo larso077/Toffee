@@ -12,7 +12,7 @@ public class PopupsController {
     public static let shared = PopupsController()
     
     
-    var shouldShowCheckoutPopup: Bool = true
+    var shouldShowCheckoutPopup: Bool = false
     func setShowCheckoutPopup(bool: Bool){
         shouldShowCheckoutPopup = bool
     }
