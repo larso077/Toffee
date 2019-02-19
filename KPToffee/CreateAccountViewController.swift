@@ -21,7 +21,7 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        passwordRequirements.isHidden = true
+        passwordRequirements.isHidden = false
         txtFirstName.delegate = self
         txtLastName.delegate = self
         txtEmail.delegate = self

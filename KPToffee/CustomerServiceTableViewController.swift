@@ -66,11 +66,14 @@ class CustomerServiceTableViewController: UITableViewController {
     }
     
     fileprivate func setCellValues() {
-        let userDefaults = UserDefaults.standard
+//        let userDefaults = UserDefaults.standard
         
-        phoneNumberCell.textLabel?.text = userDefaults.string(forKey: defaultKeys.contactPhoneNumber)
-        emailAddressCell.textLabel?.text = userDefaults.string(forKey: defaultKeys.contactEmailAddress)
-        addressCell.textLabel?.text = userDefaults.string(forKey: defaultKeys.contactAddress)
+//        phoneNumberCell.textLabel?.text = userDefaults.string(forKey: defaultKeys.contactPhoneNumber)
+        phoneNumberCell.textLabel?.text = "262-886-3920"
+//        emailAddressCell.textLabel?.text = userDefaults.string(forKey: defaultKeys.contactEmailAddress)
+        emailAddressCell.textLabel?.text = "INFO@KPTOFFEE.COM"
+//        addressCell.textLabel?.text = userDefaults.string(forKey: defaultKeys.contactAddress)
+        addressCell.textLabel?.text = "9602 DURAND AVENUE, SUITE 100 STURTEVANT, WI 53177"
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
